@@ -1,0 +1,613 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B21923071796668800B0E513 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2AF90DD1793029800FA90EC /* Foundation.framework */; };
+		B21A2BA917A566DD00C809ED /* AFHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2B9617A566DD00C809ED /* AFHTTPClient.h */; };
+		B21A2BAA17A566DD00C809ED /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2B9717A566DD00C809ED /* AFHTTPClient.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		B21A2BAB17A566DD00C809ED /* AFHTTPRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2B9817A566DD00C809ED /* AFHTTPRequestOperation.h */; };
+		B21A2BAC17A566DD00C809ED /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2B9917A566DD00C809ED /* AFHTTPRequestOperation.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		B21A2BAD17A566DD00C809ED /* AFImageRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2B9A17A566DD00C809ED /* AFImageRequestOperation.h */; };
+		B21A2BAE17A566DD00C809ED /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2B9B17A566DD00C809ED /* AFImageRequestOperation.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		B21A2BAF17A566DD00C809ED /* AFJSONRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2B9C17A566DD00C809ED /* AFJSONRequestOperation.h */; };
+		B21A2BB017A566DD00C809ED /* AFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2B9D17A566DD00C809ED /* AFJSONRequestOperation.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		B21A2BB117A566DD00C809ED /* AFNetworkActivityIndicatorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2B9E17A566DD00C809ED /* AFNetworkActivityIndicatorManager.h */; };
+		B21A2BB217A566DD00C809ED /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2B9F17A566DD00C809ED /* AFNetworkActivityIndicatorManager.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		B21A2BB317A566DD00C809ED /* AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BA017A566DD00C809ED /* AFNetworking.h */; };
+		B21A2BB417A566DD00C809ED /* AFPropertyListRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BA117A566DD00C809ED /* AFPropertyListRequestOperation.h */; };
+		B21A2BB517A566DD00C809ED /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BA217A566DD00C809ED /* AFPropertyListRequestOperation.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		B21A2BB617A566DD00C809ED /* AFURLConnectionOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BA317A566DD00C809ED /* AFURLConnectionOperation.h */; };
+		B21A2BB717A566DD00C809ED /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BA417A566DD00C809ED /* AFURLConnectionOperation.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		B21A2BB817A566DD00C809ED /* AFXMLRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BA517A566DD00C809ED /* AFXMLRequestOperation.h */; };
+		B21A2BB917A566DD00C809ED /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BA617A566DD00C809ED /* AFXMLRequestOperation.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		B21A2BBA17A566DD00C809ED /* UIImageView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BA717A566DD00C809ED /* UIImageView+AFNetworking.h */; };
+		B21A2BBB17A566DD00C809ED /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BA817A566DD00C809ED /* UIImageView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		B21A2BEB17A5671100C809ED /* EasyGrowthPush.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BBC17A5671100C809ED /* EasyGrowthPush.m */; };
+		B21A2BEE17A5671100C809ED /* GPAppDelegateWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BBF17A5671100C809ED /* GPAppDelegateWrapper.h */; };
+		B21A2BEF17A5671100C809ED /* GPAppDelegateWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BC017A5671100C809ED /* GPAppDelegateWrapper.m */; };
+		B21A2BF017A5671100C809ED /* GPAppDelegateWrapperDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BC117A5671100C809ED /* GPAppDelegateWrapperDelegate.h */; };
+		B21A2BF117A5671100C809ED /* GPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BC217A5671100C809ED /* GPClient.h */; };
+		B21A2BF217A5671100C809ED /* GPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BC317A5671100C809ED /* GPClient.m */; };
+		B21A2BF317A5671100C809ED /* GPClientService.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BC417A5671100C809ED /* GPClientService.h */; };
+		B21A2BF417A5671100C809ED /* GPClientService.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BC517A5671100C809ED /* GPClientService.m */; };
+		B21A2BF517A5671100C809ED /* GPDateUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BC617A5671100C809ED /* GPDateUtils.h */; };
+		B21A2BF617A5671100C809ED /* GPDateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BC717A5671100C809ED /* GPDateUtils.m */; };
+		B21A2BF717A5671100C809ED /* GPDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BC817A5671100C809ED /* GPDevice.h */; };
+		B21A2BF817A5671100C809ED /* GPDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BC917A5671100C809ED /* GPDevice.m */; };
+		B21A2BF917A5671100C809ED /* GPDomain.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BCA17A5671100C809ED /* GPDomain.h */; };
+		B21A2BFA17A5671100C809ED /* GPDomain.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BCB17A5671100C809ED /* GPDomain.m */; };
+		B21A2BFB17A5671100C809ED /* GPEnvironment.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BCC17A5671100C809ED /* GPEnvironment.h */; };
+		B21A2BFC17A5671100C809ED /* GPEnvironmentUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BCD17A5671100C809ED /* GPEnvironmentUtils.h */; };
+		B21A2BFD17A5671100C809ED /* GPEnvironmentUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BCE17A5671100C809ED /* GPEnvironmentUtils.m */; };
+		B21A2BFE17A5671100C809ED /* GPEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BCF17A5671100C809ED /* GPEvent.h */; };
+		B21A2BFF17A5671100C809ED /* GPEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BD017A5671100C809ED /* GPEvent.m */; };
+		B21A2C0017A5671100C809ED /* GPEventService.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BD117A5671100C809ED /* GPEventService.h */; };
+		B21A2C0117A5671100C809ED /* GPEventService.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BD217A5671100C809ED /* GPEventService.m */; };
+		B21A2C0217A5671100C809ED /* GPHttpClient.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BD317A5671100C809ED /* GPHttpClient.h */; };
+		B21A2C0317A5671100C809ED /* GPHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BD417A5671100C809ED /* GPHttpClient.m */; };
+		B21A2C0417A5671100C809ED /* GPHttpRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BD517A5671100C809ED /* GPHttpRequest.h */; };
+		B21A2C0517A5671100C809ED /* GPHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BD617A5671100C809ED /* GPHttpRequest.m */; };
+		B21A2C0617A5671100C809ED /* GPHttpResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BD717A5671100C809ED /* GPHttpResponse.h */; };
+		B21A2C0717A5671100C809ED /* GPHttpResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BD817A5671100C809ED /* GPHttpResponse.m */; };
+		B21A2C0817A5671100C809ED /* GPHttpUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BD917A5671100C809ED /* GPHttpUtils.h */; };
+		B21A2C0917A5671100C809ED /* GPHttpUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BDA17A5671100C809ED /* GPHttpUtils.m */; };
+		B21A2C0A17A5671100C809ED /* GPOS.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BDB17A5671100C809ED /* GPOS.h */; };
+		B21A2C0B17A5671100C809ED /* GPOSUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BDC17A5671100C809ED /* GPOSUtils.h */; };
+		B21A2C0C17A5671100C809ED /* GPOSUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BDD17A5671100C809ED /* GPOSUtils.m */; };
+		B21A2C0D17A5671100C809ED /* GPPreference.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BDE17A5671100C809ED /* GPPreference.h */; };
+		B21A2C0E17A5671100C809ED /* GPPreference.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BDF17A5671100C809ED /* GPPreference.m */; };
+		B21A2C0F17A5671100C809ED /* GPRequestMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BE017A5671100C809ED /* GPRequestMethod.h */; };
+		B21A2C1017A5671100C809ED /* GPRequestMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BE117A5671100C809ED /* GPRequestMethod.m */; };
+		B21A2C1117A5671100C809ED /* GPService.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BE217A5671100C809ED /* GPService.h */; };
+		B21A2C1217A5671100C809ED /* GPService.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BE317A5671100C809ED /* GPService.m */; };
+		B21A2C1317A5671100C809ED /* GPTagService.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BE417A5671100C809ED /* GPTagService.h */; };
+		B21A2C1417A5671100C809ED /* GPTagService.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BE517A5671100C809ED /* GPTagService.m */; };
+		B21A2C1517A5671100C809ED /* GPUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BE617A5671100C809ED /* GPUtils.h */; };
+		B21A2C1617A5671100C809ED /* GPViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BE717A5671100C809ED /* GPViewController.h */; };
+		B21A2C1717A5671100C809ED /* GPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BE817A5671100C809ED /* GPViewController.m */; };
+		B21A2C1817A5671100C809ED /* GrowthPush.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BE917A5671100C809ED /* GrowthPush.h */; };
+		B21A2C1917A5671100C809ED /* GrowthPush.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BEA17A5671100C809ED /* GrowthPush.m */; };
+		B24945901798DA11002163DD /* THIRD_PARTY_ LICENSES in Resources */ = {isa = PBXBuildFile; fileRef = B249458F1798DA11002163DD /* THIRD_PARTY_ LICENSES */; };
+		B24945921798DA6E002163DD /* README in Resources */ = {isa = PBXBuildFile; fileRef = B24945911798DA6E002163DD /* README */; };
+		B2AF90E41793029800FA90EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B2AF90E21793029800FA90EC /* InfoPlist.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B21A2B9617A566DD00C809ED /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFHTTPClient.h; path = AFNetworking/AFNetworking/AFHTTPClient.h; sourceTree = SOURCE_ROOT; };
+		B21A2B9717A566DD00C809ED /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFHTTPClient.m; path = AFNetworking/AFNetworking/AFHTTPClient.m; sourceTree = SOURCE_ROOT; };
+		B21A2B9817A566DD00C809ED /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFHTTPRequestOperation.h; path = AFNetworking/AFNetworking/AFHTTPRequestOperation.h; sourceTree = SOURCE_ROOT; };
+		B21A2B9917A566DD00C809ED /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFHTTPRequestOperation.m; path = AFNetworking/AFNetworking/AFHTTPRequestOperation.m; sourceTree = SOURCE_ROOT; };
+		B21A2B9A17A566DD00C809ED /* AFImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFImageRequestOperation.h; path = AFNetworking/AFNetworking/AFImageRequestOperation.h; sourceTree = SOURCE_ROOT; };
+		B21A2B9B17A566DD00C809ED /* AFImageRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFImageRequestOperation.m; path = AFNetworking/AFNetworking/AFImageRequestOperation.m; sourceTree = SOURCE_ROOT; };
+		B21A2B9C17A566DD00C809ED /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFJSONRequestOperation.h; path = AFNetworking/AFNetworking/AFJSONRequestOperation.h; sourceTree = SOURCE_ROOT; };
+		B21A2B9D17A566DD00C809ED /* AFJSONRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFJSONRequestOperation.m; path = AFNetworking/AFNetworking/AFJSONRequestOperation.m; sourceTree = SOURCE_ROOT; };
+		B21A2B9E17A566DD00C809ED /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFNetworkActivityIndicatorManager.h; path = AFNetworking/AFNetworking/AFNetworkActivityIndicatorManager.h; sourceTree = SOURCE_ROOT; };
+		B21A2B9F17A566DD00C809ED /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFNetworkActivityIndicatorManager.m; path = AFNetworking/AFNetworking/AFNetworkActivityIndicatorManager.m; sourceTree = SOURCE_ROOT; };
+		B21A2BA017A566DD00C809ED /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFNetworking.h; path = AFNetworking/AFNetworking/AFNetworking.h; sourceTree = SOURCE_ROOT; };
+		B21A2BA117A566DD00C809ED /* AFPropertyListRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFPropertyListRequestOperation.h; path = AFNetworking/AFNetworking/AFPropertyListRequestOperation.h; sourceTree = SOURCE_ROOT; };
+		B21A2BA217A566DD00C809ED /* AFPropertyListRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFPropertyListRequestOperation.m; path = AFNetworking/AFNetworking/AFPropertyListRequestOperation.m; sourceTree = SOURCE_ROOT; };
+		B21A2BA317A566DD00C809ED /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFURLConnectionOperation.h; path = AFNetworking/AFNetworking/AFURLConnectionOperation.h; sourceTree = SOURCE_ROOT; };
+		B21A2BA417A566DD00C809ED /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFURLConnectionOperation.m; path = AFNetworking/AFNetworking/AFURLConnectionOperation.m; sourceTree = SOURCE_ROOT; };
+		B21A2BA517A566DD00C809ED /* AFXMLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFXMLRequestOperation.h; path = AFNetworking/AFNetworking/AFXMLRequestOperation.h; sourceTree = SOURCE_ROOT; };
+		B21A2BA617A566DD00C809ED /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFXMLRequestOperation.m; path = AFNetworking/AFNetworking/AFXMLRequestOperation.m; sourceTree = SOURCE_ROOT; };
+		B21A2BA717A566DD00C809ED /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+AFNetworking.h"; path = "AFNetworking/AFNetworking/UIImageView+AFNetworking.h"; sourceTree = SOURCE_ROOT; };
+		B21A2BA817A566DD00C809ED /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+AFNetworking.m"; path = "AFNetworking/AFNetworking/UIImageView+AFNetworking.m"; sourceTree = SOURCE_ROOT; };
+		B21A2BBC17A5671100C809ED /* EasyGrowthPush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyGrowthPush.m; sourceTree = "<group>"; };
+		B21A2BBF17A5671100C809ED /* GPAppDelegateWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPAppDelegateWrapper.h; sourceTree = "<group>"; };
+		B21A2BC017A5671100C809ED /* GPAppDelegateWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPAppDelegateWrapper.m; sourceTree = "<group>"; };
+		B21A2BC117A5671100C809ED /* GPAppDelegateWrapperDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPAppDelegateWrapperDelegate.h; sourceTree = "<group>"; };
+		B21A2BC217A5671100C809ED /* GPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPClient.h; sourceTree = "<group>"; };
+		B21A2BC317A5671100C809ED /* GPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPClient.m; sourceTree = "<group>"; };
+		B21A2BC417A5671100C809ED /* GPClientService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPClientService.h; sourceTree = "<group>"; };
+		B21A2BC517A5671100C809ED /* GPClientService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPClientService.m; sourceTree = "<group>"; };
+		B21A2BC617A5671100C809ED /* GPDateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPDateUtils.h; sourceTree = "<group>"; };
+		B21A2BC717A5671100C809ED /* GPDateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPDateUtils.m; sourceTree = "<group>"; };
+		B21A2BC817A5671100C809ED /* GPDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPDevice.h; sourceTree = "<group>"; };
+		B21A2BC917A5671100C809ED /* GPDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPDevice.m; sourceTree = "<group>"; };
+		B21A2BCA17A5671100C809ED /* GPDomain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPDomain.h; sourceTree = "<group>"; };
+		B21A2BCB17A5671100C809ED /* GPDomain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPDomain.m; sourceTree = "<group>"; };
+		B21A2BCC17A5671100C809ED /* GPEnvironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPEnvironment.h; sourceTree = "<group>"; };
+		B21A2BCD17A5671100C809ED /* GPEnvironmentUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPEnvironmentUtils.h; sourceTree = "<group>"; };
+		B21A2BCE17A5671100C809ED /* GPEnvironmentUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPEnvironmentUtils.m; sourceTree = "<group>"; };
+		B21A2BCF17A5671100C809ED /* GPEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPEvent.h; sourceTree = "<group>"; };
+		B21A2BD017A5671100C809ED /* GPEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPEvent.m; sourceTree = "<group>"; };
+		B21A2BD117A5671100C809ED /* GPEventService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPEventService.h; sourceTree = "<group>"; };
+		B21A2BD217A5671100C809ED /* GPEventService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPEventService.m; sourceTree = "<group>"; };
+		B21A2BD317A5671100C809ED /* GPHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPHttpClient.h; sourceTree = "<group>"; };
+		B21A2BD417A5671100C809ED /* GPHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPHttpClient.m; sourceTree = "<group>"; };
+		B21A2BD517A5671100C809ED /* GPHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPHttpRequest.h; sourceTree = "<group>"; };
+		B21A2BD617A5671100C809ED /* GPHttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPHttpRequest.m; sourceTree = "<group>"; };
+		B21A2BD717A5671100C809ED /* GPHttpResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPHttpResponse.h; sourceTree = "<group>"; };
+		B21A2BD817A5671100C809ED /* GPHttpResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPHttpResponse.m; sourceTree = "<group>"; };
+		B21A2BD917A5671100C809ED /* GPHttpUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPHttpUtils.h; sourceTree = "<group>"; };
+		B21A2BDA17A5671100C809ED /* GPHttpUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPHttpUtils.m; sourceTree = "<group>"; };
+		B21A2BDB17A5671100C809ED /* GPOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPOS.h; sourceTree = "<group>"; };
+		B21A2BDC17A5671100C809ED /* GPOSUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPOSUtils.h; sourceTree = "<group>"; };
+		B21A2BDD17A5671100C809ED /* GPOSUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPOSUtils.m; sourceTree = "<group>"; };
+		B21A2BDE17A5671100C809ED /* GPPreference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPPreference.h; sourceTree = "<group>"; };
+		B21A2BDF17A5671100C809ED /* GPPreference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPPreference.m; sourceTree = "<group>"; };
+		B21A2BE017A5671100C809ED /* GPRequestMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPRequestMethod.h; sourceTree = "<group>"; };
+		B21A2BE117A5671100C809ED /* GPRequestMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPRequestMethod.m; sourceTree = "<group>"; };
+		B21A2BE217A5671100C809ED /* GPService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPService.h; sourceTree = "<group>"; };
+		B21A2BE317A5671100C809ED /* GPService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPService.m; sourceTree = "<group>"; };
+		B21A2BE417A5671100C809ED /* GPTagService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPTagService.h; sourceTree = "<group>"; };
+		B21A2BE517A5671100C809ED /* GPTagService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPTagService.m; sourceTree = "<group>"; };
+		B21A2BE617A5671100C809ED /* GPUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPUtils.h; sourceTree = "<group>"; };
+		B21A2BE717A5671100C809ED /* GPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPViewController.h; sourceTree = "<group>"; };
+		B21A2BE817A5671100C809ED /* GPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPViewController.m; sourceTree = "<group>"; };
+		B21A2BE917A5671100C809ED /* GrowthPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrowthPush.h; sourceTree = "<group>"; };
+		B21A2BEA17A5671100C809ED /* GrowthPush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrowthPush.m; sourceTree = "<group>"; };
+		B249458F1798DA11002163DD /* THIRD_PARTY_ LICENSES */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "THIRD_PARTY_ LICENSES"; sourceTree = SOURCE_ROOT; };
+		B24945911798DA6E002163DD /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = SOURCE_ROOT; };
+		B2AF90DA1793029800FA90EC /* GrowthPush.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework.static; includeInIndex = 0; path = GrowthPush.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2AF90DD1793029800FA90EC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B2AF90E11793029800FA90EC /* GrowthPush-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GrowthPush-Info.plist"; sourceTree = "<group>"; };
+		B2AF90E31793029800FA90EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B2AF90E51793029800FA90EC /* GrowthPush-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GrowthPush-Prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B2AF90D41793029800FA90EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B21923071796668800B0E513 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B2AF90CD1793029800FA90EC = {
+			isa = PBXGroup;
+			children = (
+				B2AF90DF1793029800FA90EC /* GrowthPush */,
+				B2AF90DC1793029800FA90EC /* Frameworks */,
+				B2AF90DB1793029800FA90EC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B2AF90DB1793029800FA90EC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B2AF90DA1793029800FA90EC /* GrowthPush.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B2AF90DC1793029800FA90EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B2AF90DD1793029800FA90EC /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B2AF90DF1793029800FA90EC /* GrowthPush */ = {
+			isa = PBXGroup;
+			children = (
+				B2AF913B1793035100FA90EC /* AFNetworking */,
+				B2AF90EB179302F000FA90EC /* Headers */,
+				B2AF91141793033900FA90EC /* Sources */,
+				B2AF90E01793029800FA90EC /* Supporting Files */,
+			);
+			path = GrowthPush;
+			sourceTree = "<group>";
+		};
+		B2AF90E01793029800FA90EC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B2AF90E11793029800FA90EC /* GrowthPush-Info.plist */,
+				B2AF90E51793029800FA90EC /* GrowthPush-Prefix.pch */,
+				B2AF90E21793029800FA90EC /* InfoPlist.strings */,
+				B24945911798DA6E002163DD /* README */,
+				B249458F1798DA11002163DD /* THIRD_PARTY_ LICENSES */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B2AF90EB179302F000FA90EC /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				B21A2BBF17A5671100C809ED /* GPAppDelegateWrapper.h */,
+				B21A2BC117A5671100C809ED /* GPAppDelegateWrapperDelegate.h */,
+				B21A2BC217A5671100C809ED /* GPClient.h */,
+				B21A2BC417A5671100C809ED /* GPClientService.h */,
+				B21A2BC617A5671100C809ED /* GPDateUtils.h */,
+				B21A2BC817A5671100C809ED /* GPDevice.h */,
+				B21A2BCA17A5671100C809ED /* GPDomain.h */,
+				B21A2BCC17A5671100C809ED /* GPEnvironment.h */,
+				B21A2BCD17A5671100C809ED /* GPEnvironmentUtils.h */,
+				B21A2BCF17A5671100C809ED /* GPEvent.h */,
+				B21A2BD117A5671100C809ED /* GPEventService.h */,
+				B21A2BD317A5671100C809ED /* GPHttpClient.h */,
+				B21A2BD517A5671100C809ED /* GPHttpRequest.h */,
+				B21A2BD717A5671100C809ED /* GPHttpResponse.h */,
+				B21A2BD917A5671100C809ED /* GPHttpUtils.h */,
+				B21A2BDB17A5671100C809ED /* GPOS.h */,
+				B21A2BDC17A5671100C809ED /* GPOSUtils.h */,
+				B21A2BDE17A5671100C809ED /* GPPreference.h */,
+				B21A2BE017A5671100C809ED /* GPRequestMethod.h */,
+				B21A2BE217A5671100C809ED /* GPService.h */,
+				B21A2BE417A5671100C809ED /* GPTagService.h */,
+				B21A2BE617A5671100C809ED /* GPUtils.h */,
+				B21A2BE717A5671100C809ED /* GPViewController.h */,
+				B21A2BE917A5671100C809ED /* GrowthPush.h */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		B2AF91141793033900FA90EC /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B21A2BBC17A5671100C809ED /* EasyGrowthPush.m */,
+				B21A2BC017A5671100C809ED /* GPAppDelegateWrapper.m */,
+				B21A2BC317A5671100C809ED /* GPClient.m */,
+				B21A2BC517A5671100C809ED /* GPClientService.m */,
+				B21A2BC717A5671100C809ED /* GPDateUtils.m */,
+				B21A2BC917A5671100C809ED /* GPDevice.m */,
+				B21A2BCB17A5671100C809ED /* GPDomain.m */,
+				B21A2BCE17A5671100C809ED /* GPEnvironmentUtils.m */,
+				B21A2BD017A5671100C809ED /* GPEvent.m */,
+				B21A2BD217A5671100C809ED /* GPEventService.m */,
+				B21A2BD417A5671100C809ED /* GPHttpClient.m */,
+				B21A2BD617A5671100C809ED /* GPHttpRequest.m */,
+				B21A2BD817A5671100C809ED /* GPHttpResponse.m */,
+				B21A2BDA17A5671100C809ED /* GPHttpUtils.m */,
+				B21A2BDD17A5671100C809ED /* GPOSUtils.m */,
+				B21A2BDF17A5671100C809ED /* GPPreference.m */,
+				B21A2BE117A5671100C809ED /* GPRequestMethod.m */,
+				B21A2BE317A5671100C809ED /* GPService.m */,
+				B21A2BE517A5671100C809ED /* GPTagService.m */,
+				B21A2BE817A5671100C809ED /* GPViewController.m */,
+				B21A2BEA17A5671100C809ED /* GrowthPush.m */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		B2AF913B1793035100FA90EC /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				B21A2B9617A566DD00C809ED /* AFHTTPClient.h */,
+				B21A2B9717A566DD00C809ED /* AFHTTPClient.m */,
+				B21A2B9817A566DD00C809ED /* AFHTTPRequestOperation.h */,
+				B21A2B9917A566DD00C809ED /* AFHTTPRequestOperation.m */,
+				B21A2B9A17A566DD00C809ED /* AFImageRequestOperation.h */,
+				B21A2B9B17A566DD00C809ED /* AFImageRequestOperation.m */,
+				B21A2B9C17A566DD00C809ED /* AFJSONRequestOperation.h */,
+				B21A2B9D17A566DD00C809ED /* AFJSONRequestOperation.m */,
+				B21A2B9E17A566DD00C809ED /* AFNetworkActivityIndicatorManager.h */,
+				B21A2B9F17A566DD00C809ED /* AFNetworkActivityIndicatorManager.m */,
+				B21A2BA017A566DD00C809ED /* AFNetworking.h */,
+				B21A2BA117A566DD00C809ED /* AFPropertyListRequestOperation.h */,
+				B21A2BA217A566DD00C809ED /* AFPropertyListRequestOperation.m */,
+				B21A2BA317A566DD00C809ED /* AFURLConnectionOperation.h */,
+				B21A2BA417A566DD00C809ED /* AFURLConnectionOperation.m */,
+				B21A2BA517A566DD00C809ED /* AFXMLRequestOperation.h */,
+				B21A2BA617A566DD00C809ED /* AFXMLRequestOperation.m */,
+				B21A2BA717A566DD00C809ED /* UIImageView+AFNetworking.h */,
+				B21A2BA817A566DD00C809ED /* UIImageView+AFNetworking.m */,
+			);
+			name = AFNetworking;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B2AF90D51793029800FA90EC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B21A2BA917A566DD00C809ED /* AFHTTPClient.h in Headers */,
+				B21A2BAB17A566DD00C809ED /* AFHTTPRequestOperation.h in Headers */,
+				B21A2BAD17A566DD00C809ED /* AFImageRequestOperation.h in Headers */,
+				B21A2BAF17A566DD00C809ED /* AFJSONRequestOperation.h in Headers */,
+				B21A2BB117A566DD00C809ED /* AFNetworkActivityIndicatorManager.h in Headers */,
+				B21A2BB317A566DD00C809ED /* AFNetworking.h in Headers */,
+				B21A2BB417A566DD00C809ED /* AFPropertyListRequestOperation.h in Headers */,
+				B21A2BB617A566DD00C809ED /* AFURLConnectionOperation.h in Headers */,
+				B21A2BB817A566DD00C809ED /* AFXMLRequestOperation.h in Headers */,
+				B21A2BBA17A566DD00C809ED /* UIImageView+AFNetworking.h in Headers */,
+				B21A2BEE17A5671100C809ED /* GPAppDelegateWrapper.h in Headers */,
+				B21A2BF017A5671100C809ED /* GPAppDelegateWrapperDelegate.h in Headers */,
+				B21A2BF117A5671100C809ED /* GPClient.h in Headers */,
+				B21A2BF317A5671100C809ED /* GPClientService.h in Headers */,
+				B21A2BF517A5671100C809ED /* GPDateUtils.h in Headers */,
+				B21A2BF717A5671100C809ED /* GPDevice.h in Headers */,
+				B21A2BF917A5671100C809ED /* GPDomain.h in Headers */,
+				B21A2BFB17A5671100C809ED /* GPEnvironment.h in Headers */,
+				B21A2BFC17A5671100C809ED /* GPEnvironmentUtils.h in Headers */,
+				B21A2BFE17A5671100C809ED /* GPEvent.h in Headers */,
+				B21A2C0017A5671100C809ED /* GPEventService.h in Headers */,
+				B21A2C0217A5671100C809ED /* GPHttpClient.h in Headers */,
+				B21A2C0417A5671100C809ED /* GPHttpRequest.h in Headers */,
+				B21A2C0617A5671100C809ED /* GPHttpResponse.h in Headers */,
+				B21A2C0817A5671100C809ED /* GPHttpUtils.h in Headers */,
+				B21A2C0A17A5671100C809ED /* GPOS.h in Headers */,
+				B21A2C0B17A5671100C809ED /* GPOSUtils.h in Headers */,
+				B21A2C0D17A5671100C809ED /* GPPreference.h in Headers */,
+				B21A2C0F17A5671100C809ED /* GPRequestMethod.h in Headers */,
+				B21A2C1117A5671100C809ED /* GPService.h in Headers */,
+				B21A2C1317A5671100C809ED /* GPTagService.h in Headers */,
+				B21A2C1517A5671100C809ED /* GPUtils.h in Headers */,
+				B21A2C1617A5671100C809ED /* GPViewController.h in Headers */,
+				B21A2C1817A5671100C809ED /* GrowthPush.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		B2AF90D91793029800FA90EC /* GrowthPush */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2AF90E81793029800FA90EC /* Build configuration list for PBXNativeTarget "GrowthPush" */;
+			buildPhases = (
+				B2AF90D21793029800FA90EC /* ShellScript */,
+				B2AF90D31793029800FA90EC /* Sources */,
+				B2AF90D41793029800FA90EC /* Frameworks */,
+				B2AF90D51793029800FA90EC /* Headers */,
+				B2AF90D61793029800FA90EC /* Resources */,
+				B2AF90D71793029800FA90EC /* ShellScript */,
+				B2AF90D81793029800FA90EC /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GrowthPush;
+			productName = GrowthPush;
+			productReference = B2AF90DA1793029800FA90EC /* GrowthPush.framework */;
+			productType = "com.apple.product-type.framework.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B2AF90CE1793029800FA90EC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "SIROK, Inc.";
+			};
+			buildConfigurationList = B2AF90D11793029800FA90EC /* Build configuration list for PBXProject "GrowthPush" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B2AF90CD1793029800FA90EC;
+			productRefGroup = B2AF90DB1793029800FA90EC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B2AF90D91793029800FA90EC /* GrowthPush */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B2AF90D61793029800FA90EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2AF90E41793029800FA90EC /* InfoPlist.strings in Resources */,
+				B24945901798DA11002163DD /* THIRD_PARTY_ LICENSES in Resources */,
+				B24945921798DA6E002163DD /* README in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B2AF90D21793029800FA90EC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n    # Nothing for the slave script to do\n    exit 0\nfi\nset -u\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    UFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n\tUFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version  from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    UFW_OTHER_PLATFORM=iphonesimulator\nelse\n    UFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\n    UFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\nONLY_ACTIVE_PLATFORM=${ONLY_ACTIVE_PLATFORM:-$ONLY_ACTIVE_ARCH}\n\n# Short-circuit if all binaries are up to date\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n   [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n   [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n  ([[ \"${ONLY_ACTIVE_PLATFORM}\" == \"YES\" ]] || \\\n    ([[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n     [[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n     [[ ! \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\n    )\n  )\nthen\n    exit 0\nfi\n\n\n# Clean other platform if needed\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && [[ \"${ONLY_ACTIVE_PLATFORM}\" != \"YES\" ]]\nthen\n\techo \"Platform \\\"$UFW_SDK_PLATFORM\\\" was cleaned recently. Cleaning \\\"$UFW_OTHER_PLATFORM\\\" as well\"\n\techo xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\n\txcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\nfi\n\n\n# Make sure we are building from fresh binaries\n\nrm -rf \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\n\nif [[ \"${ONLY_ACTIVE_PLATFORM}\" != \"YES\" ]]\nthen\n    rm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\n    rm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nfi\n";
+		};
+		B2AF90D71793029800FA90EC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "HEADERS_ROOT=$SRCROOT/$PRODUCT_NAME\nFRAMEWORK_HEADERS_DIR=\"$BUILT_PRODUCTS_DIR/$WRAPPER_NAME/Versions/$FRAMEWORK_VERSION/Headers\"\n\n## only header files expected at this point\nPUBLIC_HEADERS=$(find $FRAMEWORK_HEADERS_DIR/. -not -type d 2> /dev/null | sed -e \"s@.*/@@g\")\n\nFIND_OPTS=\"\"\nfor PUBLIC_HEADER in $PUBLIC_HEADERS; do\n  if [ -n \"$FIND_OPTS\" ]; then\n    FIND_OPTS=\"$FIND_OPTS -o\"\n  fi\n  FIND_OPTS=\"$FIND_OPTS -name '$PUBLIC_HEADER'\"\ndone\n\nif [ -n \"$FIND_OPTS\" ]; then\n  for ORIG_HEADER in $(eval \"find $HEADERS_ROOT/. $FIND_OPTS\" 2> /dev/null | sed -e \"s@^$HEADERS_ROOT/./@@g\"); do\n    PUBLIC_HEADER=$(basename $ORIG_HEADER)\n    RELATIVE_PATH=$(dirname $ORIG_HEADER)\n    if [ -e $FRAMEWORK_HEADERS_DIR/$PUBLIC_HEADER ]; then\n      mkdir -p \"$FRAMEWORK_HEADERS_DIR/$RELATIVE_PATH\"\n      mv \"$FRAMEWORK_HEADERS_DIR/$PUBLIC_HEADER\" \"$FRAMEWORK_HEADERS_DIR/$RELATIVE_PATH/$PUBLIC_HEADER\"\n    fi\n  done\nfi\n";
+		};
+		B2AF90D81793029800FA90EC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n    # Nothing for the slave script to do\n    exit 0\nfi\nset -u\nexport UFW_MASTER_SCRIPT_RUNNING=1\n\n\n# Functions\n\n## List files in the specified directory, storing to the specified array.\n#\n# @param $1 The path to list\n# @param $2 The name of the array to fill\n#\n##\nlist_files ()\n{\n    filelist=$(ls \"$1\")\n    while read line\n    do\n        eval \"$2[\\${#$2[*]}]=\\\"\\$line\\\"\"\n    done <<< \"$filelist\"\n}\n\n\n# Sanity check\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]]\nthen\n    echo \"Framework target \\\"${TARGET_NAME}\\\" had no source files to build from. Make sure your source files have the correct target membership\"\n    exit 1\nfi\n\n\n# Gather information\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    UFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n    UFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    UFW_OTHER_PLATFORM=iphonesimulator\nelse\n    UFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\n    UFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\nONLY_ACTIVE_PLATFORM=${ONLY_ACTIVE_PLATFORM:-$ONLY_ACTIVE_ARCH}\n\n# Short-circuit if all binaries are up to date.\n# We already checked the other platform in the prerun script.\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\nthen\n    exit 0\nfi\n\nif [ \"${ONLY_ACTIVE_PLATFORM}\" == \"YES\" ]\nthen\n    echo \"ONLY_ACTIVE_PLATFORM=${ONLY_ACTIVE_PLATFORM}: Skipping other platform build\"\nelse\n    # Make sure the other platform gets built\n    \n    echo \"Build other platform\"\n    \n    echo xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\n    xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\n    \n    \n    # Build the fat static library binary\n    \n    echo \"Create universal static library\"\n    \nif [[ \"$XCODE_VERSION_MAJOR\" = \"0500\" ]]\nthen\n    echo \"$DT_TOOLCHAIN_DIR/usr/bin/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n    \"$DT_TOOLCHAIN_DIR/usr/bin/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\nelse\n    echo \"$PLATFORM_DEVELOPER_BIN_DIR/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n    \"$PLATFORM_DEVELOPER_BIN_DIR/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\nfi \n    echo mv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\n    mv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nfi\n\n# Build embedded framework structure\n\necho \"Build Embedded Framework\"\n\necho rm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\necho mkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\necho cp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\ncp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\n\ndeclare -a UFW_FILE_LIST\nlist_files \"${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\" UFW_FILE_LIST\nfor filename in \"${UFW_FILE_LIST[@]}\"\ndo\n    if [[ \"${filename}\" != \"Info.plist\" ]] && [[ ! \"${filename}\" =~ .*\\.lproj$ ]]\n    then\n        echo ln -sfh \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\n        ln -sfh \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\n    fi\ndone\n\n\nif [ \"${ONLY_ACTIVE_PLATFORM}\" != \"YES\" ]\nthen\n    # Replace other platform's framework with a copy of this one (so that both have the same universal binary)\n    \n    echo \"Copy from $UFW_SDK_PLATFORM to $UFW_OTHER_PLATFORM\"\n    \n    echo rm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n    rm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n    echo cp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n    cp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B2AF90D31793029800FA90EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B21A2BAA17A566DD00C809ED /* AFHTTPClient.m in Sources */,
+				B21A2BAC17A566DD00C809ED /* AFHTTPRequestOperation.m in Sources */,
+				B21A2BAE17A566DD00C809ED /* AFImageRequestOperation.m in Sources */,
+				B21A2BB017A566DD00C809ED /* AFJSONRequestOperation.m in Sources */,
+				B21A2BB217A566DD00C809ED /* AFNetworkActivityIndicatorManager.m in Sources */,
+				B21A2BB517A566DD00C809ED /* AFPropertyListRequestOperation.m in Sources */,
+				B21A2BB717A566DD00C809ED /* AFURLConnectionOperation.m in Sources */,
+				B21A2BB917A566DD00C809ED /* AFXMLRequestOperation.m in Sources */,
+				B21A2BBB17A566DD00C809ED /* UIImageView+AFNetworking.m in Sources */,
+				B21A2BEB17A5671100C809ED /* EasyGrowthPush.m in Sources */,
+				B21A2BEF17A5671100C809ED /* GPAppDelegateWrapper.m in Sources */,
+				B21A2BF217A5671100C809ED /* GPClient.m in Sources */,
+				B21A2BF417A5671100C809ED /* GPClientService.m in Sources */,
+				B21A2BF617A5671100C809ED /* GPDateUtils.m in Sources */,
+				B21A2BF817A5671100C809ED /* GPDevice.m in Sources */,
+				B21A2BFA17A5671100C809ED /* GPDomain.m in Sources */,
+				B21A2BFD17A5671100C809ED /* GPEnvironmentUtils.m in Sources */,
+				B21A2BFF17A5671100C809ED /* GPEvent.m in Sources */,
+				B21A2C0117A5671100C809ED /* GPEventService.m in Sources */,
+				B21A2C0317A5671100C809ED /* GPHttpClient.m in Sources */,
+				B21A2C0517A5671100C809ED /* GPHttpRequest.m in Sources */,
+				B21A2C0717A5671100C809ED /* GPHttpResponse.m in Sources */,
+				B21A2C0917A5671100C809ED /* GPHttpUtils.m in Sources */,
+				B21A2C0C17A5671100C809ED /* GPOSUtils.m in Sources */,
+				B21A2C0E17A5671100C809ED /* GPPreference.m in Sources */,
+				B21A2C1017A5671100C809ED /* GPRequestMethod.m in Sources */,
+				B21A2C1217A5671100C809ED /* GPService.m in Sources */,
+				B21A2C1417A5671100C809ED /* GPTagService.m in Sources */,
+				B21A2C1717A5671100C809ED /* GPViewController.m in Sources */,
+				B21A2C1917A5671100C809ED /* GrowthPush.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B2AF90E21793029800FA90EC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2AF90E31793029800FA90EC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B2AF90E61793029800FA90EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_VERSION = 1.0.2;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B2AF90E71793029800FA90EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_VERSION = 1.0.2;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B2AF90E91793029800FA90EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					armv6,
+					"$(ARCHS_STANDARD_32_BIT)",
+				);
+				DYLIB_COMPATIBILITY_VERSION = 3;
+				DYLIB_CURRENT_VERSION = 3;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GrowthPush/GrowthPush-Prefix.pch";
+				INFOPLIST_FILE = "GrowthPush/GrowthPush-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		B2AF90EA1793029800FA90EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					armv6,
+					"$(ARCHS_STANDARD_32_BIT)",
+				);
+				DYLIB_COMPATIBILITY_VERSION = 3;
+				DYLIB_CURRENT_VERSION = 3;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GrowthPush/GrowthPush-Prefix.pch";
+				INFOPLIST_FILE = "GrowthPush/GrowthPush-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B2AF90D11793029800FA90EC /* Build configuration list for PBXProject "GrowthPush" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2AF90E61793029800FA90EC /* Debug */,
+				B2AF90E71793029800FA90EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2AF90E81793029800FA90EC /* Build configuration list for PBXNativeTarget "GrowthPush" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2AF90E91793029800FA90EC /* Debug */,
+				B2AF90EA1793029800FA90EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B2AF90CE1793029800FA90EC /* Project object */;
+}
