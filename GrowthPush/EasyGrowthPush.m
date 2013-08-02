@@ -71,6 +71,7 @@ static EasyGrowthPush *sharedInstance = nil;
     [GrowthPush setApplicationId:applicationId secret:secret environment:environment debug:debug];
     [GrowthPush requestDeviceToken];
     [GrowthPush setDeviceTags];
+    [GrowthPush clearBadge];
 
 }
 

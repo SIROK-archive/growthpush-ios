@@ -75,6 +75,11 @@
  */
 + (void)setDeviceTags;
 
+/**
+ * Clear badge of app icon
+ */
++ (void)clearBadge;
+
 @end
 
 @interface EasyGrowthPush : GrowthPush
