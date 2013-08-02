@@ -41,7 +41,7 @@
 		B21A2BF817A5671100C809ED /* GPDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BC917A5671100C809ED /* GPDevice.m */; };
 		B21A2BF917A5671100C809ED /* GPDomain.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BCA17A5671100C809ED /* GPDomain.h */; };
 		B21A2BFA17A5671100C809ED /* GPDomain.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BCB17A5671100C809ED /* GPDomain.m */; };
-		B21A2BFB17A5671100C809ED /* GPEnvironment.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BCC17A5671100C809ED /* GPEnvironment.h */; };
+		B21A2BFB17A5671100C809ED /* GPEnvironment.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BCC17A5671100C809ED /* GPEnvironment.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B21A2BFC17A5671100C809ED /* GPEnvironmentUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BCD17A5671100C809ED /* GPEnvironmentUtils.h */; };
 		B21A2BFD17A5671100C809ED /* GPEnvironmentUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BCE17A5671100C809ED /* GPEnvironmentUtils.m */; };
 		B21A2BFE17A5671100C809ED /* GPEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BCF17A5671100C809ED /* GPEvent.h */; };
@@ -70,7 +70,7 @@
 		B21A2C1517A5671100C809ED /* GPUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BE617A5671100C809ED /* GPUtils.h */; };
 		B21A2C1617A5671100C809ED /* GPViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BE717A5671100C809ED /* GPViewController.h */; };
 		B21A2C1717A5671100C809ED /* GPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BE817A5671100C809ED /* GPViewController.m */; };
-		B21A2C1817A5671100C809ED /* GrowthPush.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BE917A5671100C809ED /* GrowthPush.h */; };
+		B21A2C1817A5671100C809ED /* GrowthPush.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BE917A5671100C809ED /* GrowthPush.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B21A2C1917A5671100C809ED /* GrowthPush.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BEA17A5671100C809ED /* GrowthPush.m */; };
 		B24945901798DA11002163DD /* THIRD_PARTY_ LICENSES in Resources */ = {isa = PBXBuildFile; fileRef = B249458F1798DA11002163DD /* THIRD_PARTY_ LICENSES */; };
 		B24945921798DA6E002163DD /* README in Resources */ = {isa = PBXBuildFile; fileRef = B24945911798DA6E002163DD /* README */; };
@@ -303,6 +303,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B21A2C1817A5671100C809ED /* GrowthPush.h in Headers */,
+				B21A2BFB17A5671100C809ED /* GPEnvironment.h in Headers */,
 				B21A2BA917A566DD00C809ED /* AFHTTPClient.h in Headers */,
 				B21A2BAB17A566DD00C809ED /* AFHTTPRequestOperation.h in Headers */,
 				B21A2BAD17A566DD00C809ED /* AFImageRequestOperation.h in Headers */,
@@ -320,7 +322,6 @@
 				B21A2BF517A5671100C809ED /* GPDateUtils.h in Headers */,
 				B21A2BF717A5671100C809ED /* GPDevice.h in Headers */,
 				B21A2BF917A5671100C809ED /* GPDomain.h in Headers */,
-				B21A2BFB17A5671100C809ED /* GPEnvironment.h in Headers */,
 				B21A2BFC17A5671100C809ED /* GPEnvironmentUtils.h in Headers */,
 				B21A2BFE17A5671100C809ED /* GPEvent.h in Headers */,
 				B21A2C0017A5671100C809ED /* GPEventService.h in Headers */,
@@ -336,7 +337,6 @@
 				B21A2C1317A5671100C809ED /* GPTagService.h in Headers */,
 				B21A2C1517A5671100C809ED /* GPUtils.h in Headers */,
 				B21A2C1617A5671100C809ED /* GPViewController.h in Headers */,
-				B21A2C1817A5671100C809ED /* GrowthPush.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,7 +509,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_VERSION = 1.0.2;
+				FRAMEWORK_VERSION = 1.0.3;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -539,7 +539,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
-				FRAMEWORK_VERSION = 1.0.2;
+				FRAMEWORK_VERSION = 1.0.3;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;

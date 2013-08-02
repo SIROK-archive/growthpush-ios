@@ -42,6 +42,18 @@
 
 }
 
+- (BOOL) respondsToSelector:(SEL)aSelector {
+    
+    if([super respondsToSelector:aSelector])
+        return YES;
+    
+    if([originalAppDelegate respondsToSelector:aSelector])
+        return YES;
+    
+    return NO;
+    
+}
+
 - (void) applicationDidBecomeActive:(UIApplication *)application {
 
     if ([delegate respondsToSelector:@selector(willPerformApplicationDidBecomeActive:)])

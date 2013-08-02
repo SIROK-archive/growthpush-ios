@@ -95,6 +95,10 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
     [[GrowthPush sharedInstance] setDeviceTags];
 }
 
++ (void)clearBadge {
+    [[GrowthPush sharedInstance] clearBadge];
+}
+
 - (id) init {
     self = [super init];
     if (self)
@@ -190,6 +194,12 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
     if ([GPDevice build])
         [self setTag:@"Build" value:[GPDevice build]];
 
+}
+
+- (void)clearBadge {
+    
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+    
 }
 
 - (void) registerClient {
