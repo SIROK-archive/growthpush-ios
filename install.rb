@@ -1,9 +1,24 @@
 require 'rubygems'
-gem "xcodeproj", "~> 0.9.0"
-require 'xcodeproj'
 
-def error (message)
-	STDERR.print "[ERROR] #{message}\n"
+module Tty extend self
+	def red; escape 31; end
+	def green; escape 32; end
+	def yellow; escape 33; end
+	def blue; escape 34 end
+	def reset; escape 0; end
+	def escape n; "\033[#{n}m" if STDOUT.tty?; end
+end
+
+def error message
+	STDERR.print "#{Tty.red}[ERROR]#{Tty.reset} #{message}\n"
+	exit 1
+end
+
+begin
+	gem "xcodeproj", "~> 0.9.0"
+	require 'xcodeproj'
+rescue LoadError
+	error("xcodeproj gem is required.\nRun \"#{Tty.yellow}gem install xcodeproj#{Tty.reset}\" or \"#{Tty.yellow}sudo gem install xcodeproj#{Tty.reset}\"\nIf it is installed, restart the shell.")
 	exit 1
 end
 
@@ -108,7 +123,7 @@ if project_files.size < 1 then
 end
 app_delegate_file_path = app_delegate_files[0]
 app_delegate_contents = File.read(app_delegate_file_path)
-app_delegate_contents = app_delegate_contents.sub(/application:[^:]+didFinishLaunchingWithOptions:[^:]+?{/, "\\0\n    #{initialize_code}")
+app_delegate_contents = app_delegate_contents.sub(/application:[^:]+didFinishLaunchingWithOptions:[^:]+?\{/, "\\0\n    #{initialize_code}")
 
 # Add Framework Search Path Option
 add_framework_search_path(target.build_settings('Debug'), '$(inherited)')
@@ -140,10 +155,10 @@ puts "Downloading GrowthPush.framework..."
 system "mkdir -p /tmp/GrowthPush && curl -fsSL #{framework_url} -o /tmp/GrowthPush/GrowthPush.framework.zip && unzip -qo /tmp/GrowthPush/GrowthPush.framework.zip -d /tmp/GrowthPush/ && mv /tmp/GrowthPush/GrowthPush.framework ./ && rm -rf /tmp/GrowthPush"
 
 puts "Editing source files..."
-File.write(app_delegate_file_path, app_delegate_contents)
-File.write(prefix_header_file_path, prefix_header_contents)
+File.open(app_delegate_file_path, 'w') { |file| file << app_delegate_contents }
+File.open(prefix_header_file_path, 'w') { |file| file << prefix_header_contents }
 
 puts "Update project files..."
 project.save_as("#{root_directory}/#{project_file}")
 
-puts "\nCompleted!"
+puts "\n#{Tty.green}Completed!#{Tty.reset}"
