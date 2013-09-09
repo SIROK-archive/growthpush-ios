@@ -29,7 +29,13 @@
 
 @end
 
-static EasyGrowthPush *sharedInstance = nil;
+@interface GrowthPush ()
+
++ (id) sharedInstance;
+
+- (void) setApplicationId:(NSInteger)newApplicationId secret:(NSString *)newSecret environment:(GPEnvironment)newEnvironment debug:(BOOL)newDebug;
+
+@end
 
 @interface EasyGrowthPush () {
 
@@ -48,19 +54,13 @@ static EasyGrowthPush *sharedInstance = nil;
 @synthesize appDelegateWrapper;
 @synthesize appDelegateIntercepter;
 
-+ (EasyGrowthPush *) sharedInstance {
-    @synchronized(self) {
-        if (!sharedInstance)
-            sharedInstance = [[self alloc] init];
-        return sharedInstance;
-    }
-}
-
 + (void) setApplicationId:(NSInteger)applicationId secret:(NSString *)secret environment:(GPEnvironment)environment debug:(BOOL)debug {
     [[self sharedInstance] setApplicationId:applicationId secret:secret environment:environment debug:debug];
 }
 
 - (void) setApplicationId:(NSInteger)applicationId secret:(NSString *)secret environment:(GPEnvironment)environment debug:(BOOL)debug {
+    
+    [super setApplicationId:applicationId secret:secret environment:environment debug:debug];
 
     self.appDelegateWrapper = [[[GPAppDelegateWrapper alloc] init] autorelease];
     [appDelegateWrapper setOriginalAppDelegate:[[UIApplication sharedApplication] delegate]];
@@ -68,7 +68,6 @@ static EasyGrowthPush *sharedInstance = nil;
     [appDelegateWrapper setDelegate:appDelegateIntercepter];
     [[UIApplication sharedApplication] setDelegate:appDelegateWrapper];
 
-    [GrowthPush setApplicationId:applicationId secret:secret environment:environment debug:debug];
     [GrowthPush requestDeviceToken];
     [GrowthPush setDeviceTags];
     [GrowthPush clearBadge];
