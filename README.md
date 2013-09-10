@@ -1,9 +1,34 @@
-growthpush-ios-sdk
+GrowthPush SDK for iOS
 ==================
 
-GrowthPush SDK for iPhone/iPad
+GrowthPush is push notification and analysis platform for smart devices.
 
 https://growthpush.com/
+
+## Easy usage
+
+```objc
+[EasyGrowthPush setApplicationId:YOUR_APP_ID secret:@"YOUR_APP_SECRET" environment:kGrowthPushEnvironment debug:YES]; 
+```
+
+That's all. GrowthPush instance will get APNS device token, send it to server, track launching event and tag the device information. You can get the app ID and secret on web site of GrowthPush. 
+
+You can get furthermore information on [GrowthPush documetations](https://growthpush.com/documents).
+
+## Building GrowthPush.framework
+
+[iOS-Universal-Framework](https://github.com/kstenerud/iOS-Universal-Framework) is required.
+
+```shell
+git clone https://github.com/kstenerud/iOS-Universal-Framework.git
+cd ./iOS-Universal-Framework/Real\ Framework/
+./install.sh
+```
+
+1. Set the build configuration of "Run" to Release.
+2. Select the destination to "iOS device"
+3. Build the framework
+4. The framework will be generated under "Products"
 
 ## License
 
