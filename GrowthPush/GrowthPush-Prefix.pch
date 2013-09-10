@@ -8,3 +8,6 @@
 #import <SystemConfiguration/SystemConfiguration.h>
 #import <MobileCoreServices/MobileCoreServices.h>
 #endif
+
+#define NSJSONSerialization NSClassFromString(@"NSJSONSerialization")
+
