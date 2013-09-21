@@ -75,7 +75,7 @@
 		B24945901798DA11002163DD /* THIRD_PARTY_ LICENSES in Resources */ = {isa = PBXBuildFile; fileRef = B249458F1798DA11002163DD /* THIRD_PARTY_ LICENSES */; };
 		B24945921798DA6E002163DD /* README in Resources */ = {isa = PBXBuildFile; fileRef = B24945911798DA6E002163DD /* README */; };
 		B2AF90E41793029800FA90EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B2AF90E21793029800FA90EC /* InfoPlist.strings */; };
-		B2C68C0C17ECC5AB001F0BF7 /* EGPOption.h in Headers */ = {isa = PBXBuildFile; fileRef = B2C68C0B17ECC5AB001F0BF7 /* EGPOption.h */; };
+		B2C68C0C17ECC5AB001F0BF7 /* EGPOption.h in Headers */ = {isa = PBXBuildFile; fileRef = B2C68C0B17ECC5AB001F0BF7 /* EGPOption.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -308,6 +308,7 @@
 			files = (
 				B21A2C1817A5671100C809ED /* GrowthPush.h in Headers */,
 				B21A2BFB17A5671100C809ED /* GPEnvironment.h in Headers */,
+				B2C68C0C17ECC5AB001F0BF7 /* EGPOption.h in Headers */,
 				B21A2BA917A566DD00C809ED /* AFHTTPClient.h in Headers */,
 				B21A2BAB17A566DD00C809ED /* AFHTTPRequestOperation.h in Headers */,
 				B21A2BAD17A566DD00C809ED /* AFImageRequestOperation.h in Headers */,
@@ -328,7 +329,6 @@
 				B21A2BFC17A5671100C809ED /* GPEnvironmentUtils.h in Headers */,
 				B21A2BFE17A5671100C809ED /* GPEvent.h in Headers */,
 				B21A2C0017A5671100C809ED /* GPEventService.h in Headers */,
-				B2C68C0C17ECC5AB001F0BF7 /* EGPOption.h in Headers */,
 				B21A2C0217A5671100C809ED /* GPHttpClient.h in Headers */,
 				B21A2C0417A5671100C809ED /* GPHttpRequest.h in Headers */,
 				B21A2C0617A5671100C809ED /* GPHttpResponse.h in Headers */,
