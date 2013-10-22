@@ -18,4 +18,10 @@ Pod::Spec.new do |s|
     s.platform     = :ios, '5.0'
     s.requires_arc = false
     s.dependency   'AFNetworking', '~> 1.3.2'
+    s.prefix_header_contents = <<-EOS
+        #ifdef __OBJC__
+            #import <SystemConfiguration/SystemConfiguration.h>
+            #import <MobileCoreServices/MobileCoreServices.h>
+        #endif
+        EOS
 end
