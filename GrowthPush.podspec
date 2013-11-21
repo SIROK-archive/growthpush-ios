@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
     s.name         = "GrowthPush"
-    s.version      = "1.0.5"
+    s.version      = "1.0.6"
     s.summary      = "GrowthPush SDK for iPhone/iPad"
     s.description  = <<-DESC
                      GrowthPush is push notification and analysis platform for smart devices.
