@@ -72,6 +72,13 @@
 - (id) init {
     self = [super init];
     if (self){
+
+        self.appDelegateWrapper = [[[GPAppDelegateWrapper alloc] init] autorelease];
+        [appDelegateWrapper setOriginalAppDelegate:[[UIApplication sharedApplication] delegate]];
+        self.appDelegateIntercepter = [[[EasyGrowthPushAppDelegateIntercepter alloc] init] autorelease];
+        [appDelegateWrapper setDelegate:appDelegateIntercepter];
+        [[UIApplication sharedApplication] setDelegate:appDelegateWrapper];
+
         self.option = EGPOptionAll;
     }
     return self;
@@ -80,16 +87,10 @@
 - (void) setApplicationId:(NSInteger)applicationId secret:(NSString *)secret environment:(GPEnvironment)environment debug:(BOOL)debug {
     
     [super setApplicationId:applicationId secret:secret environment:environment debug:debug];
-    
-    self.appDelegateWrapper = [[[GPAppDelegateWrapper alloc] init] autorelease];
-    [appDelegateWrapper setOriginalAppDelegate:[[UIApplication sharedApplication] delegate]];
-    self.appDelegateIntercepter = [[[EasyGrowthPushAppDelegateIntercepter alloc] init] autorelease];
-    [appDelegateWrapper setDelegate:appDelegateIntercepter];
-    [[UIApplication sharedApplication] setDelegate:appDelegateWrapper];
-    
+
     [GrowthPush clearBadge];
     [GrowthPush requestDeviceToken];
-    
+
     if ((option & EGPOptionTagDevie) && [GPDevice device])
         [GrowthPush setTag:@"Device" value:[GPDevice device]];
     if ((option & EGPOptionTagOS) && [GPDevice os])
@@ -102,7 +103,7 @@
         [GrowthPush setTag:@"Version" value:[GPDevice version]];
     if ((option & EGPOptionTagBuild) && [GPDevice build])
         [GrowthPush setTag:@"Build" value:[GPDevice build]];
-    
+
 }
 
 - (void) setApplicationId:(NSInteger)applicationId secret:(NSString *)secret environment:(GPEnvironment)environment debug:(BOOL)debug option:(EGPOption)newOption {
