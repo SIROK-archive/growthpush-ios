@@ -7,25 +7,21 @@
 //
 
 #import "GPHttpClient.h"
-#import "AFNetworking.h"
 
 static GPHttpClient *sharedInstance = nil;
 
 @interface GPHttpClient () {
 
-    AFHTTPClient *httpClient;
     NSURL *baseUrl;
 
 }
 
-@property (nonatomic, retain) AFHTTPClient *httpClient;
 @property (nonatomic, retain) NSURL *baseUrl;
 
 @end
 
 @implementation GPHttpClient
 
-@synthesize httpClient;
 @synthesize baseUrl;
 
 + (GPHttpClient *) sharedInstance {
@@ -37,28 +33,44 @@ static GPHttpClient *sharedInstance = nil;
 }
 
 - (void) dealloc {
-
-    self.httpClient = nil;
+    
     self.baseUrl = nil;
-
+    
     [super dealloc];
-
+    
 }
 
 - (void) httpRequest:(GPHttpRequest *)httpRequest success:(void (^)(GPHttpResponse *httpResponse))success fail:(void (^)(GPHttpResponse *httpResponse))fail {
-
-    NSURLRequest *urlRequest = [httpRequest urlRequestWithBaseUrl:baseUrl];
-
-    AFJSONRequestOperation *requestOperation = [AFJSONRequestOperation JSONRequestOperationWithRequest:urlRequest success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-            if (success)
-                success([GPHttpResponse instanceWithUrlRequest:urlRequest httpUrlResponse:response error:nil body:JSON]);
-        } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
-            if (fail)
-                fail([GPHttpResponse instanceWithUrlRequest:urlRequest httpUrlResponse:response error:error body:JSON]);
-        }];
-
-    [requestOperation start];
-
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        
+        NSURLRequest *urlRequest = [httpRequest urlRequestWithBaseUrl:baseUrl];
+        NSHTTPURLResponse *urlResponse = nil;
+        NSError *error = nil;
+        NSData *data = [NSURLConnection sendSynchronousRequest:urlRequest returningResponse:&urlResponse error:&error];
+        
+        if (error) {
+            GPHttpResponse *httpResponse = [GPHttpResponse instanceWithUrlRequest:urlRequest httpUrlResponse:urlResponse error:error body:nil];
+            if (fail) {
+                fail(httpResponse);
+            }
+            return;
+        }
+        
+        id body = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (urlResponse.statusCode >= 200 && urlResponse.statusCode < 300) {
+                if (success)
+                    success([GPHttpResponse instanceWithUrlRequest:urlRequest httpUrlResponse:urlResponse error:nil body:body]);
+            } else {
+                if (fail)
+                    fail([GPHttpResponse instanceWithUrlRequest:urlRequest httpUrlResponse:urlResponse error:error body:body]);
+            }
+        });
+        
+    });
+    
 }
 
 @end
