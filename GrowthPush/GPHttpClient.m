@@ -7,6 +7,7 @@
 //
 
 #import "GPHttpClient.h"
+#import "GPHTTPOperation.h"
 
 static GPHttpClient *sharedInstance = nil;
 
@@ -42,7 +43,7 @@ static GPHttpClient *sharedInstance = nil;
 
 - (void) httpRequest:(GPHttpRequest *)httpRequest success:(void (^)(GPHttpResponse *httpResponse))success fail:(void (^)(GPHttpResponse *httpResponse))fail {
 
-    NSURLRequest *urlRequest = [httpRequest urlRequestWithBaseUrl:baseUrl];
+    [[NSOperationQueue mainQueue] addOperation:[GPHTTPOperation instanceWithRequest:[httpRequest urlRequestWithBaseUrl:baseUrl] success:success fail:fail]];
 
 }
 
