@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B28611DE19059EF000C285E1 /* EventTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B28611DD19059EF000C285E1 /* EventTests.m */; };
+		B28611E119059F4000C285E1 /* TagTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B28611E019059F4000C285E1 /* TagTests.m */; };
+		B28611E71905A91400C285E1 /* GrowthPushTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B28611E61905A91400C285E1 /* GrowthPushTests.m */; };
 		B2B7EF2019057B4400BE82EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2B7EF1F19057B4400BE82EE /* Foundation.framework */; };
 		B2B7EF2219057B4400BE82EE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2B7EF2119057B4400BE82EE /* CoreGraphics.framework */; };
 		B2B7EF2419057B4400BE82EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2B7EF2319057B4400BE82EE /* UIKit.framework */; };
@@ -20,7 +23,7 @@
 		B2B7EF4019057B4400BE82EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2B7EF1F19057B4400BE82EE /* Foundation.framework */; };
 		B2B7EF4119057B4400BE82EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2B7EF2319057B4400BE82EE /* UIKit.framework */; };
 		B2B7EF4919057B4400BE82EE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B2B7EF4719057B4400BE82EE /* InfoPlist.strings */; };
-		B2B7EF4B19057B4400BE82EE /* GrowthPushSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B2B7EF4A19057B4400BE82EE /* GrowthPushSampleTests.m */; };
+		B2B7EF4B19057B4400BE82EE /* GrowthPushTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = B2B7EF4A19057B4400BE82EE /* GrowthPushTestCase.m */; };
 		B2B7EF5A19057D0B00BE82EE /* GrowthPush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2B7EF5919057D0B00BE82EE /* GrowthPush.framework */; };
 		B2B7EF5B19057D0B00BE82EE /* GrowthPush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2B7EF5919057D0B00BE82EE /* GrowthPush.framework */; };
 /* End PBXBuildFile section */
@@ -36,6 +39,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B28611DD19059EF000C285E1 /* EventTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTests.m; sourceTree = "<group>"; };
+		B28611DF19059F4000C285E1 /* TagTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagTests.h; sourceTree = "<group>"; };
+		B28611E019059F4000C285E1 /* TagTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagTests.m; sourceTree = "<group>"; };
+		B28611E219059F6500C285E1 /* EventTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventTests.h; sourceTree = "<group>"; };
+		B28611E319059F6500C285E1 /* GrowthPushTestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GrowthPushTestCase.h; sourceTree = "<group>"; };
+		B28611E51905A91400C285E1 /* GrowthPushTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrowthPushTests.h; sourceTree = "<group>"; };
+		B28611E61905A91400C285E1 /* GrowthPushTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrowthPushTests.m; sourceTree = "<group>"; };
 		B2B7EF1C19057B4400BE82EE /* GrowthPushSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrowthPushSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2B7EF1F19057B4400BE82EE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B2B7EF2119057B4400BE82EE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -54,7 +64,7 @@
 		B2B7EF3E19057B4400BE82EE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		B2B7EF4619057B4400BE82EE /* GrowthPushSampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GrowthPushSampleTests-Info.plist"; sourceTree = "<group>"; };
 		B2B7EF4819057B4400BE82EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		B2B7EF4A19057B4400BE82EE /* GrowthPushSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GrowthPushSampleTests.m; sourceTree = "<group>"; };
+		B2B7EF4A19057B4400BE82EE /* GrowthPushTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GrowthPushTestCase.m; sourceTree = "<group>"; };
 		B2B7EF5919057D0B00BE82EE /* GrowthPush.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GrowthPush.framework; path = ../GrowthPush.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,7 +153,14 @@
 		B2B7EF4419057B4400BE82EE /* GrowthPushSampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				B2B7EF4A19057B4400BE82EE /* GrowthPushSampleTests.m */,
+				B28611E219059F6500C285E1 /* EventTests.h */,
+				B28611DD19059EF000C285E1 /* EventTests.m */,
+				B28611E319059F6500C285E1 /* GrowthPushTestCase.h */,
+				B2B7EF4A19057B4400BE82EE /* GrowthPushTestCase.m */,
+				B28611E51905A91400C285E1 /* GrowthPushTests.h */,
+				B28611E61905A91400C285E1 /* GrowthPushTests.m */,
+				B28611DF19059F4000C285E1 /* TagTests.h */,
+				B28611E019059F4000C285E1 /* TagTests.m */,
 				B2B7EF4519057B4400BE82EE /* Supporting Files */,
 			);
 			path = GrowthPushSampleTests;
@@ -268,7 +285,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2B7EF4B19057B4400BE82EE /* GrowthPushSampleTests.m in Sources */,
+				B28611DE19059EF000C285E1 /* EventTests.m in Sources */,
+				B28611E119059F4000C285E1 /* TagTests.m in Sources */,
+				B28611E71905A91400C285E1 /* GrowthPushTests.m in Sources */,
+				B2B7EF4B19057B4400BE82EE /* GrowthPushTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +346,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -344,6 +365,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -364,6 +386,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -375,6 +398,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -428,8 +452,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(PROJECT_DIR)/libs",
-					"/Users/kataoka/growthpush-ios",
+					"$(PROJECT_DIR)/../",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GrowthPushSample/GrowthPushSample-Prefix.pch";
@@ -439,6 +462,7 @@
 				);
 				INFOPLIST_FILE = "GrowthPushSampleTests/GrowthPushSampleTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "C0925ABA-C7F9-44F9-BF3F-802CFF2B8F06";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -452,13 +476,13 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(PROJECT_DIR)/libs",
-					"/Users/kataoka/growthpush-ios",
+					"$(PROJECT_DIR)/../",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GrowthPushSample/GrowthPushSample-Prefix.pch";
 				INFOPLIST_FILE = "GrowthPushSampleTests/GrowthPushSampleTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "C0925ABA-C7F9-44F9-BF3F-802CFF2B8F06";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
