@@ -205,6 +205,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "SIROK, Inc.";
 				TargetAttributes = {
+					B2B7EF1B19057B4400BE82EE = {
+						DevelopmentTeam = KXJAKTLCBX;
+					};
 					B2B7EF3C19057B4400BE82EE = {
 						TestTargetID = B2B7EF1B19057B4400BE82EE;
 					};
@@ -339,7 +342,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -371,7 +374,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -382,6 +385,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/../",
@@ -390,6 +395,7 @@
 				GCC_PREFIX_HEADER = "GrowthPushSample/GrowthPushSample-Prefix.pch";
 				INFOPLIST_FILE = "GrowthPushSample/GrowthPushSample-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "C0925ABA-C7F9-44F9-BF3F-802CFF2B8F06";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -399,6 +405,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/../",
@@ -407,6 +415,7 @@
 				GCC_PREFIX_HEADER = "GrowthPushSample/GrowthPushSample-Prefix.pch";
 				INFOPLIST_FILE = "GrowthPushSample/GrowthPushSample-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

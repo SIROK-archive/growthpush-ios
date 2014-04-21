@@ -1,0 +1,57 @@
+#!/bin/bash
+
+TOOL_DIR=`dirname $0`
+ROOT_DIR="${TOOL_DIR}/../"
+FILES=('GrowthPush.framework' 'GrowthPush.podspec' 'README.md' 'LICENSE' 'CHANGES')
+
+for FILE in ${FILES[@]}; do
+	echo -n "Check ${FILE}... "
+	if [ -f ${ROOT_DIR}/${FILE} ]; then
+		echo 'exists.'
+	elif [ -d ${ROOT_DIR}/${FILE} ]; then
+		echo 'exists.'
+	else
+		echo 'does NOT exist.'
+		echo '[FATAL] Failed to verify package.'
+		exit 1;
+	fi
+done
+
+HEADERS=('GrowthPush' 'GPEnvironment' 'EGPOption')
+
+for HEADER in ${HEADERS[@]}; do
+	echo -n "Check ${HEADER}.h... "
+	if [ -f ${ROOT_DIR}/GrowthPush.framework/Headers/${HEADER}.h ]; then
+		echo 'exists.'
+	else
+		echo 'does NOT exist.'
+		echo '[FATAL] Failed to verify package.'
+		exit 1;
+	fi
+done
+
+CLASSES=`otool -vL GrowthPush.framework/GrowthPush | grep '\.o' | sed 's/^.*(\(.*\).o).*/\1/' | sort`
+SOURCES=`find ./source/GrowthPush -name '*.m' -exec basename {} '.m' \; | sort`
+echo -n "Class symbols... "
+if [ "$CLASSES" == "$SOURCES" ]; then
+	echo 'are matched.'
+else
+	echo 'are NOT matched.'
+	echo '[FATAL] Failed to verify package.'
+	exit 1;
+fi
+
+EXPECTED_ARCHITECTURES=('armv7' 'armv7s' 'arm64' 'i386')
+ARCHITECTURES=`xcrun -sdk iphoneos lipo -info ${ROOT_DIR}/GrowthPush.framework/GrowthPush | sed 's/^.*: \(.*\)$/\1/' | tr -s ' ' '\n'`
+for EXPECTED_ARCHITECTURE in ${EXPECTED_ARCHITECTURES[@]}; do
+	echo -n "Check architecture ${EXPECTED_ARCHITECTURE}... "
+	if [ `echo "${ARCHITECTURES}" | grep "^${EXPECTED_ARCHITECTURE}\$" | wc -l` -gt 0 ]; then
+		echo 'exists.'
+	else
+		echo 'does NOT exist.'
+		echo '[FATAL] Failed to verify package.'
+		exit 1;
+	fi
+done
+
+echo '[SUCCESS] Completed to verify package.'
