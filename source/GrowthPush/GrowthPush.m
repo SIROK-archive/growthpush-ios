@@ -144,7 +144,12 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 }
 
 - (void) trackEvent:(NSString *)name value:(NSString *)value {
-
+    
+    if(!name){
+        [self log:@"Event name cannot be nil."];
+        return;
+    }
+    
     [self runAfterRegister:^{
         [self log:@"Sending event ... (name: %@)", name];
         [[GPEventService sharedInstance] createWithClientId:client.id code:client.code name:name value:value success:^(GPEvent *event) {
@@ -160,6 +165,11 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 
 - (void) setTag:(NSString *)name value:(NSString *)value {
 
+    if(!name){
+        [self log:@"Tag name cannot be nil."];
+        return;
+    }
+    
     [self runAfterRegister:^{
 
         NSString *existValue = [tags objectForKey:name];
