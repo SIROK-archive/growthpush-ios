@@ -12,6 +12,10 @@
 
 @optional
 
+- (BOOL)willPerformApplication:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions;
+- (BOOL)didPerformApplication:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions;
+- (BOOL)willPerformApplication:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions;
+- (BOOL)didPerformApplication:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions;
 - (void)willPerformApplicationDidBecomeActive:(UIApplication *)application;
 - (void)didPerformApplicationDidBecomeActive:(UIApplication *)application;
 - (void)willPerformApplicationWillResignActive:(UIApplication *)application;

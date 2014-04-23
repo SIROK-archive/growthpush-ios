@@ -54,6 +54,41 @@
     
 }
 
+
+- (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+ 
+    BOOL returnValue = YES;
+    
+    if ([delegate respondsToSelector:@selector(willPerformApplication:willFinishLaunchingWithOptions:)])
+        returnValue = returnValue && [delegate willPerformApplication:application willFinishLaunchingWithOptions:launchOptions];
+    
+    if ([originalAppDelegate respondsToSelector:@selector(application:willFinishLaunchingWithOptions:)])
+        returnValue = returnValue && [originalAppDelegate application:application willFinishLaunchingWithOptions:launchOptions];
+    
+    if ([delegate respondsToSelector:@selector(didPerformApplication:willFinishLaunchingWithOptions:)])
+        returnValue = returnValue && [delegate willPerformApplication:application didFinishLaunchingWithOptions:launchOptions];
+    
+    return returnValue;
+    
+}
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    BOOL returnValue = YES;
+    
+    if ([delegate respondsToSelector:@selector(willPerformApplication:didFinishLaunchingWithOptions:)])
+        returnValue = returnValue && [delegate willPerformApplication:application didFinishLaunchingWithOptions:launchOptions];
+    
+    if ([originalAppDelegate respondsToSelector:@selector(application:didFinishLaunchingWithOptions:)])
+        returnValue = returnValue && [originalAppDelegate application:application didFinishLaunchingWithOptions:launchOptions];
+    
+    if ([delegate respondsToSelector:@selector(didPerformApplication:didFinishLaunchingWithOptions:)])
+        returnValue = returnValue && [delegate willPerformApplication:application didFinishLaunchingWithOptions:launchOptions];
+    
+    return returnValue;
+    
+}
+
 - (void) applicationDidBecomeActive:(UIApplication *)application {
 
     if ([delegate respondsToSelector:@selector(willPerformApplicationDidBecomeActive:)])
