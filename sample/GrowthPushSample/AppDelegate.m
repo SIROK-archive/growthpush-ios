@@ -15,8 +15,6 @@
 
     [EasyGrowthPush setApplicationId:1070 secret:@"BhcrsJHoEvWT85437EnSJ1COUhflEg1E" environment:kGrowthPushEnvironment debug:YES];
 
-    _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    _window.rootViewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
     [_window makeKeyAndVisible];
 
     return YES;

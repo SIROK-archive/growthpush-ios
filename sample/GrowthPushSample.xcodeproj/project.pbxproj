@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24A90B0B190976D600AE7727 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24A90B0A190976D600AE7727 /* MainWindow.xib */; };
 		B28611DE19059EF000C285E1 /* EventTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B28611DD19059EF000C285E1 /* EventTests.m */; };
 		B28611E119059F4000C285E1 /* TagTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B28611E019059F4000C285E1 /* TagTests.m */; };
 		B28611E71905A91400C285E1 /* GrowthPushTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B28611E61905A91400C285E1 /* GrowthPushTests.m */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		24A90B0A190976D600AE7727 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		B28611DD19059EF000C285E1 /* EventTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTests.m; sourceTree = "<group>"; };
 		B28611DF19059F4000C285E1 /* TagTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagTests.h; sourceTree = "<group>"; };
 		B28611E019059F4000C285E1 /* TagTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagTests.m; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				B2B7EF3419057B4400BE82EE /* ViewController.h */,
 				B2B7EF3519057B4400BE82EE /* ViewController.m */,
 				B2B51DC91909594D0025CDBD /* ViewController.xib */,
+				24A90B0A190976D600AE7727 /* MainWindow.xib */,
 				B2B7EF3719057B4400BE82EE /* Images.xcassets */,
 				B2B7EF2619057B4400BE82EE /* Supporting Files */,
 			);
@@ -254,6 +257,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24A90B0B190976D600AE7727 /* MainWindow.xib in Resources */,
 				B2B7EF3819057B4400BE82EE /* Images.xcassets in Resources */,
 				B2B51DCA1909594D0025CDBD /* ViewController.xib in Resources */,
 				B2B7EF2A19057B4400BE82EE /* InfoPlist.strings in Resources */,
