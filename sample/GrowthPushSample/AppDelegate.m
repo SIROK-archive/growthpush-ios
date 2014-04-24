@@ -7,16 +7,21 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 
 @implementation AppDelegate
 
-- (BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    
     [EasyGrowthPush setApplicationId:1070 secret:@"BhcrsJHoEvWT85437EnSJ1COUhflEg1E" environment:kGrowthPushEnvironment debug:YES];
-
+    
+    _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    _window.rootViewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+    [_window makeKeyAndVisible];
+    
     return YES;
-
+    
 }
 
 - (void) applicationWillResignActive:(UIApplication *)application {

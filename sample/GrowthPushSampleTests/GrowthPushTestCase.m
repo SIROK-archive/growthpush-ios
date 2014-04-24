@@ -20,18 +20,23 @@ static NSString *const kGPPreferenceFileName = @"growthpush-preferences";
 
 @end
 
+@interface GrowthPush ()
+
++ (GrowthPush *)sharedInstance;
+- (GPClient *)client;
+@property (nonatomic, retain) GPClient *client;
+@property (nonatomic, retain) NSMutableDictionary *tags;
+
+@end
+
 @implementation GrowthPushTestCase
 
-+ (GrowthPush *) growthPush {
-
-    return [[GrowthPush class] performSelector:@selector(sharedInstance)];
-
++ (GrowthPush *)growthPush {
+    return [GrowthPush sharedInstance];
 }
 
-+ (GPClient *) client {
-
-    return [[self growthPush] performSelector:@selector(client)];
-
++ (GPClient *)client {
+    return [[self growthPush] client];
 }
 
 + (void) initialize {
@@ -50,11 +55,11 @@ static NSString *const kGPPreferenceFileName = @"growthpush-preferences";
 
 }
 
-+ (void) initializeGrowthPush {
-
-    [[self growthPush] performSelector:@selector(setClient:) withObject:nil];
-    [[self growthPush] performSelector:@selector(setTags:) withObject:nil];
-
++ (void)initializeGrowthPush {
+    
+    [[self growthPush] setClient:nil];
+    [[self growthPush] setTags:nil];
+    
 }
 
 + (void) waitOperation:(NSInteger)second {
