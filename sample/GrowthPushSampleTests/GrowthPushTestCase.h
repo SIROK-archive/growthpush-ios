@@ -24,6 +24,8 @@ static NSString *const kApplicationSecret = @ "BhcrsJHoEvWT85437EnSJ1COUhflEg1E"
 
 @interface GPClient
 
+@property (nonatomic, assign) GPEnvironment environment;
+
 @end
 
 @interface GPPreference : NSObject

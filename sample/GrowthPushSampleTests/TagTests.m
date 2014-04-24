@@ -41,17 +41,17 @@
 }
 
 - (void) testSetDeviceTags {
-    NSUInteger tagsCount = [[[GrowthPush sharedInstance] tags] count];
 
     [GrowthPush setDeviceTags];
     [[self class] waitOperation];
-    XCTAssertEqual([[[GrowthPush sharedInstance] tags] count], tagsCount + 6);
+    
     XCTAssertNotNil([[[GrowthPush sharedInstance] tags] objectForKey:@"OS"]);
     XCTAssertNotNil([[[GrowthPush sharedInstance] tags] objectForKey:@"Version"]);
     XCTAssertNotNil([[[GrowthPush sharedInstance] tags] objectForKey:@"Language"]);
     XCTAssertNotNil([[[GrowthPush sharedInstance] tags] objectForKey:@"Time Zone"]);
     XCTAssertNotNil([[[GrowthPush sharedInstance] tags] objectForKey:@"Device"]);
     XCTAssertNotNil([[[GrowthPush sharedInstance] tags] objectForKey:@"Build"]);
+    
 }
 
 - (void) testSetTag {
