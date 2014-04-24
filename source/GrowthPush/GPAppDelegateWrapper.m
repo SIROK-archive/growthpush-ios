@@ -66,7 +66,7 @@
         returnValue = returnValue && [originalAppDelegate application:application willFinishLaunchingWithOptions:launchOptions];
     
     if ([delegate respondsToSelector:@selector(didPerformApplication:willFinishLaunchingWithOptions:)])
-        returnValue = returnValue && [delegate willPerformApplication:application didFinishLaunchingWithOptions:launchOptions];
+        returnValue = returnValue && [delegate didPerformApplication:application didFinishLaunchingWithOptions:launchOptions];
     
     return returnValue;
     
@@ -83,7 +83,7 @@
         returnValue = returnValue && [originalAppDelegate application:application didFinishLaunchingWithOptions:launchOptions];
     
     if ([delegate respondsToSelector:@selector(didPerformApplication:didFinishLaunchingWithOptions:)])
-        returnValue = returnValue && [delegate willPerformApplication:application didFinishLaunchingWithOptions:launchOptions];
+        returnValue = returnValue && [delegate didPerformApplication:application didFinishLaunchingWithOptions:launchOptions];
     
     return returnValue;
     
