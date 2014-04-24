@@ -21,9 +21,7 @@
 }
 
 - (id) initWithDictionary:(NSDictionary *)dictionary {
-
-    return nil;
-
+    return [self init];
 }
 
 @end
