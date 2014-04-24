@@ -118,9 +118,9 @@
 		B2B7EF1E19057B4400BE82EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B2B7EF5919057D0B00BE82EE /* GrowthPush.framework */,
-				B2B7EF1F19057B4400BE82EE /* Foundation.framework */,
 				B2B7EF2119057B4400BE82EE /* CoreGraphics.framework */,
+				B2B7EF1F19057B4400BE82EE /* Foundation.framework */,
+				B2B7EF5919057D0B00BE82EE /* GrowthPush.framework */,
 				B2B7EF2319057B4400BE82EE /* UIKit.framework */,
 				B2B7EF3E19057B4400BE82EE /* XCTest.framework */,
 			);
