@@ -22,6 +22,10 @@
 
 }
 
++ (void) tearDown {
+    [super tearDown];
+}
+
 - (void) setUp {
 
     [super setUp];
@@ -30,7 +34,7 @@
 
 }
 
-+ (void) tearDown {
+- (void) tearDown {
 
     [super tearDown];
 

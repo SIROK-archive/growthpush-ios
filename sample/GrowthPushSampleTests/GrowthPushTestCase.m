@@ -10,25 +10,6 @@
 
 static NSString *const kGPPreferenceFileName = @"growthpush-preferences";
 
-@interface GPClient
-
-@end
-
-@interface GPPreference : NSObject
-
-+ (GPPreference *) sharedInstance;
-
-@end
-
-@interface GrowthPush ()
-
-+ (GrowthPush *) sharedInstance;
-- (GPClient *) client;
-@property (nonatomic, retain) GPClient *client;
-@property (nonatomic, retain) NSMutableDictionary *tags;
-
-@end
-
 @implementation GrowthPushTestCase
 
 + (GPClient *) client {

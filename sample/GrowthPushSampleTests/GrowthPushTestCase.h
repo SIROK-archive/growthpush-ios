@@ -21,3 +21,22 @@ static NSString *const kApplicationSecret = @ "BhcrsJHoEvWT85437EnSJ1COUhflEg1E"
 + (void)sleep:(NSTimeInterval)second;
 
 @end
+
+@interface GPClient
+
+@end
+
+@interface GPPreference : NSObject
+
++ (GPPreference *)sharedInstance;
+
+@end
+
+@interface GrowthPush ()
+
++ (GrowthPush *)sharedInstance;
+- (GPClient *)client;
+@property (nonatomic, retain) GPClient *client;
+@property (nonatomic, retain) NSMutableDictionary *tags;
+
+@end
