@@ -12,15 +12,18 @@
 
 + (id) domainWithDictionary:(NSDictionary *)dictionary {
 
-    if (!dictionary)
+    if (!dictionary) {
         return nil;
+    }
 
     return [[[self alloc] initWithDictionary:dictionary] autorelease];
 
 }
 
 - (id) initWithDictionary:(NSDictionary *)dictionary {
+
     return nil;
+
 }
 
 @end

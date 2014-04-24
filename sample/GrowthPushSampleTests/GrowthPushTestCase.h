@@ -9,7 +9,7 @@
 #import <XCTest/XCTest.h>
 
 static const NSInteger kApplicationId = 1070;
-static NSString *const kApplicationSecret = @"BhcrsJHoEvWT85437EnSJ1COUhflEg1E";
+static NSString *const kApplicationSecret = @ "BhcrsJHoEvWT85437EnSJ1COUhflEg1E";
 
 @interface GrowthPushTestCase : XCTestCase
 

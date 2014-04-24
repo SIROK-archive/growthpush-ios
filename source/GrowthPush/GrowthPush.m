@@ -57,10 +57,12 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 
 + (GrowthPush *) sharedInstance {
     @synchronized(self) {
-        if([[[UIDevice currentDevice] systemVersion] floatValue] < 5.0f)
+        if ([[[UIDevice currentDevice] systemVersion] floatValue] < 5.0f) {
             return nil;
-        if (!sharedInstance)
+        }
+        if (!sharedInstance) {
             sharedInstance = [[self alloc] init];
+        }
         return sharedInstance;
     }
 }
@@ -69,7 +71,7 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
     [[GrowthPush sharedInstance] setApplicationId:applicationId secret:secret environment:environment debug:debug];
 }
 
-+ (void)requestDeviceToken {
++ (void) requestDeviceToken {
     [[GrowthPush sharedInstance] requestDeviceToken];
 }
 
@@ -97,14 +99,15 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
     [[GrowthPush sharedInstance] setDeviceTags];
 }
 
-+ (void)clearBadge {
++ (void) clearBadge {
     [[GrowthPush sharedInstance] clearBadge];
 }
 
 - (id) init {
     self = [super init];
-    if (self)
+    if (self) {
         [[GPHttpClient sharedInstance] setBaseUrl:[NSURL URLWithString:kGPBaseUrl]];
+    }
     return self;
 }
 
@@ -130,10 +133,10 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 
 }
 
-- (void)requestDeviceToken {
-    
+- (void) requestDeviceToken {
+
     [[UIApplication sharedApplication] registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound];
-    
+
 }
 
 - (void) setDeviceToken:(NSData *)newDeviceToken {
@@ -144,20 +147,21 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 }
 
 - (void) trackEvent:(NSString *)name value:(NSString *)value {
-    
-    if(!name){
+
+    if (!name) {
         [self log:@"Event name cannot be nil."];
         return;
     }
-    
+
     [self runAfterRegister:^{
         [self log:@"Sending event ... (name: %@)", name];
         [[GPEventService sharedInstance] createWithClientId:client.id code:client.code name:name value:value success:^(GPEvent *event) {
             [self log:@"Sending event success. (timestamp: %lld)", event.timestamp];
         } fail:^(NSInteger status, NSError *error) {
             [self log:@"Sending event fail. %@", error];
-            if (status == 401)
+            if (status == 401) {
                 [self clearClient];
+            }
         }];
     }];
 
@@ -165,16 +169,17 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 
 - (void) setTag:(NSString *)name value:(NSString *)value {
 
-    if(!name){
+    if (!name) {
         [self log:@"Tag name cannot be nil."];
         return;
     }
-    
+
     [self runAfterRegister:^{
 
         NSString *existValue = [tags objectForKey:name];
-        if (existValue && [existValue isEqualToString:value ? value:@""])
+        if (existValue && [existValue isEqualToString:value ? value:@""]) {
             return;
+        }
 
         [self log:@"Sending tag... (key: %@, value: %@)", name, value];
         [[GPTagService sharedInstance] updateWithClientId:client.id code:client.code name:name value:value success:^{
@@ -183,8 +188,9 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
             [self saveTags:tags];
         } fail:^(NSInteger status, NSError *error) {
             [self log:@"Sending tag fail. %@", error];
-            if (status == 401)
+            if (status == 401) {
                 [self clearClient];
+            }
         }];
 
     }];
@@ -193,34 +199,42 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 
 - (void) setDeviceTags {
 
-    if ([GPDevice device])
+    if ([GPDevice device]) {
         [self setTag:@"Device" value:[GPDevice device]];
-    if ([GPDevice os])
+    }
+    if ([GPDevice os]) {
         [self setTag:@"OS" value:[GPDevice os]];
-    if ([GPDevice language])
+    }
+    if ([GPDevice language]) {
         [self setTag:@"Language" value:[GPDevice language]];
-    if ([GPDevice timeZone])
+    }
+    if ([GPDevice timeZone]) {
         [self setTag:@"Time Zone" value:[GPDevice timeZone]];
-    if ([GPDevice version])
+    }
+    if ([GPDevice version]) {
         [self setTag:@"Version" value:[GPDevice version]];
-    if ([GPDevice build])
+    }
+    if ([GPDevice build]) {
         [self setTag:@"Build" value:[GPDevice build]];
+    }
 
 }
 
-- (void)clearBadge {
-    
+- (void) clearBadge {
+
     [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
-    
+
 }
 
 - (void) registerClient {
 
     if (applicationId == client.applicationId) {
-        if (!token)
+        if (!token) {
             return;
-        if ([token isEqualToString:client.token])
+        }
+        if ([token isEqualToString:client.token]) {
             return;
+        }
     }
 
     if (registeringClient) {
@@ -248,8 +262,9 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 - (void) runAfterRegister:(void (^)(void))runnable {
 
     if (client) {
-        if (runnable)
+        if (runnable) {
             runnable();
+        }
         return;
     }
 
@@ -263,8 +278,9 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 
     NSData *data = [[GPPreference sharedInstance] objectForKey:kGPPreferenceClientKey];
 
-    if (!data)
+    if (!data) {
         return nil;
+    }
 
     return [NSKeyedUnarchiver unarchiveObjectWithData:data];
 
@@ -272,8 +288,9 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 
 - (void) saveClient:(GPClient *)newClient {
 
-    if (!newClient)
+    if (!newClient) {
         return;
+    }
 
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:client];
     [[GPPreference sharedInstance] setObject:data forKey:kGPPreferenceClientKey];
@@ -291,8 +308,9 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 
     NSDictionary *loadedTags = [[GPPreference sharedInstance] objectForKey:kGPPreferenceTagsKey];
 
-    if (loadedTags && [loadedTags isKindOfClass:[NSDictionary class]])
+    if (loadedTags && [loadedTags isKindOfClass:[NSDictionary class]]) {
         return [NSMutableDictionary dictionaryWithDictionary:loadedTags];
+    }
 
     return [NSMutableDictionary dictionary];
 
@@ -300,8 +318,9 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 
 - (void) saveTags:(NSDictionary *)newTags {
 
-    if (!newTags)
+    if (!newTags) {
         return;
+    }
 
     [[GPPreference sharedInstance] setObject:newTags forKey:kGPPreferenceTagsKey];
 
@@ -309,8 +328,9 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 
 - (void) log:(NSString *)format, ...{
 
-    if (!debug)
+    if (!debug) {
         return;
+    }
 
     va_list args;
 
@@ -323,8 +343,9 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 
 - (NSString *) convertToHexToken:(NSData *)targetDeviceToken {
 
-    if (!targetDeviceToken)
+    if (!targetDeviceToken) {
         return nil;
+    }
 
     const unsigned *tokenBytes = [targetDeviceToken bytes];
 

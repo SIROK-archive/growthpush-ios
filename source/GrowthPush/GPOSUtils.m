@@ -23,10 +23,12 @@ NSString *NSStringFromGPOS(GPOS os) {
 
 GPOS GPOSFromNSString(NSString *osString) {
 
-    if ([osString isEqualToString:@"ios"])
+    if ([osString isEqualToString:@"ios"]) {
         return GPOSIos;
-    if ([osString isEqualToString:@"android"])
+    }
+    if ([osString isEqualToString:@"android"]) {
         return GPOSAndroid;
+    }
     return GPOSUnknown;
 
 }

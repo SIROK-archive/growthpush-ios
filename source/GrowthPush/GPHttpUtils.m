@@ -17,8 +17,9 @@
     for (NSString *key in [params keyEnumerator]) {
         NSString *encodedKey = [key stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
         id values = [params objectForKey:key];
-        if (![values isKindOfClass:[NSArray class]])
+        if (![values isKindOfClass:[NSArray class]]) {
             values = [NSArray arrayWithObject:values];
+        }
         for (id value in values) {
             NSString *encodedValue = [[NSString stringWithFormat:@"%@", value] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
             [combinedParams addObject:[NSString stringWithFormat:@"%@=%@", encodedKey, encodedValue]];

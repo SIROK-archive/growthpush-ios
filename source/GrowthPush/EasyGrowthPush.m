@@ -23,11 +23,11 @@
 @end
 
 @interface EasyGrowthPush () {
-    
+
     GPAppDelegateWrapper *appDelegateWrapper;
     EasyGrowthPushAppDelegateIntercepter *appDelegateIntercepter;
     EGPOption option;
-    
+
 }
 
 @property (nonatomic, retain) GPAppDelegateWrapper *appDelegateWrapper;
@@ -39,10 +39,11 @@
 @implementation EasyGrowthPushAppDelegateIntercepter
 
 - (void) willPerformApplicationDidBecomeActive:(UIApplication *)application {
-    
-    if([[EasyGrowthPush sharedInstance] option] & EGPOptionTrackLaunch)
+
+    if ([[EasyGrowthPush sharedInstance] option] & EGPOptionTrackLaunch) {
         [GrowthPush trackEvent:@"Launch"];
-    
+    }
+
 }
 
 - (void) willPerformApplication:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
@@ -70,8 +71,9 @@
 }
 
 - (id) init {
+
     self = [super init];
-    if (self){
+    if (self) {
 
         self.appDelegateWrapper = [[[GPAppDelegateWrapper alloc] init] autorelease];
         [appDelegateWrapper setOriginalAppDelegate:[[UIApplication sharedApplication] delegate]];
@@ -82,36 +84,43 @@
         self.option = EGPOptionAll;
     }
     return self;
+
 }
 
 - (void) setApplicationId:(NSInteger)applicationId secret:(NSString *)secret environment:(GPEnvironment)environment debug:(BOOL)debug {
-    
+
     [super setApplicationId:applicationId secret:secret environment:environment debug:debug];
 
     [GrowthPush clearBadge];
     [GrowthPush requestDeviceToken];
 
-    if ((option & EGPOptionTagDevie) && [GPDevice device])
+    if ((option & EGPOptionTagDevie) && [GPDevice device]) {
         [GrowthPush setTag:@"Device" value:[GPDevice device]];
-    if ((option & EGPOptionTagOS) && [GPDevice os])
+    }
+    if ((option & EGPOptionTagOS) && [GPDevice os]) {
         [GrowthPush setTag:@"OS" value:[GPDevice os]];
-    if ((option & EGPOptionTagLanguage) && [GPDevice language])
+    }
+    if ((option & EGPOptionTagLanguage) && [GPDevice language]) {
         [GrowthPush setTag:@"Language" value:[GPDevice language]];
-    if ((option & EGPOptionTagTimeZone) && [GPDevice timeZone])
+    }
+    if ((option & EGPOptionTagTimeZone) && [GPDevice timeZone]) {
         [GrowthPush setTag:@"Time Zone" value:[GPDevice timeZone]];
-    if ((option & EGPOptionTagVersion) && [GPDevice version])
+    }
+    if ((option & EGPOptionTagVersion) && [GPDevice version]) {
         [GrowthPush setTag:@"Version" value:[GPDevice version]];
-    if ((option & EGPOptionTagBuild) && [GPDevice build])
+    }
+    if ((option & EGPOptionTagBuild) && [GPDevice build]) {
         [GrowthPush setTag:@"Build" value:[GPDevice build]];
+    }
 
 }
 
 - (void) setApplicationId:(NSInteger)applicationId secret:(NSString *)secret environment:(GPEnvironment)environment debug:(BOOL)debug option:(EGPOption)newOption {
-    
+
     self.option = newOption;
-    
+
     [self setApplicationId:applicationId secret:secret environment:environment debug:debug];
-    
+
 }
 
 @end

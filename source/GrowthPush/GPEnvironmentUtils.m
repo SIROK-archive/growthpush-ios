@@ -23,10 +23,12 @@ NSString *NSStringFromGPEnvironment(GPEnvironment environment) {
 
 GPEnvironment GPEnvironmentFromNSString(NSString *environmentString) {
 
-    if ([environmentString isEqualToString:@"development"])
+    if ([environmentString isEqualToString:@"development"]) {
         return GPEnvironmentDevelopment;
-    if ([environmentString isEqualToString:@"production"])
+    }
+    if ([environmentString isEqualToString:@"production"]) {
         return GPEnvironmentProduction;
+    }
     return GPEnvironmentUnknown;
 
 }

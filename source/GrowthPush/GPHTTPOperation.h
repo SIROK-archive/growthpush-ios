@@ -11,6 +11,6 @@
 
 @interface GPHTTPOperation : NSOperation <NSURLConnectionDataDelegate, NSURLConnectionDelegate>
 
-+ (instancetype) instanceWithRequest:(NSURLRequest *)request success:(void (^)(GPHttpResponse *))success fail:(void (^)(GPHttpResponse *httpResponse))fail;
++ (instancetype)instanceWithRequest:(NSURLRequest *)request success:(void(^) (GPHttpResponse *)) success fail:(void(^) (GPHttpResponse * httpResponse))fail;
 
 @end

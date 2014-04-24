@@ -10,45 +10,54 @@
 
 @implementation TagTests
 
-+ (void)setUp
-{
++ (void) setUp {
+
     [super setUp];
-    
+
     [self initialize];
-    
+
     [EasyGrowthPush setApplicationId:kApplicationId secret:kApplicationSecret environment:GPEnvironmentDevelopment debug:YES];
+
     [self waitClient:30];
-    
+
 }
 
-- (void)setUp {
+- (void) setUp {
+
     [super setUp];
+
     [[self class] waitOperation:30];
+
 }
 
-+ (void)tearDown
-{
++ (void) tearDown {
+
     [super tearDown];
+
 }
 
-- (void)testSetDeviceTags
-{
+- (void) testSetDeviceTags {
+
     [GrowthPush setDeviceTags];
+
 }
 
-- (void)testSetTag
-{
+- (void) testSetTag {
+
     [GrowthPush setTag:@"Payed User"];
+
 }
 
-- (void)testSetTagWithInvalidName
-{
+- (void) testSetTagWithInvalidName {
+
     [GrowthPush setTag:nil];
+
 }
 
-- (void)testSetTagWithValue
-{
+- (void) testSetTagWithValue {
+
     [GrowthPush setTag:@"Gender" value:@"male"];
+
 }
 
 @end

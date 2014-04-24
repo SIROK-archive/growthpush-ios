@@ -26,11 +26,14 @@ static GPHttpClient *sharedInstance = nil;
 @synthesize baseUrl;
 
 + (GPHttpClient *) sharedInstance {
+
     @synchronized(self) {
-        if (!sharedInstance)
+        if (!sharedInstance) {
             sharedInstance = [[self alloc] init];
+        }
         return sharedInstance;
     }
+
 }
 
 - (void) dealloc {

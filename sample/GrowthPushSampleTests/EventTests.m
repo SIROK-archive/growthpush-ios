@@ -10,40 +10,48 @@
 
 @implementation EventTests
 
-+ (void)setUp
-{
++ (void) setUp {
+
     [super setUp];
-    
+
     [self initialize];
-    
+
     [EasyGrowthPush setApplicationId:kApplicationId secret:kApplicationSecret environment:GPEnvironmentDevelopment debug:YES];
+
     [self waitClient:30];
-    
+
 }
 
-- (void)setUp {
+- (void) setUp {
+
     [super setUp];
+
     [[self class] waitOperation:30];
+
 }
 
-+ (void)tearDown
-{
++ (void) tearDown {
+
     [super tearDown];
+
 }
 
-- (void)testTrackEvent
-{
+- (void) testTrackEvent {
+
     [GrowthPush trackEvent:@"Launch"];
+
 }
 
-- (void)testTrackEventWithInvalidName
-{
+- (void) testTrackEventWithInvalidName {
+
     [GrowthPush trackEvent:nil];
+
 }
 
-- (void)testTrackEventWithValue
-{
+- (void) testTrackEventWithValue {
+
     [GrowthPush trackEvent:@"Payment" value:@"500"];
+
 }
 
 @end

@@ -13,11 +13,14 @@ static GPTagService *sharedInstance = nil;
 @implementation GPTagService
 
 + (GPTagService *) sharedInstance {
+
     @synchronized(self) {
-        if (!sharedInstance)
+        if (!sharedInstance) {
             sharedInstance = [[self alloc] init];
+        }
         return sharedInstance;
     }
+
 }
 
 - (void) updateWithClientId:(long long)clientId code:(NSString *)code name:(NSString *)name value:(NSString *)value success:(void (^)(void))success fail:(void (^)(NSInteger status, NSError *error))fail {
@@ -25,23 +28,29 @@ static GPTagService *sharedInstance = nil;
     NSString *path = @"/1/tags";
     NSMutableDictionary *body = [NSMutableDictionary dictionary];
 
-    if (clientId)
+    if (clientId) {
         [body setObject:@(clientId) forKey:@"clientId"];
-    if (code)
+    }
+    if (code) {
         [body setObject:code forKey:@"code"];
-    if (name)
+    }
+    if (name) {
         [body setObject:name forKey:@"name"];
-    if (value)
+    }
+    if (value) {
         [body setObject:value forKey:@"value"];
+    }
 
     GPHttpRequest *httpRequest = [GPHttpRequest instanceWithRequestMethod:GPRequestMethodPost path:path query:nil body:body];
 
     [self httpRequest:httpRequest success:^(GPHttpResponse *httpResponse) {
-        if (success)
+        if (success) {
             success();
+        }
     } fail:^(GPHttpResponse *httpResponse) {
-        if (fail)
+        if (fail) {
             fail(httpResponse.httpUrlResponse.statusCode, httpResponse.error);
+        }
     }];
 
 }

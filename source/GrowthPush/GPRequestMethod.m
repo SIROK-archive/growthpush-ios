@@ -27,14 +27,18 @@ NSString *NSStringFromGPRequestMethod(GPRequestMethod requestMethod) {
 
 GPRequestMethod GPRequestMethodFromNSString(NSString *requestMethodString) {
 
-    if ([requestMethodString isEqualToString:@"GET"])
+    if ([requestMethodString isEqualToString:@"GET"]) {
         return GPRequestMethodGet;
-    if ([requestMethodString isEqualToString:@"POST"])
+    }
+    if ([requestMethodString isEqualToString:@"POST"]) {
         return GPRequestMethodPost;
-    if ([requestMethodString isEqualToString:@"PUT"])
+    }
+    if ([requestMethodString isEqualToString:@"PUT"]) {
         return GPRequestMethodPut;
-    if ([requestMethodString isEqualToString:@"DELETE"])
+    }
+    if ([requestMethodString isEqualToString:@"DELETE"]) {
         return GPRequestMethodDelete;
+    }
 
     return GPRequestMethodUnknown;
 

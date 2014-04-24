@@ -27,17 +27,21 @@ static NSString *const kGPPreferenceFileName = @"growthpush-preferences";
 
 + (GPPreference *) sharedInstance {
     @synchronized(self) {
-        if (!sharedInstance)
+        if (!sharedInstance) {
             sharedInstance = [[self alloc] init];
+        }
         return sharedInstance;
     }
 }
 
 - (id) init {
+
     self = [super init];
-    if (self)
+    if (self) {
         self.fileUrl = [self preferenceFileUrl];
+    }
     return self;
+
 }
 
 - (void) dealloc {
@@ -82,8 +86,9 @@ static NSString *const kGPPreferenceFileName = @"growthpush-preferences";
 
     NSArray *urls = [[NSFileManager defaultManager] URLsForDirectory:NSLibraryDirectory inDomains:NSUserDomainMask];
 
-    if ([urls count] == 0)
+    if ([urls count] == 0) {
         return nil;
+    }
 
     NSURL *url = [urls lastObject];
     return [NSURL URLWithString:kGPPreferenceFileName relativeToURL:url];

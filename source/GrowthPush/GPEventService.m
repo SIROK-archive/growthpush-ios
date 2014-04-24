@@ -13,11 +13,14 @@ static GPEventService *sharedInstance = nil;
 @implementation GPEventService
 
 + (GPEventService *) sharedInstance {
+
     @synchronized(self) {
-        if (!sharedInstance)
+        if (!sharedInstance) {
             sharedInstance = [[self alloc] init];
+        }
         return sharedInstance;
     }
+
 }
 
 - (void) createWithClientId:(long long)clientId code:(NSString *)code name:(NSString *)name value:(NSString *)value success:(void (^)(GPEvent *event))success fail:(void (^)(NSInteger status, NSError *error))fail {
@@ -25,24 +28,30 @@ static GPEventService *sharedInstance = nil;
     NSString *path = @"/1/events";
     NSMutableDictionary *body = [NSMutableDictionary dictionary];
 
-    if (clientId)
+    if (clientId) {
         [body setObject:@(clientId) forKey:@"clientId"];
-    if (code)
+    }
+    if (code) {
         [body setObject:code forKey:@"code"];
-    if (name)
+    }
+    if (name) {
         [body setObject:name forKey:@"name"];
-    if (value)
+    }
+    if (value) {
         [body setObject:value forKey:@"value"];
+    }
 
     GPHttpRequest *httpRequest = [GPHttpRequest instanceWithRequestMethod:GPRequestMethodPost path:path query:nil body:body];
 
     [self httpRequest:httpRequest success:^(GPHttpResponse *httpResponse) {
         GPEvent *event = [GPEvent domainWithDictionary:httpResponse.body];
-        if (success)
+        if (success) {
             success(event);
+        }
     } fail:^(GPHttpResponse *httpResponse) {
-        if (fail)
+        if (fail) {
             fail(httpResponse.httpUrlResponse.statusCode, httpResponse.error);
+        }
     }];
 
 }

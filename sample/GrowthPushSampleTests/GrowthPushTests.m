@@ -10,39 +10,42 @@
 
 @implementation GrowthPushTests
 
-+ (void)setUp
-{
++ (void) setUp {
+
     [super setUp];
+
 }
 
-- (void)setUp {
+- (void) setUp {
+
     [super setUp];
+
     [[self class] waitOperation:30];
+
 }
 
-+ (void)tearDown
-{
++ (void) tearDown {
+
     [super tearDown];
+
 }
 
-- (void)testRegisterWithDevelopment
-{
-    
+- (void) testRegisterWithDevelopment {
+
     [[self class] initialize];
-    
+
     [EasyGrowthPush setApplicationId:kApplicationId secret:kApplicationSecret environment:GPEnvironmentDevelopment debug:YES];
     [[self class] waitClient:30];
-    
+
 }
 
-- (void)testRegisterWithProduction
-{
-    
+- (void) testRegisterWithProduction {
+
     [[self class] initialize];
-    
+
     [EasyGrowthPush setApplicationId:kApplicationId secret:kApplicationSecret environment:GPEnvironmentProduction debug:YES];
     [[self class] waitClient:30];
-    
+
 }
 
 @end

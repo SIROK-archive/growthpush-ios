@@ -71,8 +71,9 @@
     NSString *requestQueryString = [GPHttpUtils queryStringWithDictionary:requestQuery];
     NSString *requestBodyString = [GPHttpUtils queryStringWithDictionary:requestBody];
 
-    if ([requestQueryString length] > 0)
+    if ([requestQueryString length] > 0) {
         requestPath = [NSString stringWithFormat:@"%@?%@", requestPath, requestQueryString];
+    }
 
     NSURL *url = [NSURL URLWithString:requestPath relativeToURL:baseUrl];
     NSMutableURLRequest *urlRequest = [[[NSMutableURLRequest alloc] initWithURL:url] autorelease];

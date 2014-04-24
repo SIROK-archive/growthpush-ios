@@ -20,8 +20,9 @@
 
     NSString *version = [[UIDevice currentDevice] systemVersion];
 
-    if (!version || [version length] == 0)
+    if (!version || [version length] == 0) {
         return nil;
+    }
 
     return [NSString stringWithFormat:@"iOS %@", version];
 
@@ -31,8 +32,9 @@
 
     NSArray *languages = [NSLocale preferredLanguages];
 
-    if (!languages || [languages count] == 0)
+    if (!languages || [languages count] == 0) {
         return nil;
+    }
 
     return [languages objectAtIndex:0];
 
@@ -45,11 +47,15 @@
 }
 
 + (NSString *) version {
+
     return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+
 }
 
 + (NSString *) build {
+
     return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
+
 }
 
 @end

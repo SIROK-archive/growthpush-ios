@@ -8,18 +8,18 @@
 
 #import "GPHTTPOperation.h"
 
-@interface GPHTTPOperation() {
-    
+@interface GPHTTPOperation () {
+
     NSURLRequest *request;
-    
+
     NSMutableData *receiveData;
-    
+
     NSHTTPURLResponse *receiveResponse;
-    
+
     void (^success)(GPHttpResponse *);
-    
+
     void (^fail)(GPHttpResponse *);
-    
+
 }
 
 @property (nonatomic, retain) NSURLRequest *request;
@@ -53,7 +53,7 @@
 - (instancetype) init {
 
     self = [super init];
-    if(self) {
+    if (self) {
         self.receiveData = [NSMutableData data];
     }
     return self;
