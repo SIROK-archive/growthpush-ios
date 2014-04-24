@@ -22,8 +22,8 @@ static NSString *const kGPPreferenceFileName = @"growthpush-preferences";
 
 @interface GrowthPush ()
 
-+ (GrowthPush *)sharedInstance;
-- (GPClient *)client;
++ (GrowthPush *) sharedInstance;
+- (GPClient *) client;
 @property (nonatomic, retain) GPClient *client;
 @property (nonatomic, retain) NSMutableDictionary *tags;
 
@@ -31,12 +31,8 @@ static NSString *const kGPPreferenceFileName = @"growthpush-preferences";
 
 @implementation GrowthPushTestCase
 
-+ (GrowthPush *)growthPush {
-    return [GrowthPush sharedInstance];
-}
-
-+ (GPClient *)client {
-    return [[self growthPush] client];
++ (GPClient *) client {
+    return [[GrowthPush sharedInstance] client];
 }
 
 + (void) initialize {
@@ -55,11 +51,15 @@ static NSString *const kGPPreferenceFileName = @"growthpush-preferences";
 
 }
 
-+ (void)initializeGrowthPush {
-    
-    [[self growthPush] setClient:nil];
-    [[self growthPush] setTags:nil];
-    
++ (void) initializeGrowthPush {
+
+    [[GrowthPush sharedInstance] setClient:nil];
+    [[GrowthPush sharedInstance] setTags:nil];
+
+}
+
++ (void) waitOperation {
+    [self waitOperation:30];
 }
 
 + (void) waitOperation:(NSInteger)second {
@@ -71,8 +71,12 @@ static NSString *const kGPPreferenceFileName = @"growthpush-preferences";
         [self sleep:1];
     }
 
-    [[NSException exceptionWithName:@"TimeoutException" reason:@"Waiting client timeout." userInfo:nil] raise];
+    [[NSException exceptionWithName:@"TimeoutException" reason:@"Waiting operation timeout." userInfo:nil] raise];
 
+}
+
++ (void) waitClient {
+    [self waitClient:30];
 }
 
 + (void) waitClient:(NSInteger)second {

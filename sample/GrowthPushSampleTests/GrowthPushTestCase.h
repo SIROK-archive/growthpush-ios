@@ -14,7 +14,9 @@ static NSString *const kApplicationSecret = @ "BhcrsJHoEvWT85437EnSJ1COUhflEg1E"
 @interface GrowthPushTestCase : XCTestCase
 
 + (void)initialize;
++ (void)waitOperation;
 + (void)waitOperation:(NSInteger)second;
++ (void)waitClient;
 + (void)waitClient:(NSInteger)second;
 + (void)sleep:(NSTimeInterval)second;
 

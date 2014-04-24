@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 
 typedef NS_OPTIONS (NSInteger, EGPOption) {
-        EGPOptionNone = 0,
-        EGPOptionTrackLaunch = 1 << 0,
+    EGPOptionNone = 0,
+    EGPOptionTrackLaunch = 1 << 0,
         EGPOptionTagDevie = 1 << 1,
         EGPOptionTagOS = 1 << 2,
         EGPOptionTagLanguage = 1 << 3,

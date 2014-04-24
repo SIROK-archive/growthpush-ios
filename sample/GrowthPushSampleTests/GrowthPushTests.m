@@ -20,7 +20,7 @@
 
     [super setUp];
 
-    [[self class] waitOperation:30];
+    [[self class] waitOperation];
 
 }
 
@@ -35,7 +35,8 @@
     [[self class] initialize];
 
     [EasyGrowthPush setApplicationId:kApplicationId secret:kApplicationSecret environment:GPEnvironmentDevelopment debug:YES];
-    [[self class] waitClient:30];
+
+    [[self class] waitClient];
 
 }
 
@@ -44,7 +45,8 @@
     [[self class] initialize];
 
     [EasyGrowthPush setApplicationId:kApplicationId secret:kApplicationSecret environment:GPEnvironmentProduction debug:YES];
-    [[self class] waitClient:30];
+
+    [[self class] waitClient];
 
 }
 
