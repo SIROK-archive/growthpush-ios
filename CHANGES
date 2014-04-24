@@ -1,0 +1,41 @@
+= 1.1.1 (2014-04-25)
+
+* Add binary library</li>
+* Add sample project and tests</li>
+* Avoid to send events and tags with null name</li>
+* Fix GPDomain potential leak</li>
+
+= 1.1.0 (2014-04-15)
+
+* Remove AFNetworking
+* Add Runnable Architectures(armv7s, arm64)
+* Build with Xcode5
+
+= 1.0.6 (2013-11-20)
+
+* Optimize the order of initialization of GrowthPush variables.
+* Build with Xcode5
+
+= 1.0.5 (2013-09-20)
+
+* Add EasyGrowthPush option
+* Build with Xcode5
+
+= 1.0.4 (2013-09-10)
+
+* Suppress crashing app on iOS 4.3
+
+= 1.0.3 (2013-08-02)
+
+* Add clearBadge method
+* Fix GPAppDelegateWrapper to call methods of UIApplicationDelegate
+
+= 1.0.2 (2013-07-19)
+
+* Change to avoid to register dummy client when device token has timed out.
+
+= 1.0.1 (2013-07-18)
+
+* Change clinet ID range to 64bit.
+
+= 1.0.0 (2013-07-17)
