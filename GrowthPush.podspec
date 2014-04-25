@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
     s.author       = { "SIROK, Inc." => "support@growthpush.com" }
 
     s.source       = { :git => "https://github.com/SIROK/growthpush-ios.git", :tag => "#{s.version}" }
-    s.source_files   = 'GrowthPush/*.{h,m}'
+    s.source_files   = 'source/GrowthPush/*.{h,m}'
     s.preserve_paths = "README.*", "THIRD_PARTY_ LICENSES"
     
     s.platform     = :ios, '5.1.1'
