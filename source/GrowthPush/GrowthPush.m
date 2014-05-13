@@ -341,7 +341,7 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 
 }
 
-- (void) log:(NSString *)format, ...{
+- (void) log:(NSString *)format, ... {
 
     if (!debug) {
         return;
