@@ -16,7 +16,7 @@ static NSString *const kGPPreferenceFileName = @"growthpush-preferences";
     return [[GrowthPush sharedInstance] client];
 }
 
-+ (void) initialize {
++ (void) initializeAll {
 
     [self initializePreference];
     [self initializeGrowthPush];
@@ -58,6 +58,7 @@ static NSString *const kGPPreferenceFileName = @"growthpush-preferences";
 
 + (void) waitClient {
     [self waitClient:30];
+    [self sleep:0.01f];
 }
 
 + (void) waitClient:(NSInteger)second {
@@ -75,11 +76,7 @@ static NSString *const kGPPreferenceFileName = @"growthpush-preferences";
 
 + (void) sleep:(NSTimeInterval)second {
 
-    NSDate *begin = [NSDate date];
-
-    while ([[NSDate date] timeIntervalSinceDate:begin] < second) {
-        [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.01f]];
-    }
+    [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:second]];
 
 }
 

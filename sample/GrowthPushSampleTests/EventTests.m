@@ -14,9 +14,10 @@
 
     [super setUp];
 
-    [self initialize];
+    [self sleep:10];
+    [self initializeAll];
 
-    [EasyGrowthPush setApplicationId:kApplicationId secret:kApplicationSecret environment:GPEnvironmentDevelopment debug:YES];
+    [EasyGrowthPush setApplicationId:kApplicationId secret:kApplicationSecret environment:GPEnvironmentDevelopment debug:YES option:EGPOptionNone];
 
     [self waitClient];
 

@@ -36,9 +36,9 @@
 
 - (void) testRegisterWithDevelopment {
 
-    [[self class] initialize];
+    [[self class] initializeAll];
 
-    [EasyGrowthPush setApplicationId:kApplicationId secret:kApplicationSecret environment:GPEnvironmentDevelopment debug:YES];
+    [EasyGrowthPush setApplicationId:kApplicationId secret:kApplicationSecret environment:GPEnvironmentDevelopment debug:YES option:EGPOptionNone];
     [[self class] waitClient];
     
     XCTAssertEqual(GPEnvironmentDevelopment, [[[GrowthPush sharedInstance] client] environment]);
@@ -47,9 +47,9 @@
 
 - (void) testRegisterWithProduction {
 
-    [[self class] initialize];
+    [[self class] initializeAll];
 
-    [EasyGrowthPush setApplicationId:kApplicationId secret:kApplicationSecret environment:GPEnvironmentProduction debug:YES];
+    [EasyGrowthPush setApplicationId:kApplicationId secret:kApplicationSecret environment:GPEnvironmentProduction debug:YES option:EGPOptionNone];
     [[self class] waitClient];
     
     XCTAssertEqual(GPEnvironmentProduction, [[[GrowthPush sharedInstance] client] environment]);
