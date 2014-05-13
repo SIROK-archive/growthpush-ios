@@ -15,6 +15,7 @@
 + (id) sharedInstance;
 
 - (void) setApplicationId:(NSInteger)newApplicationId secret:(NSString *)newSecret environment:(GPEnvironment)newEnvironment debug:(BOOL)newDebug;
+- (void) log:(NSString *)format, ...;
 
 @end
 
@@ -51,6 +52,7 @@
 }
 
 - (void) willPerformApplication:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
+    [[GrowthPush sharedInstance] log:@"Failed to get device token. %@", error];
     [GrowthPush setDeviceToken:nil];
 }
 
