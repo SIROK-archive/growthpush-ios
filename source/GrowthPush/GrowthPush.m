@@ -233,15 +233,6 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 
 - (void) registerClient {
 
-    if (applicationId == client.applicationId) {
-        if (!token) {
-            return;
-        }
-        if ([token isEqualToString:client.token]) {
-            return;
-        }
-    }
-
     if (registeringClient) {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(kGPRegisterPollingInterval * NSEC_PER_SEC)), dispatch_get_main_queue(), ^(void){
                 [self registerClient];
@@ -250,17 +241,36 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
     }
     self.registeringClient = YES;
 
-    [self log:@"Registering client... (applicationId: %d, environment: %@)", applicationId, NSStringFromGPEnvironment(environment)];
-    [[GPClientService sharedInstance] createWithApplicationId:applicationId secret:secret token:token environment:environment success:^(GPClient *createdClient) {
-        [self log:@"Registering client success. (clientId: %lld)", createdClient.id];
-        [self log:@"See https://growthpush.com/applications/%d/clients to check the client registration.", applicationId];
-        self.client = createdClient;
-        [self saveClient:client];
-        self.registeringClient = NO;
-    } fail:^(NSInteger status, NSError *error) {
-        [self log:@"Registering client fail. %@", error];
-        self.registeringClient = NO;
-    }];
+    if(!client) {
+        [self log:@"Registering client... (applicationId: %d, environment: %@)", applicationId, NSStringFromGPEnvironment(environment)];
+        [[GPClientService sharedInstance] createWithApplicationId:applicationId secret:secret token:token environment:environment success:^(GPClient *createdClient) {
+            [self log:@"Registering client success. (clientId: %lld)", createdClient.id];
+            [self log:@"See https://growthpush.com/applications/%d/clients to check the client registration.", applicationId];
+            self.client = createdClient;
+            [self saveClient:client];
+            self.registeringClient = NO;
+        } fail:^(NSInteger status, NSError *error) {
+            [self log:@"Registering client fail. %@", error];
+            self.registeringClient = NO;
+        }];
+        return;
+    }
+    
+    if((token != client.token && ![token isEqualToString:client.token]) || environment != client.environment) {
+        [self log:@"Update client... (id: %d, token: %@, environment: %@)", applicationId, token, NSStringFromGPEnvironment(environment)];
+        [[GPClientService sharedInstance] updateWithId:client.id code:client.code token:token environment:environment success:^(GPClient *updatedClient) {
+            [self log:@"Updating client success. (clientId: %lld)", updatedClient.id];
+            self.client = updatedClient;
+            [self saveClient:client];
+            self.registeringClient = NO;
+        } fail:^(NSInteger status, NSError *error) {
+            [self log:@"Updating client fail. %@", error];
+            self.registeringClient = NO;
+        }];
+        return;
+    }
+    
+    [self log:@"Client already registered."];
 
 }
 
