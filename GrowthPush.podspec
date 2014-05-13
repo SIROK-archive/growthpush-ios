@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
     s.name         = "GrowthPush"
-    s.version      = "1.1.1"
+    s.version      = "1.1.2"
     s.summary      = "GrowthPush SDK for iPhone/iPad"
     s.description  = <<-DESC
                      GrowthPush is push notification and analysis platform for smart devices.
@@ -17,10 +17,4 @@ Pod::Spec.new do |s|
     
     s.platform     = :ios, '5.1.1'
     s.requires_arc = false
-    s.prefix_header_contents = <<-EOS
-        #ifdef __OBJC__
-            #import <SystemConfiguration/SystemConfiguration.h>
-            #import <MobileCoreServices/MobileCoreServices.h>
-        #endif
-        EOS
 end

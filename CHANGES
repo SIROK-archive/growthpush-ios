@@ -1,9 +1,14 @@
+= 1.1.2 (2014-05-14)
+
+* Clear all tags when application id is changed
+* Implement updating client 
+
 = 1.1.1 (2014-04-25)
 
-* Add binary library</li>
-* Add sample project and tests</li>
-* Avoid to send events and tags with null name</li>
-* Fix GPDomain potential leak</li>
+* Add binary library
+* Add sample project and tests
+* Avoid to send events and tags with null name
+* Fix GPDomain potential leak
 
 = 1.1.0 (2014-04-15)
 
