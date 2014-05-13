@@ -14,5 +14,6 @@
 - (id)objectForKey:(id <NSCopying>)key;
 - (void)setObject:(id)object forKey:(id <NSCopying>)key;
 - (void)removeObjectForKey:(id <NSCopying>)key;
+- (void)removeAll;
 
 @end

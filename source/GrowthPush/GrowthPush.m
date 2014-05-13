@@ -128,7 +128,12 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
     self.secret = newSecret;
     self.environment = newEnvironment;
     self.debug = newDebug;
+    
     self.client = [self loadClient];
+    if(self.client && self.client.applicationId != newApplicationId) {
+        [self clearClient];
+    }
+    
     self.tags = [self loadTags];
 
 }
@@ -300,7 +305,7 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 - (void) clearClient {
 
     self.client = nil;
-    [[GPPreference sharedInstance] removeObjectForKey:kGPPreferenceClientKey];
+    [[GPPreference sharedInstance] removeAll];
 
 }
 
