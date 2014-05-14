@@ -128,12 +128,12 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
     self.secret = newSecret;
     self.environment = newEnvironment;
     self.debug = newDebug;
-    
+
     self.client = [self loadClient];
-    if(self.client && self.client.applicationId != newApplicationId) {
+    if (self.client && self.client.applicationId != newApplicationId) {
         [self clearClient];
     }
-    
+
     self.tags = [self loadTags];
 
 }
@@ -241,7 +241,7 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
     }
     self.registeringClient = YES;
 
-    if(!client) {
+    if (!client) {
         [self log:@"Registering client... (applicationId: %d, environment: %@)", applicationId, NSStringFromGPEnvironment(environment)];
         [[GPClientService sharedInstance] createWithApplicationId:applicationId secret:secret token:token environment:environment success:^(GPClient *createdClient) {
             [self log:@"Registering client success. (clientId: %lld)", createdClient.id];
@@ -255,8 +255,8 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
         }];
         return;
     }
-    
-    if((token != client.token && ![token isEqualToString:client.token]) || environment != client.environment) {
+
+    if ((token != client.token && ![token isEqualToString:client.token]) || environment != client.environment) {
         [self log:@"Update client... (id: %d, token: %@, environment: %@)", applicationId, token, NSStringFromGPEnvironment(environment)];
         [[GPClientService sharedInstance] updateWithId:client.id code:client.code token:token environment:environment success:^(GPClient *updatedClient) {
             [self log:@"Updating client success. (clientId: %lld)", updatedClient.id];
@@ -269,7 +269,7 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
         }];
         return;
     }
-    
+
     [self log:@"Client already registered."];
 
 }
@@ -341,7 +341,7 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 
 }
 
-- (void) log:(NSString *)format, ... {
+- (void) log:(NSString *)format, ...{
 
     if (!debug) {
         return;

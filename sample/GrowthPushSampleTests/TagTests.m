@@ -44,14 +44,14 @@
 
     [GrowthPush setDeviceTags];
     [[self class] waitOperation];
-    
+
     XCTAssertNotNil([[[GrowthPush sharedInstance] tags] objectForKey:@"OS"]);
     XCTAssertNotNil([[[GrowthPush sharedInstance] tags] objectForKey:@"Version"]);
     XCTAssertNotNil([[[GrowthPush sharedInstance] tags] objectForKey:@"Language"]);
     XCTAssertNotNil([[[GrowthPush sharedInstance] tags] objectForKey:@"Time Zone"]);
     XCTAssertNotNil([[[GrowthPush sharedInstance] tags] objectForKey:@"Device"]);
     XCTAssertNotNil([[[GrowthPush sharedInstance] tags] objectForKey:@"Build"]);
-    
+
 }
 
 - (void) testSetTag {

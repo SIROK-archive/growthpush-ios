@@ -61,10 +61,10 @@ static GPClientService *sharedInstance = nil;
 }
 
 - (void) updateWithId:(long long)id code:(NSString *)code token:(NSString *)token environment:(GPEnvironment)environment success:(void (^)(GPClient *client))success fail:(void (^)(NSInteger status, NSError *error))fail {
-    
+
     NSString *path = [NSString stringWithFormat:@"/1/clients/%lld", id];
     NSMutableDictionary *body = [NSMutableDictionary dictionary];
-    
+
     if (code) {
         [body setObject:code forKey:@"code"];
     }
@@ -74,9 +74,9 @@ static GPClientService *sharedInstance = nil;
     if (NSStringFromGPEnvironment(environment)) {
         [body setObject:NSStringFromGPEnvironment(environment) forKey:@"environment"];
     }
-    
+
     GPHttpRequest *httpRequest = [GPHttpRequest instanceWithRequestMethod:GPRequestMethodPut path:path query:nil body:body];
-    
+
     [self httpRequest:httpRequest success:^(GPHttpResponse *httpResponse) {
         GPClient *client = [GPClient domainWithDictionary:httpResponse.body];
         if (success) {

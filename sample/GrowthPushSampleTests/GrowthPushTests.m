@@ -40,7 +40,7 @@
 
     [EasyGrowthPush setApplicationId:kApplicationId secret:kApplicationSecret environment:GPEnvironmentDevelopment debug:YES option:EGPOptionNone];
     [[self class] waitClient];
-    
+
     XCTAssertEqual(GPEnvironmentDevelopment, [[[GrowthPush sharedInstance] client] environment]);
 
 }
@@ -51,7 +51,7 @@
 
     [EasyGrowthPush setApplicationId:kApplicationId secret:kApplicationSecret environment:GPEnvironmentProduction debug:YES option:EGPOptionNone];
     [[self class] waitClient];
-    
+
     XCTAssertEqual(GPEnvironmentProduction, [[[GrowthPush sharedInstance] client] environment]);
 
 }

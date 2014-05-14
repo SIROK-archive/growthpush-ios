@@ -14,6 +14,6 @@
 
 + (GPClientService *)sharedInstance;
 - (void)createWithApplicationId:(NSInteger)applicationId secret:(NSString *)secret token:(NSString *)token environment:(GPEnvironment)environment success:(void(^) (GPClient * client)) success fail:(void(^) (NSInteger status, NSError * error))fail;
-- (void) updateWithId:(long long)id code:(NSString *)code token:(NSString *)token environment:(GPEnvironment)environment success:(void (^)(GPClient *client))success fail:(void (^)(NSInteger status, NSError *error))fail;
+- (void)updateWithId:(long long)id code:(NSString *)code token:(NSString *)token environment:(GPEnvironment)environment success:(void(^) (GPClient * client)) success fail:(void(^) (NSInteger status, NSError * error))fail;
 
 @end

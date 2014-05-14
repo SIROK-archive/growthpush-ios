@@ -78,11 +78,12 @@ static NSString *const kGPPreferenceFileName = @"growthpush-preferences";
 
 }
 
-- (void)removeAll {
-    
-    for (id key in [[self preferences] keyEnumerator])
+- (void) removeAll {
+
+    for (id key in [[self preferences] keyEnumerator]) {
         [self removeObjectForKey:key];
-    
+    }
+
 }
 
 - (NSDictionary *) preferences {
