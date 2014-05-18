@@ -15,7 +15,7 @@ def error message
 end
 
 begin
-	gem "xcodeproj", "~> 0.9.0"
+	gem "xcodeproj"
 	require 'xcodeproj'
 rescue LoadError
 	error("xcodeproj gem is required.\nRun \"#{Tty.yellow}gem install xcodeproj#{Tty.reset}\" or \"#{Tty.yellow}sudo gem install xcodeproj#{Tty.reset}\"\nIf it is installed, restart the shell.")
@@ -57,16 +57,18 @@ def ask (question)
 end
 
 if ARGV.size < 2 then
-  error("Incomplete parameters. Usage: #{$0} <application-id> <secret>")
+  error("Incomplete parameters. Usage: #{$0} application-id secret [skip-initilize] [skip-confirm]")
 end
 
 application_id = ARGV[0]
 secret = ARGV[1]
+skip_initialize = ((ARGV.size >= 3) && (ARGV[2] == 'true'))
+skip_confirm = ((ARGV.size >= 4) && (ARGV[3] == 'true'))
 initialize_code = "[EasyGrowthPush setApplicationId:#{application_id} secret:@\"#{secret}\" environment:kGrowthPushEnvironment debug:YES];"
 framework_url = 'https://growthpush.com/downloads/ios/libraries/latest'
 project_file_suffix = '.xcodeproj'
 framework_path = 'GrowthPush.framework'
-framework_dependencies = ['Security', 'SystemConfiguration', 'MobileCoreServices']
+framework_dependencies = []
 
 # Search project file
 root_directory = `pwd`.chomp
@@ -142,21 +144,24 @@ puts "Project directory: #{root_directory}"
 puts "Project file: #{project_file}\n\n"
 puts "Project will be applied following changes"
 puts "Making a backup of project is recommended."
-puts "1. Download, install and link GrowthPush.framework"
-puts "2. Link Security.framework, SystemConfiguration.framework and MobileCoreServices.framework"
-puts "3. Add $(inherit) and $(SRCROOT) to framework search paths"
-puts "4. Import GrowthPush.h in prefix header"
-puts "5. Call EasyGrowthPush in AppDelegate\n\n"
-if !ask("Is this ok? [y/n]: ") then
+puts "* Download, install and link GrowthPush.framework"
+puts "* Add $(inherit) and $(SRCROOT) to framework search paths"
+if !skip_initialize then
+	puts "* Import GrowthPush.h in prefix header"
+	puts "* Call EasyGrowthPush in AppDelegate\n\n"
+end
+if !skip_confirm && !ask("Is this ok? [y/n]: ") then
 	error("Installation was canceled.")
 end
 
 puts "Downloading GrowthPush.framework..."
 system "mkdir -p /tmp/GrowthPush && curl -fsSL #{framework_url} -o /tmp/GrowthPush/growthpush-ios.zip && unzip -qo /tmp/GrowthPush/growthpush-ios.zip -d /tmp/GrowthPush/ && mv /tmp/GrowthPush/growthpush-ios/GrowthPush.framework ./ && rm -rf /tmp/GrowthPush"
 
-puts "Editing source files..."
-File.open(app_delegate_file_path, 'w') { |file| file << app_delegate_contents }
-File.open(prefix_header_file_path, 'w') { |file| file << prefix_header_contents }
+if !skip_initialize then
+	puts "Editing source files..."
+	File.open(app_delegate_file_path, 'w') { |file| file << app_delegate_contents }
+	File.open(prefix_header_file_path, 'w') { |file| file << prefix_header_contents }
+end
 
 puts "Update project files..."
 project.save_as("#{root_directory}/#{project_file}")
