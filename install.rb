@@ -1,4 +1,5 @@
 require 'rubygems'
+require 'optparse'
 
 module Tty extend self
 	def red; escape 31; end
@@ -56,23 +57,38 @@ def ask (question)
 	return ask(question)
 end
 
-if ARGV.size < 2 then
-  error("Incomplete parameters. Usage: #{$0} application-id secret [skip-initilize] [skip-confirm]")
-end
+# Parse options parameters
+opt = OptionParser.new
+skip_confirm = false
+opt.on('-y') {|v| skip_confirm = true }
+overwrite = false
+opt.on('-o') {|v| overwrite = true }
+library_path = 'https://growthpush.com/downloads/ios/libraries/latest'
+opt.on('-l VAL') {|v| library_path = v }
+project_directory = `pwd`
+opt.on('-p VAL') {|v| project_directory = v }
+application_id = nil
+opt.on('-i VAL') {|v| application_id = v }
+secret = nil
+opt.on('-s VAL') {|v| secret = v }
+opt.parse!(ARGV)
 
-application_id = ARGV[0]
-secret = ARGV[1]
-skip_initialize = ((ARGV.size >= 3) && (ARGV[2] == 'true'))
-skip_confirm = ((ARGV.size >= 4) && (ARGV[3] == 'true'))
-initialize_code = "[EasyGrowthPush setApplicationId:#{application_id} secret:@\"#{secret}\" environment:kGrowthPushEnvironment debug:YES];"
-framework_url = 'https://growthpush.com/downloads/ios/libraries/latest'
+library_path = library_path.sub(/(\/|\s)+$/, '')
+project_directory = project_directory.sub(/(\/|\s)+$/, '')
+edit_source = false
+if application_id && secret then
+	initialize_code = "[EasyGrowthPush setApplicationId:#{application_id} secret:@\"#{secret}\" environment:kGrowthPushEnvironment debug:YES];"
+	edit_source = true
+end
+download_library = (/^https?:\/\// =~ library_path)
+
 project_file_suffix = '.xcodeproj'
-framework_path = 'GrowthPush.framework'
+framework_name = 'GrowthPush.framework'
 framework_dependencies = []
+import_code = '#import <GrowthPush/GrowthPush.h>'
 
 # Search project file
-root_directory = `pwd`.chomp
-project_files = Dir.glob(root_directory + '/*' + project_file_suffix)
+project_files = Dir.glob(project_directory + '/*' + project_file_suffix)
 if project_files.size < 1 then
   error(".xcodeproj file not found in current directory. Change directory to project.")
 elsif project_files.size > 1 then
@@ -81,7 +97,7 @@ end
 
 project_name = File.basename(project_files[0], project_file_suffix)
 project_file = project_name + project_file_suffix
-project = Xcodeproj::Project.new("#{root_directory}/#{project_file}")
+project = Xcodeproj::Project.new("#{project_directory}/#{project_file}")
 
 # Search app target
 target = nil
@@ -95,10 +111,10 @@ if !target then
 end
 
 # Add GrowthPush.framework and some frameworks.
-if include_framework?(target, framework_path) then
+if include_framework?(target, framework_name) && !overwrite then
 	error("GrowthPush.framework already added.")
 end
-file_reference = project.frameworks_group.new_framework("#{root_directory}/#{framework_path}")
+file_reference = project.frameworks_group.new_framework("#{project_directory}/#{framework_name}")
 target.frameworks_build_phase.add_file_reference(file_reference)
 
 framework_dependencies.each{ |element|
@@ -119,13 +135,15 @@ if !app_delegate_file then
 	error("AppDelegate file cannot be specified.")
 end
 
-app_delegate_files = Dir.glob("#{root_directory}/**/#{app_delegate_file}")
+app_delegate_files = Dir.glob("#{project_directory}/**/#{app_delegate_file}")
 if project_files.size < 1 then
   error("AppDelegate file not found.")
 end
 app_delegate_file_path = app_delegate_files[0]
 app_delegate_contents = File.read(app_delegate_file_path)
-app_delegate_contents = app_delegate_contents.sub(/application:[^:]+didFinishLaunchingWithOptions:[^:]+?\{/, "\\0\n    #{initialize_code}")
+if initialize_code && !app_delegate_contents.include?(initialize_code) then
+	app_delegate_contents = app_delegate_contents.sub(/application:[^:]+didFinishLaunchingWithOptions:[^:]+?\{/, "\\0\n    #{initialize_code}")
+end
 
 # Add Framework Search Path Option
 add_framework_search_path(target.build_settings('Debug'), '$(inherited)')
@@ -135,18 +153,23 @@ add_framework_search_path(target.build_settings('Release'), '$(SRCROOT)')
 
 # Add GrowthPush import statement to prefix header
 prefix_header_file = target.build_settings('Debug')['GCC_PREFIX_HEADER']
-prefix_header_file_path = "#{root_directory}/#{prefix_header_file}"
+prefix_header_file_path = "#{project_directory}/#{prefix_header_file}"
 prefix_header_contents = File.read(prefix_header_file_path)
-prefix_header_contents = prefix_header_contents.sub(/#import[^\n]+Foundation.h[^\n]+/, "\\0\n#import <GrowthPush/GrowthPush.h>")
+if import_code && !prefix_header_contents.include?(import_code) then
+	prefix_header_contents = prefix_header_contents.sub(/#import[^\n]+Foundation.h[^\n]+/, "\\0\n#{import_code}")
+end
 
 # Apply changes
-puts "Project directory: #{root_directory}"
+puts "Project directory: #{project_directory}"
 puts "Project file: #{project_file}\n\n"
 puts "Project will be applied following changes"
 puts "Making a backup of project is recommended."
-puts "* Download, install and link GrowthPush.framework"
+if download_library then
+	puts "Download library"
+end
+puts "* Install and link GrowthPush.framework"
 puts "* Add $(inherit) and $(SRCROOT) to framework search paths"
-if !skip_initialize then
+if edit_source then
 	puts "* Import GrowthPush.h in prefix header"
 	puts "* Call EasyGrowthPush in AppDelegate\n\n"
 end
@@ -154,17 +177,23 @@ if !skip_confirm && !ask("Is this ok? [y/n]: ") then
 	error("Installation was canceled.")
 end
 
-puts "Downloading GrowthPush.framework..."
-system "mkdir -p /tmp/GrowthPush && curl -fsSL #{framework_url} -o /tmp/GrowthPush/growthpush-ios.zip && unzip -qo /tmp/GrowthPush/growthpush-ios.zip -d /tmp/GrowthPush/ && mv /tmp/GrowthPush/growthpush-ios/GrowthPush.framework ./ && rm -rf /tmp/GrowthPush"
+if download_library then
+	puts "Downloading GrowthPush.framework..."
+	system "mkdir -p /tmp/GrowthPush && curl -fsSL #{library_path} -o /tmp/GrowthPush/growthpush-ios.zip && unzip -qo /tmp/GrowthPush/growthpush-ios.zip -d /tmp/GrowthPush/"
+	library_path = '/tmp/GrowthPush/growthpush-ios/GrowthPush.framework'
+end
 
-if !skip_initialize then
+puts "Copy GrowthPush.framework to project..."
+system "cp -r #{library_path} #{project_directory}/"
+
+if edit_source then
 	puts "Editing source files..."
 	File.open(app_delegate_file_path, 'w') { |file| file << app_delegate_contents }
 	File.open(prefix_header_file_path, 'w') { |file| file << prefix_header_contents }
 end
 
 puts "Update project files..."
-project.save_as("#{root_directory}/#{project_file}")
+project.save_as("#{project_directory}/#{project_file}")
 
 puts "\n#{Tty.green}Completed!#{Tty.reset}"
 
