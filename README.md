@@ -15,6 +15,29 @@ That's all. GrowthPush instance will get APNS device token, send it to server, t
 
 You can get furthermore information on [GrowthPush documetations](https://growthpush.com/documents).
 
+## Install with script
+
+Run install script.
+
+```bash
+ruby ./install.rb -l ./GrowthPush.framework -p /path/to/your_project -i APPLICATION_ID -s APPLICATION_SECRET
+```
+
+## Install with CocoaPods
+
+Add GrowthPush dependency to Podfile.
+
+```bash
+platform :ios, '7.0'
+pod 'GrowthPush' 
+```
+
+Then run pod command
+
+```bash
+pod install
+```
+
 ## Building GrowthPush.framework
 
 [iOS-Universal-Framework](https://github.com/kstenerud/iOS-Universal-Framework) is required.
