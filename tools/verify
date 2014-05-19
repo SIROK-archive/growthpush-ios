@@ -2,7 +2,14 @@
 
 TOOL_DIR=`dirname $0`
 ROOT_DIR="${TOOL_DIR}/../"
-FILES=('GrowthPush.framework' 'GrowthPush.podspec' 'README.md' 'LICENSE' 'CHANGES')
+FILES=( \ 
+	'GrowthPush.framework' \ 
+	'GrowthPush.podspec' \ 
+	'README.md' \ 
+	'LICENSE' \ 
+	'CHANGES' \ 
+	'install.rb' \ 
+)
 
 for FILE in ${FILES[@]}; do
 	echo -n "Check ${FILE}... "
