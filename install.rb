@@ -16,7 +16,7 @@ def error message
 end
 
 begin
-	gem "xcodeproj"
+	gem 'xcodeproj'
 	require 'xcodeproj'
 rescue LoadError
 	error("xcodeproj gem is required.\nRun \"#{Tty.yellow}gem install xcodeproj#{Tty.reset}\" or \"#{Tty.yellow}sudo gem install xcodeproj#{Tty.reset}\"\nIf it is installed, restart the shell.")
@@ -100,7 +100,11 @@ end
 
 project_name = File.basename(project_files[0], project_file_suffix)
 project_file = project_name + project_file_suffix
-project = Xcodeproj::Project.new("#{project_directory}/#{project_file}")
+if xcodeproj_version_number >= 10 then
+	project = Xcodeproj::Project.open("#{project_directory}/#{project_file}")
+else
+	project = Xcodeproj::Project.new("#{project_directory}/#{project_file}")
+end
 
 # Search app target
 target = nil
@@ -117,7 +121,12 @@ end
 if include_framework?(target, framework_name) && !overwrite then
 	error("GrowthPush.framework already added.")
 end
-file_reference = project.frameworks_group.new_framework("#{project_directory}/#{framework_name}")
+
+if xcodeproj_version_number >= 10 then
+	file_reference = project.frameworks_group.new_file("#{project_directory}/#{framework_name}")
+else
+	file_reference = project.frameworks_group.new_framework("#{project_directory}/#{framework_name}")
+end
 target.frameworks_build_phase.add_file_reference(file_reference)
 
 framework_dependencies.each{ |element|
@@ -196,7 +205,11 @@ if edit_source then
 end
 
 puts "Update project files..."
-project.save_as("#{project_directory}/#{project_file}")
+if xcodeproj_version_number >= 10 then
+	project.save("#{project_directory}/#{project_file}")
+else
+	project.save_as("#{project_directory}/#{project_file}")
+end
 
 puts "\n#{Tty.green}Completed!#{Tty.reset}"
 
