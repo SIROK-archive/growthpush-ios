@@ -118,11 +118,12 @@ if !target then
 end
 
 # Add GrowthPush.framework and some frameworks.
-if include_framework?(target, framework_name) && !overwrite then
+if !include_framework?(target, framework_name) then
+	file_reference = project.frameworks_group.new_file("#{project_directory}/#{framework_name}")
+	target.frameworks_build_phase.add_file_reference(file_reference)
+elsif !overwrite then
 	error("GrowthPush.framework already added.")
 end
-file_reference = project.frameworks_group.new_file("#{project_directory}/#{framework_name}")
-target.frameworks_build_phase.add_file_reference(file_reference)
 
 framework_dependencies.each{ |element|
 	if !include_framework?(target, element) then
