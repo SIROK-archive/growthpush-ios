@@ -23,6 +23,9 @@ rescue LoadError
 	exit 1
 end
 
+xcodeproj_version = Gem.loaded_specs["xcodeproj"].version.to_s
+xcodeproj_version_number = xcodeproj_version.gsub(/(\d+)\.\d+(\.\d+)*/, '\1').to_i * 100 + xcodeproj_version.gsub(/\d+\.(\d+)(\.\d+)*/, '\1').to_i
+
 def include_framework? (target, name)
 	target.frameworks_build_phase.files.each { |element|
 		if element.display_name.include?(name) then
