@@ -16,7 +16,7 @@ def error message
 end
 
 begin
-	gem 'xcodeproj'
+	gem 'xcodeproj', '>= 0.5.0'
 	require 'xcodeproj'
 rescue LoadError
 	error("xcodeproj gem is required.\nRun \"#{Tty.yellow}gem install xcodeproj#{Tty.reset}\" or \"#{Tty.yellow}sudo gem install xcodeproj#{Tty.reset}\"\nIf it is installed, restart the shell.")
