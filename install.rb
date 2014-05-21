@@ -121,12 +121,7 @@ end
 if include_framework?(target, framework_name) && !overwrite then
 	error("GrowthPush.framework already added.")
 end
-
-if xcodeproj_version_number >= 10 then
-	file_reference = project.frameworks_group.new_file("#{project_directory}/#{framework_name}")
-else
-	file_reference = project.frameworks_group.new_framework("#{project_directory}/#{framework_name}")
-end
+file_reference = project.frameworks_group.new_file("#{project_directory}/#{framework_name}")
 target.frameworks_build_phase.add_file_reference(file_reference)
 
 framework_dependencies.each{ |element|
@@ -177,7 +172,7 @@ puts "Project file: #{project_file}\n\n"
 puts "Project will be applied following changes"
 puts "Making a backup of project is recommended."
 if download_library then
-	puts "Download library"
+	puts "* Download library"
 end
 puts "* Install and link GrowthPush.framework"
 puts "* Add $(inherit) and $(SRCROOT) to framework search paths"
