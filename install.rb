@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 require 'rubygems'
 require 'optparse'
 
@@ -16,12 +18,15 @@ def error message
 end
 
 begin
-	gem "xcodeproj"
+	gem 'xcodeproj', '>= 0.5.0'
 	require 'xcodeproj'
 rescue LoadError
 	error("xcodeproj gem is required.\nRun \"#{Tty.yellow}gem install xcodeproj#{Tty.reset}\" or \"#{Tty.yellow}sudo gem install xcodeproj#{Tty.reset}\"\nIf it is installed, restart the shell.")
 	exit 1
 end
+
+xcodeproj_version = Gem.loaded_specs["xcodeproj"].version.to_s
+xcodeproj_version_number = xcodeproj_version.gsub(/(\d+)\.\d+(\.\d+)*/, '\1').to_i * 100 + xcodeproj_version.gsub(/\d+\.(\d+)(\.\d+)*/, '\1').to_i
 
 def include_framework? (target, name)
 	target.frameworks_build_phase.files.each { |element|
@@ -97,7 +102,11 @@ end
 
 project_name = File.basename(project_files[0], project_file_suffix)
 project_file = project_name + project_file_suffix
-project = Xcodeproj::Project.new("#{project_directory}/#{project_file}")
+if xcodeproj_version_number >= 10 then
+	project = Xcodeproj::Project.open("#{project_directory}/#{project_file}")
+else
+	project = Xcodeproj::Project.new("#{project_directory}/#{project_file}")
+end
 
 # Search app target
 target = nil
@@ -111,11 +120,12 @@ if !target then
 end
 
 # Add GrowthPush.framework and some frameworks.
-if include_framework?(target, framework_name) && !overwrite then
+if !include_framework?(target, framework_name) then
+	file_reference = project.frameworks_group.new_file("#{project_directory}/#{framework_name}")
+	target.frameworks_build_phase.add_file_reference(file_reference)
+elsif !overwrite then
 	error("GrowthPush.framework already added.")
 end
-file_reference = project.frameworks_group.new_framework("#{project_directory}/#{framework_name}")
-target.frameworks_build_phase.add_file_reference(file_reference)
 
 framework_dependencies.each{ |element|
 	if !include_framework?(target, element) then
@@ -165,7 +175,7 @@ puts "Project file: #{project_file}\n\n"
 puts "Project will be applied following changes"
 puts "Making a backup of project is recommended."
 if download_library then
-	puts "Download library"
+	puts "* Download library"
 end
 puts "* Install and link GrowthPush.framework"
 puts "* Add $(inherit) and $(SRCROOT) to framework search paths"
@@ -193,7 +203,11 @@ if edit_source then
 end
 
 puts "Update project files..."
-project.save_as("#{project_directory}/#{project_file}")
+if xcodeproj_version_number >= 10 then
+	project.save("#{project_directory}/#{project_file}")
+else
+	project.save_as("#{project_directory}/#{project_file}")
+end
 
 puts "\n#{Tty.green}Completed!#{Tty.reset}"
 
