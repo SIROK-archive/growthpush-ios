@@ -68,39 +68,39 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 }
 
 + (void) setApplicationId:(NSInteger)applicationId secret:(NSString *)secret environment:(GPEnvironment)environment debug:(BOOL)debug {
-    [[GrowthPush sharedInstance] setApplicationId:applicationId secret:secret environment:environment debug:debug];
+    [[self sharedInstance] setApplicationId:applicationId secret:secret environment:environment debug:debug];
 }
 
 + (void) requestDeviceToken {
-    [[GrowthPush sharedInstance] requestDeviceToken];
+    [[self sharedInstance] requestDeviceToken];
 }
 
 + (void) setDeviceToken:(NSData *)deviceToken {
-    [[GrowthPush sharedInstance] setDeviceToken:deviceToken];
+    [[self sharedInstance] setDeviceToken:deviceToken];
 }
 
 + (void) trackEvent:(NSString *)name {
-    [[GrowthPush sharedInstance] trackEvent:name value:nil];
+    [[self sharedInstance] trackEvent:name value:nil];
 }
 
 + (void) trackEvent:(NSString *)name value:(NSString *)value {
-    [[GrowthPush sharedInstance] trackEvent:name value:value];
+    [[self sharedInstance] trackEvent:name value:value];
 }
 
 + (void) setTag:(NSString *)name {
-    [[GrowthPush sharedInstance] setTag:name value:nil];
+    [[self sharedInstance] setTag:name value:nil];
 }
 
 + (void) setTag:(NSString *)name value:(NSString *)value {
-    [[GrowthPush sharedInstance] setTag:name value:value];
+    [[self sharedInstance] setTag:name value:value];
 }
 
 + (void) setDeviceTags {
-    [[GrowthPush sharedInstance] setDeviceTags];
+    [[self sharedInstance] setDeviceTags];
 }
 
 + (void) clearBadge {
-    [[GrowthPush sharedInstance] clearBadge];
+    [[self sharedInstance] clearBadge];
 }
 
 - (id) init {
