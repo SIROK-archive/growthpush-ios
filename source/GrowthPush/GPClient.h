@@ -24,10 +24,10 @@
 
 @property (nonatomic, assign) long long id;
 @property (nonatomic, assign) NSInteger applicationId;
-@property (nonatomic, retain) NSString *code;
-@property (nonatomic, retain) NSString *token;
+@property (nonatomic, strong) NSString *code;
+@property (nonatomic, strong) NSString *token;
 @property (nonatomic, assign) GPOS os;
 @property (nonatomic, assign) GPEnvironment environment;
-@property (nonatomic, retain) NSDate *created;
+@property (nonatomic, strong) NSDate *created;
 
 @end

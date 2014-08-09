@@ -20,6 +20,6 @@
 @property (nonatomic, assign) NSInteger goalId;
 @property (nonatomic, assign) long long timestamp;
 @property (nonatomic, assign) long long clientId;
-@property (nonatomic, retain) NSString *value;
+@property (nonatomic, strong) NSString *value;
 
 @end

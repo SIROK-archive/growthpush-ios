@@ -17,7 +17,7 @@ static NSString *const kGPPreferenceFileName = @"growthpush-preferences";
 
 }
 
-@property (nonatomic, retain) NSURL *fileUrl;
+@property (nonatomic, strong) NSURL *fileUrl;
 
 @end
 
@@ -44,13 +44,6 @@ static NSString *const kGPPreferenceFileName = @"growthpush-preferences";
 
 }
 
-- (void) dealloc {
-
-    self.fileUrl = nil;
-
-    [super dealloc];
-
-}
 
 - (id) objectForKey:(id <NSCopying>)key {
 

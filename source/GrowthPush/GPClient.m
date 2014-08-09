@@ -79,15 +79,6 @@
 
 }
 
-- (void) dealloc {
-
-    self.code = nil;
-    self.token = nil;
-    self.created = nil;
-
-    [super dealloc];
-
-}
 
 - (void) encodeWithCoder:(NSCoder *)aCoder {
 

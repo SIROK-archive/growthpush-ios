@@ -35,15 +35,15 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 
 }
 
-@property (nonatomic, retain) GBLogger *logger;
-@property (nonatomic, retain) GBHttpClient *httpClient;
+@property (nonatomic, strong) GBLogger *logger;
+@property (nonatomic, strong) GBHttpClient *httpClient;
 @property (nonatomic, assign) NSInteger applicationId;
-@property (nonatomic, retain) NSString *secret;
+@property (nonatomic, strong) NSString *secret;
 @property (nonatomic, assign) GPEnvironment environment;
 @property (nonatomic, assign) BOOL debug;
-@property (nonatomic, retain) NSString *token;
-@property (nonatomic, retain) GPClient *client;
-@property (nonatomic, retain) NSMutableDictionary *tags;
+@property (nonatomic, strong) NSString *token;
+@property (nonatomic, strong) GPClient *client;
+@property (nonatomic, strong) NSMutableDictionary *tags;
 @property (nonatomic, assign) BOOL registeringClient;
 
 @end
@@ -112,23 +112,12 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 - (id) init {
     self = [super init];
     if (self) {
-        self.logger = [[[GBLogger alloc] initWithTag:@"Growth Push"] autorelease];
+        self.logger = [[GBLogger alloc] initWithTag:@"Growth Push"];
         self.httpClient = [[GBHttpClient alloc] initWithBaseUrl:[NSURL URLWithString:kGPBaseUrl]];
     }
     return self;
 }
 
-- (void) dealloc {
-
-    self.logger = nil;
-    self.secret = nil;
-    self.token = nil;
-    self.client = nil;
-    self.tags = nil;
-
-    [super dealloc];
-
-}
 
 - (void) setApplicationId:(NSInteger)newApplicationId secret:(NSString *)newSecret environment:(GPEnvironment)newEnvironment debug:(BOOL)newDebug {
 

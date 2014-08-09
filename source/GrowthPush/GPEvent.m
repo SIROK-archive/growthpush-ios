@@ -36,12 +36,5 @@
 
 }
 
-- (void) dealloc {
-
-    self.value = nil;
-
-    [super dealloc];
-
-}
 
 @end

@@ -389,6 +389,7 @@
 		B2AF90E91793029800FA90EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				DYLIB_COMPATIBILITY_VERSION = 3;
 				DYLIB_CURRENT_VERSION = 3;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -408,6 +409,7 @@
 		B2AF90EA1793029800FA90EC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				DYLIB_COMPATIBILITY_VERSION = 3;
 				DYLIB_CURRENT_VERSION = 3;
 				FRAMEWORK_SEARCH_PATHS = (

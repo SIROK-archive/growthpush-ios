@@ -16,7 +16,7 @@
         return nil;
     }
 
-    return [[[self alloc] initWithDictionary:dictionary] autorelease];
+    return [[self alloc] initWithDictionary:dictionary];
 
 }
 
