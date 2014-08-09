@@ -42,7 +42,8 @@
             self.environment = GPEnvironmentFromNSString([dictionary objectForKey:@"environment"]);
         }
         if ([dictionary objectForKey:@"created"] && [dictionary objectForKey:@"created"] != [NSNull null]) {
-            self.created = [GPDateUtils dateWithDateTimeString:[dictionary objectForKey:@"created"]];
+            // TODO fix time difference
+            self.created = [GBDateUtils dateWithString:[dictionary objectForKey:@"created"] format:@"yyyy-MM-dd HH:mm:ss"];
         }
     }
     return self;

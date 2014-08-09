@@ -8,9 +8,6 @@
 #import <SystemConfiguration/SystemConfiguration.h>
 #import <MobileCoreServices/MobileCoreServices.h>
 #import <GrowthbeatCore/GrowthbeatCore.h>
-#import <GrowthbeatCore/GBHttpRequest.h>
-#import <GrowthbeatCore/GBHttpResponse.h>
-#import <GrowthbeatCore/GBRequestMethod.h>
 #endif
 
 #define NSJSONSerialization NSClassFromString(@"NSJSONSerialization")

@@ -16,8 +16,6 @@
 		B21A2BF217A5671100C809ED /* GPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BC317A5671100C809ED /* GPClient.m */; };
 		B21A2BF317A5671100C809ED /* GPClientService.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BC417A5671100C809ED /* GPClientService.h */; };
 		B21A2BF417A5671100C809ED /* GPClientService.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BC517A5671100C809ED /* GPClientService.m */; };
-		B21A2BF517A5671100C809ED /* GPDateUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BC617A5671100C809ED /* GPDateUtils.h */; };
-		B21A2BF617A5671100C809ED /* GPDateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BC717A5671100C809ED /* GPDateUtils.m */; };
 		B21A2BF717A5671100C809ED /* GPDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BC817A5671100C809ED /* GPDevice.h */; };
 		B21A2BF817A5671100C809ED /* GPDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BC917A5671100C809ED /* GPDevice.m */; };
 		B21A2BF917A5671100C809ED /* GPDomain.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BCA17A5671100C809ED /* GPDomain.h */; };
@@ -57,8 +55,6 @@
 		B21A2BC317A5671100C809ED /* GPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPClient.m; sourceTree = "<group>"; };
 		B21A2BC417A5671100C809ED /* GPClientService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPClientService.h; sourceTree = "<group>"; };
 		B21A2BC517A5671100C809ED /* GPClientService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPClientService.m; sourceTree = "<group>"; };
-		B21A2BC617A5671100C809ED /* GPDateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPDateUtils.h; sourceTree = "<group>"; };
-		B21A2BC717A5671100C809ED /* GPDateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPDateUtils.m; sourceTree = "<group>"; };
 		B21A2BC817A5671100C809ED /* GPDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPDevice.h; sourceTree = "<group>"; };
 		B21A2BC917A5671100C809ED /* GPDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPDevice.m; sourceTree = "<group>"; };
 		B21A2BCA17A5671100C809ED /* GPDomain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPDomain.h; sourceTree = "<group>"; };
@@ -160,7 +156,6 @@
 				B21A2BC117A5671100C809ED /* GPAppDelegateWrapperDelegate.h */,
 				B21A2BC217A5671100C809ED /* GPClient.h */,
 				B21A2BC417A5671100C809ED /* GPClientService.h */,
-				B21A2BC617A5671100C809ED /* GPDateUtils.h */,
 				B21A2BC817A5671100C809ED /* GPDevice.h */,
 				B21A2BCA17A5671100C809ED /* GPDomain.h */,
 				B21A2BCC17A5671100C809ED /* GPEnvironment.h */,
@@ -186,7 +181,6 @@
 				B21A2BC017A5671100C809ED /* GPAppDelegateWrapper.m */,
 				B21A2BC317A5671100C809ED /* GPClient.m */,
 				B21A2BC517A5671100C809ED /* GPClientService.m */,
-				B21A2BC717A5671100C809ED /* GPDateUtils.m */,
 				B21A2BC917A5671100C809ED /* GPDevice.m */,
 				B21A2BCB17A5671100C809ED /* GPDomain.m */,
 				B21A2BCE17A5671100C809ED /* GPEnvironmentUtils.m */,
@@ -216,7 +210,6 @@
 				B21A2BF017A5671100C809ED /* GPAppDelegateWrapperDelegate.h in Headers */,
 				B21A2BF117A5671100C809ED /* GPClient.h in Headers */,
 				B21A2BF317A5671100C809ED /* GPClientService.h in Headers */,
-				B21A2BF517A5671100C809ED /* GPDateUtils.h in Headers */,
 				B21A2BF717A5671100C809ED /* GPDevice.h in Headers */,
 				B21A2BF917A5671100C809ED /* GPDomain.h in Headers */,
 				B21A2BFC17A5671100C809ED /* GPEnvironmentUtils.h in Headers */,
@@ -344,7 +337,6 @@
 				B21A2BEF17A5671100C809ED /* GPAppDelegateWrapper.m in Sources */,
 				B21A2BF217A5671100C809ED /* GPClient.m in Sources */,
 				B21A2BF417A5671100C809ED /* GPClientService.m in Sources */,
-				B21A2BF617A5671100C809ED /* GPDateUtils.m in Sources */,
 				B21A2BF817A5671100C809ED /* GPDevice.m in Sources */,
 				B21A2BFA17A5671100C809ED /* GPDomain.m in Sources */,
 				B21A2BFD17A5671100C809ED /* GPEnvironmentUtils.m in Sources */,
