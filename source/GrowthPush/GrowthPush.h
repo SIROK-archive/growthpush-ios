@@ -83,5 +83,6 @@
 + (GrowthPush *) sharedInstance;
 - (GBLogger *)logger;
 - (GBHttpClient *)httpClient;
+- (GBPreference *)preference;
 
 @end

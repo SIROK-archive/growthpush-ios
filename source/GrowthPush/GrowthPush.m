@@ -7,14 +7,13 @@
 //
 
 #import "GrowthPush.h"
-#import "GPPreference.h"
 #import "GPClientService.h"
 #import "GPEventService.h"
 #import "GPTagService.h"
-#import "GPDevice.h"
 
 static GrowthPush *sharedInstance = nil;
 static NSString *const kGPBaseUrl = @"https://api.growthpush.com/";
+static NSString *const kGPPreferenceDefaultFileName = @"growthpush-preferences";
 static NSString *const kGPPreferenceClientKey = @"client";
 static NSString *const kGPPreferenceTagsKey = @"tags";
 static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
@@ -23,6 +22,7 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 
     GBLogger *logger;
     GBHttpClient *httpClient;
+    GBPreference *preference;
     
     NSInteger applicationId;
     NSString *secret;
@@ -37,6 +37,8 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 
 @property (nonatomic, strong) GBLogger *logger;
 @property (nonatomic, strong) GBHttpClient *httpClient;
+@property (nonatomic, strong) GBPreference *preference;
+
 @property (nonatomic, assign) NSInteger applicationId;
 @property (nonatomic, strong) NSString *secret;
 @property (nonatomic, assign) GPEnvironment environment;
@@ -52,6 +54,8 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 
 @synthesize logger;
 @synthesize httpClient;
+@synthesize preference;
+
 @synthesize applicationId;
 @synthesize secret;
 @synthesize environment;
@@ -114,6 +118,7 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
     if (self) {
         self.logger = [[GBLogger alloc] initWithTag:@"Growth Push"];
         self.httpClient = [[GBHttpClient alloc] initWithBaseUrl:[NSURL URLWithString:kGPBaseUrl]];
+        self.preference = [[GBPreference alloc] initWithFileName:kGPPreferenceDefaultFileName];
     }
     return self;
 }
@@ -201,23 +206,23 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 
 - (void) setDeviceTags {
 
-    if ([GPDevice device]) {
-        [self setTag:@"Device" value:[GPDevice device]];
+    if ([GBDeviceUtils model]) {
+        [self setTag:@"Device" value:[GBDeviceUtils model]];
     }
-    if ([GPDevice os]) {
-        [self setTag:@"OS" value:[GPDevice os]];
+    if ([GBDeviceUtils os]) {
+        [self setTag:@"OS" value:[GBDeviceUtils os]];
     }
-    if ([GPDevice language]) {
-        [self setTag:@"Language" value:[GPDevice language]];
+    if ([GBDeviceUtils language]) {
+        [self setTag:@"Language" value:[GBDeviceUtils language]];
     }
-    if ([GPDevice timeZone]) {
-        [self setTag:@"Time Zone" value:[GPDevice timeZone]];
+    if ([GBDeviceUtils timeZone]) {
+        [self setTag:@"Time Zone" value:[GBDeviceUtils timeZone]];
     }
-    if ([GPDevice version]) {
-        [self setTag:@"Version" value:[GPDevice version]];
+    if ([GBDeviceUtils version]) {
+        [self setTag:@"Version" value:[GBDeviceUtils version]];
     }
-    if ([GPDevice build]) {
-        [self setTag:@"Build" value:[GPDevice build]];
+    if ([GBDeviceUtils build]) {
+        [self setTag:@"Build" value:[GBDeviceUtils build]];
     }
 
 }
@@ -288,7 +293,7 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 
 - (GPClient *) loadClient {
 
-    NSData *data = [[GPPreference sharedInstance] objectForKey:kGPPreferenceClientKey];
+    NSData *data = [preference objectForKey:kGPPreferenceClientKey];
 
     if (!data) {
         return nil;
@@ -305,20 +310,20 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
     }
 
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:client];
-    [[GPPreference sharedInstance] setObject:data forKey:kGPPreferenceClientKey];
+    [preference setObject:data forKey:kGPPreferenceClientKey];
 
 }
 
 - (void) clearClient {
 
     self.client = nil;
-    [[GPPreference sharedInstance] removeAll];
+    [preference removeAll];
 
 }
 
 - (NSMutableDictionary *) loadTags {
 
-    NSDictionary *loadedTags = [[GPPreference sharedInstance] objectForKey:kGPPreferenceTagsKey];
+    NSDictionary *loadedTags = [preference objectForKey:kGPPreferenceTagsKey];
 
     if (loadedTags && [loadedTags isKindOfClass:[NSDictionary class]]) {
         return [NSMutableDictionary dictionaryWithDictionary:loadedTags];
@@ -334,7 +339,7 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
         return;
     }
 
-    [[GPPreference sharedInstance] setObject:newTags forKey:kGPPreferenceTagsKey];
+    [preference setObject:newTags forKey:kGPPreferenceTagsKey];
 
 }
 
