@@ -22,6 +22,8 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 
 @interface GrowthPush () {
 
+    GBLogger *logger;
+    
     NSInteger applicationId;
     NSString *secret;
     GPEnvironment environment;
@@ -33,6 +35,7 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 
 }
 
+@property (nonatomic, retain) GBLogger *logger;
 @property (nonatomic, assign) NSInteger applicationId;
 @property (nonatomic, retain) NSString *secret;
 @property (nonatomic, assign) GPEnvironment environment;
@@ -46,6 +49,7 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 
 @implementation GrowthPush
 
+@synthesize logger;
 @synthesize applicationId;
 @synthesize secret;
 @synthesize environment;
@@ -106,6 +110,7 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 - (id) init {
     self = [super init];
     if (self) {
+        self.logger = [[[GBLogger alloc] initWithTag:@"Growth Push"] autorelease];
         [[GPHttpClient sharedInstance] setBaseUrl:[NSURL URLWithString:kGPBaseUrl]];
     }
     return self;
@@ -113,6 +118,7 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 
 - (void) dealloc {
 
+    self.logger = nil;
     self.secret = nil;
     self.token = nil;
     self.client = nil;
@@ -154,16 +160,16 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 - (void) trackEvent:(NSString *)name value:(NSString *)value {
 
     if (!name) {
-        [self log:@"Event name cannot be nil."];
+        [logger warn:@"Event name cannot be nil."];
         return;
     }
 
     [self runAfterRegister:^{
-        [self log:@"Sending event ... (name: %@)", name];
+        [logger info:@"Sending event ... (name: %@)", name];
         [[GPEventService sharedInstance] createWithClientId:client.id code:client.code name:name value:value success:^(GPEvent *event) {
-            [self log:@"Sending event success. (timestamp: %lld)", event.timestamp];
+            [logger info:@"Sending event success. (timestamp: %lld)", event.timestamp];
         } fail:^(NSInteger status, NSError *error) {
-            [self log:@"Sending event fail. %@", error];
+            [logger info:@"Sending event fail. %@", error];
             if (status == 401) {
                 [self clearClient];
             }
@@ -175,7 +181,7 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 - (void) setTag:(NSString *)name value:(NSString *)value {
 
     if (!name) {
-        [self log:@"Tag name cannot be nil."];
+        [logger warn:@"Tag name cannot be nil."];
         return;
     }
 
@@ -186,13 +192,13 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
             return;
         }
 
-        [self log:@"Sending tag... (key: %@, value: %@)", name, value];
+        [logger info:@"Sending tag... (key: %@, value: %@)", name, value];
         [[GPTagService sharedInstance] updateWithClientId:client.id code:client.code name:name value:value success:^{
-            [self log:@"Sending tag success."];
+            [logger info:@"Sending tag success."];
             [tags setObject:value ? value:@"" forKey:name];
             [self saveTags:tags];
         } fail:^(NSInteger status, NSError *error) {
-            [self log:@"Sending tag fail. %@", error];
+            [logger info:@"Sending tag fail. %@", error];
             if (status == 401) {
                 [self clearClient];
             }
@@ -242,35 +248,35 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
     self.registeringClient = YES;
 
     if (!client) {
-        [self log:@"Registering client... (applicationId: %d, environment: %@)", applicationId, NSStringFromGPEnvironment(environment)];
+        [logger info:@"Registering client... (applicationId: %d, environment: %@)", applicationId, NSStringFromGPEnvironment(environment)];
         [[GPClientService sharedInstance] createWithApplicationId:applicationId secret:secret token:token environment:environment success:^(GPClient *createdClient) {
-            [self log:@"Registering client success. (clientId: %lld)", createdClient.id];
-            [self log:@"See https://growthpush.com/applications/%d/clients to check the client registration.", applicationId];
+            [logger info:@"Registering client success. (clientId: %lld)", createdClient.id];
+            [logger info:@"See https://growthpush.com/applications/%d/clients to check the client registration.", applicationId];
             self.client = createdClient;
             [self saveClient:client];
             self.registeringClient = NO;
         } fail:^(NSInteger status, NSError *error) {
-            [self log:@"Registering client fail. %@", error];
+            [logger info:@"Registering client fail. %@", error];
             self.registeringClient = NO;
         }];
         return;
     }
 
     if ((token != client.token && ![token isEqualToString:client.token]) || environment != client.environment) {
-        [self log:@"Update client... (id: %d, token: %@, environment: %@)", applicationId, token, NSStringFromGPEnvironment(environment)];
+        [logger info:@"Update client... (id: %d, token: %@, environment: %@)", applicationId, token, NSStringFromGPEnvironment(environment)];
         [[GPClientService sharedInstance] updateWithId:client.id code:client.code token:token environment:environment success:^(GPClient *updatedClient) {
-            [self log:@"Updating client success. (clientId: %lld)", updatedClient.id];
+            [logger info:@"Updating client success. (clientId: %lld)", updatedClient.id];
             self.client = updatedClient;
             [self saveClient:client];
             self.registeringClient = NO;
         } fail:^(NSInteger status, NSError *error) {
-            [self log:@"Updating client fail. %@", error];
+            [logger info:@"Updating client fail. %@", error];
             self.registeringClient = NO;
         }];
         return;
     }
 
-    [self log:@"Client already registered."];
+    [logger info:@"Client already registered."];
 
 }
 
@@ -338,21 +344,6 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
     }
 
     [[GPPreference sharedInstance] setObject:newTags forKey:kGPPreferenceTagsKey];
-
-}
-
-- (void) log:(NSString *)format, ...{
-
-    if (!debug) {
-        return;
-    }
-
-    va_list args;
-
-    va_start(args, format);
-
-    NSString *message = [[[NSString alloc] initWithFormat:format arguments:args] autorelease];
-    NSLog(@"GrowthPush - %@", message);
 
 }
 
