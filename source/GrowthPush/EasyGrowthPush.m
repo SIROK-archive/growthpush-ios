@@ -7,7 +7,6 @@
 //
 
 #import "GrowthPush.h"
-#import "GPAppDelegateWrapper.h"
 #import "GPDevice.h"
 
 @interface GrowthPush ()
@@ -17,19 +16,19 @@
 
 @end
 
-@interface EasyGrowthPushAppDelegateIntercepter : NSObject <GPAppDelegateWrapperDelegate>
+@interface EasyGrowthPushAppDelegateIntercepter : NSObject <GBAppDelegateWrapperDelegate>
 
 @end
 
 @interface EasyGrowthPush () {
 
-    GPAppDelegateWrapper *appDelegateWrapper;
+    GBAppDelegateWrapper *appDelegateWrapper;
     EasyGrowthPushAppDelegateIntercepter *appDelegateIntercepter;
     EGPOption option;
 
 }
 
-@property (nonatomic, retain) GPAppDelegateWrapper *appDelegateWrapper;
+@property (nonatomic, retain) GBAppDelegateWrapper *appDelegateWrapper;
 @property (nonatomic, retain) EasyGrowthPushAppDelegateIntercepter *appDelegateIntercepter;
 @property (nonatomic, assign) EGPOption option;
 
@@ -75,7 +74,7 @@
     self = [super init];
     if (self) {
 
-        self.appDelegateWrapper = [[[GPAppDelegateWrapper alloc] init] autorelease];
+        self.appDelegateWrapper = [[[GBAppDelegateWrapper alloc] init] autorelease];
         [appDelegateWrapper setOriginalAppDelegate:[[UIApplication sharedApplication] delegate]];
         self.appDelegateIntercepter = [[[EasyGrowthPushAppDelegateIntercepter alloc] init] autorelease];
         [appDelegateWrapper setDelegate:appDelegateIntercepter];

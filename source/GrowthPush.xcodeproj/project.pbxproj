@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		B21923071796668800B0E513 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2AF90DD1793029800FA90EC /* Foundation.framework */; };
 		B21A2BEB17A5671100C809ED /* EasyGrowthPush.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BBC17A5671100C809ED /* EasyGrowthPush.m */; };
-		B21A2BEE17A5671100C809ED /* GPAppDelegateWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BBF17A5671100C809ED /* GPAppDelegateWrapper.h */; };
-		B21A2BEF17A5671100C809ED /* GPAppDelegateWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BC017A5671100C809ED /* GPAppDelegateWrapper.m */; };
-		B21A2BF017A5671100C809ED /* GPAppDelegateWrapperDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BC117A5671100C809ED /* GPAppDelegateWrapperDelegate.h */; };
 		B21A2BF117A5671100C809ED /* GPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BC217A5671100C809ED /* GPClient.h */; };
 		B21A2BF217A5671100C809ED /* GPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BC317A5671100C809ED /* GPClient.m */; };
 		B21A2BF317A5671100C809ED /* GPClientService.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BC417A5671100C809ED /* GPClientService.h */; };
@@ -45,9 +42,6 @@
 
 /* Begin PBXFileReference section */
 		B21A2BBC17A5671100C809ED /* EasyGrowthPush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyGrowthPush.m; sourceTree = "<group>"; };
-		B21A2BBF17A5671100C809ED /* GPAppDelegateWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPAppDelegateWrapper.h; sourceTree = "<group>"; };
-		B21A2BC017A5671100C809ED /* GPAppDelegateWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPAppDelegateWrapper.m; sourceTree = "<group>"; };
-		B21A2BC117A5671100C809ED /* GPAppDelegateWrapperDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPAppDelegateWrapperDelegate.h; sourceTree = "<group>"; };
 		B21A2BC217A5671100C809ED /* GPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPClient.h; sourceTree = "<group>"; };
 		B21A2BC317A5671100C809ED /* GPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPClient.m; sourceTree = "<group>"; };
 		B21A2BC417A5671100C809ED /* GPClientService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPClientService.h; sourceTree = "<group>"; };
@@ -146,8 +140,6 @@
 			isa = PBXGroup;
 			children = (
 				B2C68C0B17ECC5AB001F0BF7 /* EGPOption.h */,
-				B21A2BBF17A5671100C809ED /* GPAppDelegateWrapper.h */,
-				B21A2BC117A5671100C809ED /* GPAppDelegateWrapperDelegate.h */,
 				B21A2BC217A5671100C809ED /* GPClient.h */,
 				B21A2BC417A5671100C809ED /* GPClientService.h */,
 				B21A2BC817A5671100C809ED /* GPDevice.h */,
@@ -169,7 +161,6 @@
 			isa = PBXGroup;
 			children = (
 				B21A2BBC17A5671100C809ED /* EasyGrowthPush.m */,
-				B21A2BC017A5671100C809ED /* GPAppDelegateWrapper.m */,
 				B21A2BC317A5671100C809ED /* GPClient.m */,
 				B21A2BC517A5671100C809ED /* GPClientService.m */,
 				B21A2BC917A5671100C809ED /* GPDevice.m */,
@@ -197,8 +188,6 @@
 				B21A2C1817A5671100C809ED /* GrowthPush.h in Headers */,
 				B21A2BFB17A5671100C809ED /* GPEnvironment.h in Headers */,
 				B2C68C0C17ECC5AB001F0BF7 /* EGPOption.h in Headers */,
-				B21A2BEE17A5671100C809ED /* GPAppDelegateWrapper.h in Headers */,
-				B21A2BF017A5671100C809ED /* GPAppDelegateWrapperDelegate.h in Headers */,
 				B21A2BF117A5671100C809ED /* GPClient.h in Headers */,
 				B21A2BF317A5671100C809ED /* GPClientService.h in Headers */,
 				B21A2BF717A5671100C809ED /* GPDevice.h in Headers */,
@@ -322,7 +311,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B21A2BEB17A5671100C809ED /* EasyGrowthPush.m in Sources */,
-				B21A2BEF17A5671100C809ED /* GPAppDelegateWrapper.m in Sources */,
 				B21A2BF217A5671100C809ED /* GPClient.m in Sources */,
 				B21A2BF417A5671100C809ED /* GPClientService.m in Sources */,
 				B21A2BF817A5671100C809ED /* GPDevice.m in Sources */,
