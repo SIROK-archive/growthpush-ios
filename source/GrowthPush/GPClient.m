@@ -7,7 +7,6 @@
 //
 
 #import "GPClient.h"
-#import "GPUtils.h"
 
 @implementation GPClient
 

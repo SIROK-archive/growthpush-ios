@@ -7,7 +7,6 @@
 //
 
 #import "GPClientService.h"
-#import "GPUtils.h"
 
 static GPClientService *sharedInstance = nil;
 

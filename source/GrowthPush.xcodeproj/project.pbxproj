@@ -21,7 +21,6 @@
 		B21A2BF917A5671100C809ED /* GPDomain.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BCA17A5671100C809ED /* GPDomain.h */; };
 		B21A2BFA17A5671100C809ED /* GPDomain.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BCB17A5671100C809ED /* GPDomain.m */; };
 		B21A2BFB17A5671100C809ED /* GPEnvironment.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BCC17A5671100C809ED /* GPEnvironment.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B21A2BFC17A5671100C809ED /* GPEnvironmentUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BCD17A5671100C809ED /* GPEnvironmentUtils.h */; };
 		B21A2BFD17A5671100C809ED /* GPEnvironmentUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BCE17A5671100C809ED /* GPEnvironmentUtils.m */; };
 		B21A2BFE17A5671100C809ED /* GPEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BCF17A5671100C809ED /* GPEvent.h */; };
 		B21A2BFF17A5671100C809ED /* GPEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BD017A5671100C809ED /* GPEvent.m */; };
@@ -35,7 +34,6 @@
 		B21A2C1217A5671100C809ED /* GPService.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BE317A5671100C809ED /* GPService.m */; };
 		B21A2C1317A5671100C809ED /* GPTagService.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BE417A5671100C809ED /* GPTagService.h */; };
 		B21A2C1417A5671100C809ED /* GPTagService.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BE517A5671100C809ED /* GPTagService.m */; };
-		B21A2C1517A5671100C809ED /* GPUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BE617A5671100C809ED /* GPUtils.h */; };
 		B21A2C1617A5671100C809ED /* GPViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BE717A5671100C809ED /* GPViewController.h */; };
 		B21A2C1717A5671100C809ED /* GPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BE817A5671100C809ED /* GPViewController.m */; };
 		B21A2C1817A5671100C809ED /* GrowthPush.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BE917A5671100C809ED /* GrowthPush.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -59,7 +57,6 @@
 		B21A2BCA17A5671100C809ED /* GPDomain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPDomain.h; sourceTree = "<group>"; };
 		B21A2BCB17A5671100C809ED /* GPDomain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPDomain.m; sourceTree = "<group>"; };
 		B21A2BCC17A5671100C809ED /* GPEnvironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPEnvironment.h; sourceTree = "<group>"; };
-		B21A2BCD17A5671100C809ED /* GPEnvironmentUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPEnvironmentUtils.h; sourceTree = "<group>"; };
 		B21A2BCE17A5671100C809ED /* GPEnvironmentUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPEnvironmentUtils.m; sourceTree = "<group>"; };
 		B21A2BCF17A5671100C809ED /* GPEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPEvent.h; sourceTree = "<group>"; };
 		B21A2BD017A5671100C809ED /* GPEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPEvent.m; sourceTree = "<group>"; };
@@ -73,7 +70,6 @@
 		B21A2BE317A5671100C809ED /* GPService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPService.m; sourceTree = "<group>"; };
 		B21A2BE417A5671100C809ED /* GPTagService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPTagService.h; sourceTree = "<group>"; };
 		B21A2BE517A5671100C809ED /* GPTagService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPTagService.m; sourceTree = "<group>"; };
-		B21A2BE617A5671100C809ED /* GPUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPUtils.h; sourceTree = "<group>"; };
 		B21A2BE717A5671100C809ED /* GPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPViewController.h; sourceTree = "<group>"; };
 		B21A2BE817A5671100C809ED /* GPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPViewController.m; sourceTree = "<group>"; };
 		B21A2BE917A5671100C809ED /* GrowthPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrowthPush.h; sourceTree = "<group>"; };
@@ -157,14 +153,12 @@
 				B21A2BC817A5671100C809ED /* GPDevice.h */,
 				B21A2BCA17A5671100C809ED /* GPDomain.h */,
 				B21A2BCC17A5671100C809ED /* GPEnvironment.h */,
-				B21A2BCD17A5671100C809ED /* GPEnvironmentUtils.h */,
 				B21A2BCF17A5671100C809ED /* GPEvent.h */,
 				B21A2BD117A5671100C809ED /* GPEventService.h */,
 				B21A2BDB17A5671100C809ED /* GPOS.h */,
 				B21A2BDE17A5671100C809ED /* GPPreference.h */,
 				B21A2BE217A5671100C809ED /* GPService.h */,
 				B21A2BE417A5671100C809ED /* GPTagService.h */,
-				B21A2BE617A5671100C809ED /* GPUtils.h */,
 				B21A2BE717A5671100C809ED /* GPViewController.h */,
 				B21A2BE917A5671100C809ED /* GrowthPush.h */,
 			);
@@ -209,14 +203,12 @@
 				B21A2BF317A5671100C809ED /* GPClientService.h in Headers */,
 				B21A2BF717A5671100C809ED /* GPDevice.h in Headers */,
 				B21A2BF917A5671100C809ED /* GPDomain.h in Headers */,
-				B21A2BFC17A5671100C809ED /* GPEnvironmentUtils.h in Headers */,
 				B21A2BFE17A5671100C809ED /* GPEvent.h in Headers */,
 				B21A2C0017A5671100C809ED /* GPEventService.h in Headers */,
 				B21A2C0A17A5671100C809ED /* GPOS.h in Headers */,
 				B21A2C0D17A5671100C809ED /* GPPreference.h in Headers */,
 				B21A2C1117A5671100C809ED /* GPService.h in Headers */,
 				B21A2C1317A5671100C809ED /* GPTagService.h in Headers */,
-				B21A2C1517A5671100C809ED /* GPUtils.h in Headers */,
 				B21A2C1617A5671100C809ED /* GPViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,3 +13,6 @@ typedef NS_ENUM (NSInteger, GPEnvironment) {
     GPEnvironmentDevelopment,
     GPEnvironmentProduction,
 };
+
+NSString *NSStringFromGPEnvironment(GPEnvironment environment);
+GPEnvironment GPEnvironmentFromNSString(NSString *environmentString);

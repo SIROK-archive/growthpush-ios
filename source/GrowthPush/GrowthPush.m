@@ -12,7 +12,6 @@
 #import "GPEventService.h"
 #import "GPTagService.h"
 #import "GPDevice.h"
-#import "GPUtils.h"
 
 static GrowthPush *sharedInstance = nil;
 static NSString *const kGPBaseUrl = @"https://api.growthpush.com/";
