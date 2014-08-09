@@ -10,6 +10,5 @@
 #define pickaxe_GPUtils_h
 
 #import "GPEnvironmentUtils.h"
-#import "GPOSUtils.h"
 
 #endif

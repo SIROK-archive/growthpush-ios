@@ -13,3 +13,6 @@ typedef NS_ENUM (NSInteger, GPOS) {
     GPOSIos,
     GPOSAndroid,
 };
+
+NSString *NSStringFromGPOS(GPOS os);
+GPOS GPOSFromNSString(NSString *osString);

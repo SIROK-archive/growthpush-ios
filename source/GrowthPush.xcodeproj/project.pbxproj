@@ -28,8 +28,7 @@
 		B21A2C0017A5671100C809ED /* GPEventService.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BD117A5671100C809ED /* GPEventService.h */; };
 		B21A2C0117A5671100C809ED /* GPEventService.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BD217A5671100C809ED /* GPEventService.m */; };
 		B21A2C0A17A5671100C809ED /* GPOS.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BDB17A5671100C809ED /* GPOS.h */; };
-		B21A2C0B17A5671100C809ED /* GPOSUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BDC17A5671100C809ED /* GPOSUtils.h */; };
-		B21A2C0C17A5671100C809ED /* GPOSUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BDD17A5671100C809ED /* GPOSUtils.m */; };
+		B21A2C0C17A5671100C809ED /* GPOS.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BDD17A5671100C809ED /* GPOS.m */; };
 		B21A2C0D17A5671100C809ED /* GPPreference.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BDE17A5671100C809ED /* GPPreference.h */; };
 		B21A2C0E17A5671100C809ED /* GPPreference.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BDF17A5671100C809ED /* GPPreference.m */; };
 		B21A2C1117A5671100C809ED /* GPService.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BE217A5671100C809ED /* GPService.h */; };
@@ -67,8 +66,7 @@
 		B21A2BD117A5671100C809ED /* GPEventService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPEventService.h; sourceTree = "<group>"; };
 		B21A2BD217A5671100C809ED /* GPEventService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPEventService.m; sourceTree = "<group>"; };
 		B21A2BDB17A5671100C809ED /* GPOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPOS.h; sourceTree = "<group>"; };
-		B21A2BDC17A5671100C809ED /* GPOSUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPOSUtils.h; sourceTree = "<group>"; };
-		B21A2BDD17A5671100C809ED /* GPOSUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPOSUtils.m; sourceTree = "<group>"; };
+		B21A2BDD17A5671100C809ED /* GPOS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPOS.m; sourceTree = "<group>"; };
 		B21A2BDE17A5671100C809ED /* GPPreference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPPreference.h; sourceTree = "<group>"; };
 		B21A2BDF17A5671100C809ED /* GPPreference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPPreference.m; sourceTree = "<group>"; };
 		B21A2BE217A5671100C809ED /* GPService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPService.h; sourceTree = "<group>"; };
@@ -163,7 +161,6 @@
 				B21A2BCF17A5671100C809ED /* GPEvent.h */,
 				B21A2BD117A5671100C809ED /* GPEventService.h */,
 				B21A2BDB17A5671100C809ED /* GPOS.h */,
-				B21A2BDC17A5671100C809ED /* GPOSUtils.h */,
 				B21A2BDE17A5671100C809ED /* GPPreference.h */,
 				B21A2BE217A5671100C809ED /* GPService.h */,
 				B21A2BE417A5671100C809ED /* GPTagService.h */,
@@ -186,7 +183,7 @@
 				B21A2BCE17A5671100C809ED /* GPEnvironmentUtils.m */,
 				B21A2BD017A5671100C809ED /* GPEvent.m */,
 				B21A2BD217A5671100C809ED /* GPEventService.m */,
-				B21A2BDD17A5671100C809ED /* GPOSUtils.m */,
+				B21A2BDD17A5671100C809ED /* GPOS.m */,
 				B21A2BDF17A5671100C809ED /* GPPreference.m */,
 				B21A2BE317A5671100C809ED /* GPService.m */,
 				B21A2BE517A5671100C809ED /* GPTagService.m */,
@@ -216,7 +213,6 @@
 				B21A2BFE17A5671100C809ED /* GPEvent.h in Headers */,
 				B21A2C0017A5671100C809ED /* GPEventService.h in Headers */,
 				B21A2C0A17A5671100C809ED /* GPOS.h in Headers */,
-				B21A2C0B17A5671100C809ED /* GPOSUtils.h in Headers */,
 				B21A2C0D17A5671100C809ED /* GPPreference.h in Headers */,
 				B21A2C1117A5671100C809ED /* GPService.h in Headers */,
 				B21A2C1317A5671100C809ED /* GPTagService.h in Headers */,
@@ -342,7 +338,7 @@
 				B21A2BFD17A5671100C809ED /* GPEnvironmentUtils.m in Sources */,
 				B21A2BFF17A5671100C809ED /* GPEvent.m in Sources */,
 				B21A2C0117A5671100C809ED /* GPEventService.m in Sources */,
-				B21A2C0C17A5671100C809ED /* GPOSUtils.m in Sources */,
+				B21A2C0C17A5671100C809ED /* GPOS.m in Sources */,
 				B21A2C0E17A5671100C809ED /* GPPreference.m in Sources */,
 				B21A2C1217A5671100C809ED /* GPService.m in Sources */,
 				B21A2C1417A5671100C809ED /* GPTagService.m in Sources */,
