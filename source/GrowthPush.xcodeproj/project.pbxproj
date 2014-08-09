@@ -55,6 +55,7 @@
 		B21A2C1717A5671100C809ED /* GPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BE817A5671100C809ED /* GPViewController.m */; };
 		B21A2C1817A5671100C809ED /* GrowthPush.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BE917A5671100C809ED /* GrowthPush.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B21A2C1917A5671100C809ED /* GrowthPush.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BEA17A5671100C809ED /* GrowthPush.m */; };
+		B2916FB91996530000A3C023 /* GrowthbeatCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2916FB81996530000A3C023 /* GrowthbeatCore.framework */; };
 		B2AF90E41793029800FA90EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B2AF90E21793029800FA90EC /* InfoPlist.strings */; };
 		B2C68C0C17ECC5AB001F0BF7 /* EGPOption.h in Headers */ = {isa = PBXBuildFile; fileRef = B2C68C0B17ECC5AB001F0BF7 /* EGPOption.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -107,6 +108,7 @@
 		B21A2BE817A5671100C809ED /* GPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPViewController.m; sourceTree = "<group>"; };
 		B21A2BE917A5671100C809ED /* GrowthPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrowthPush.h; sourceTree = "<group>"; };
 		B21A2BEA17A5671100C809ED /* GrowthPush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrowthPush.m; sourceTree = "<group>"; };
+		B2916FB81996530000A3C023 /* GrowthbeatCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GrowthbeatCore.framework; path = "../submodules/growthbeat-core-ios/GrowthbeatCore.framework"; sourceTree = "<group>"; };
 		B2AF90DA1793029800FA90EC /* GrowthPush.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework.static; includeInIndex = 0; path = GrowthPush.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2AF90DD1793029800FA90EC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B2AF90E11793029800FA90EC /* GrowthPush-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GrowthPush-Info.plist"; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2916FB91996530000A3C023 /* GrowthbeatCore.framework in Frameworks */,
 				B21923071796668800B0E513 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,6 +150,7 @@
 		B2AF90DC1793029800FA90EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B2916FB81996530000A3C023 /* GrowthbeatCore.framework */,
 				B2AF90DD1793029800FA90EC /* Foundation.framework */,
 			);
 			name = Frameworks;
@@ -475,6 +479,10 @@
 			buildSettings = {
 				DYLIB_COMPATIBILITY_VERSION = 3;
 				DYLIB_CURRENT_VERSION = 3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/kataoka/growthpush-ios/submodules/growthbeat-core-ios",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GrowthPush/GrowthPush-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
@@ -490,6 +498,10 @@
 			buildSettings = {
 				DYLIB_COMPATIBILITY_VERSION = 3;
 				DYLIB_CURRENT_VERSION = 3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/kataoka/growthpush-ios/submodules/growthbeat-core-ios",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GrowthPush/GrowthPush-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
