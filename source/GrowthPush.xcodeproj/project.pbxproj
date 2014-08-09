@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		24D9435C1902D9F40000C3AE /* GPHTTPOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 24D9435B1902D9ED0000C3AE /* GPHTTPOperation.h */; };
-		24D9435E1902D9FC0000C3AE /* GPHTTPOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D9435D1902D9FC0000C3AE /* GPHTTPOperation.m */; };
 		B21923071796668800B0E513 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2AF90DD1793029800FA90EC /* Foundation.framework */; };
 		B21A2BEB17A5671100C809ED /* EasyGrowthPush.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BBC17A5671100C809ED /* EasyGrowthPush.m */; };
 		B21A2BEE17A5671100C809ED /* GPAppDelegateWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BBF17A5671100C809ED /* GPAppDelegateWrapper.h */; };
@@ -31,21 +29,11 @@
 		B21A2BFF17A5671100C809ED /* GPEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BD017A5671100C809ED /* GPEvent.m */; };
 		B21A2C0017A5671100C809ED /* GPEventService.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BD117A5671100C809ED /* GPEventService.h */; };
 		B21A2C0117A5671100C809ED /* GPEventService.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BD217A5671100C809ED /* GPEventService.m */; };
-		B21A2C0217A5671100C809ED /* GPHttpClient.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BD317A5671100C809ED /* GPHttpClient.h */; };
-		B21A2C0317A5671100C809ED /* GPHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BD417A5671100C809ED /* GPHttpClient.m */; };
-		B21A2C0417A5671100C809ED /* GPHttpRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BD517A5671100C809ED /* GPHttpRequest.h */; };
-		B21A2C0517A5671100C809ED /* GPHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BD617A5671100C809ED /* GPHttpRequest.m */; };
-		B21A2C0617A5671100C809ED /* GPHttpResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BD717A5671100C809ED /* GPHttpResponse.h */; };
-		B21A2C0717A5671100C809ED /* GPHttpResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BD817A5671100C809ED /* GPHttpResponse.m */; };
-		B21A2C0817A5671100C809ED /* GPHttpUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BD917A5671100C809ED /* GPHttpUtils.h */; };
-		B21A2C0917A5671100C809ED /* GPHttpUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BDA17A5671100C809ED /* GPHttpUtils.m */; };
 		B21A2C0A17A5671100C809ED /* GPOS.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BDB17A5671100C809ED /* GPOS.h */; };
 		B21A2C0B17A5671100C809ED /* GPOSUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BDC17A5671100C809ED /* GPOSUtils.h */; };
 		B21A2C0C17A5671100C809ED /* GPOSUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BDD17A5671100C809ED /* GPOSUtils.m */; };
 		B21A2C0D17A5671100C809ED /* GPPreference.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BDE17A5671100C809ED /* GPPreference.h */; };
 		B21A2C0E17A5671100C809ED /* GPPreference.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BDF17A5671100C809ED /* GPPreference.m */; };
-		B21A2C0F17A5671100C809ED /* GPRequestMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BE017A5671100C809ED /* GPRequestMethod.h */; };
-		B21A2C1017A5671100C809ED /* GPRequestMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BE117A5671100C809ED /* GPRequestMethod.m */; };
 		B21A2C1117A5671100C809ED /* GPService.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BE217A5671100C809ED /* GPService.h */; };
 		B21A2C1217A5671100C809ED /* GPService.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BE317A5671100C809ED /* GPService.m */; };
 		B21A2C1317A5671100C809ED /* GPTagService.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BE417A5671100C809ED /* GPTagService.h */; };
@@ -61,8 +49,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		24D9435B1902D9ED0000C3AE /* GPHTTPOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPHTTPOperation.h; sourceTree = "<group>"; };
-		24D9435D1902D9FC0000C3AE /* GPHTTPOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPHTTPOperation.m; sourceTree = "<group>"; };
 		B21A2BBC17A5671100C809ED /* EasyGrowthPush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyGrowthPush.m; sourceTree = "<group>"; };
 		B21A2BBF17A5671100C809ED /* GPAppDelegateWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPAppDelegateWrapper.h; sourceTree = "<group>"; };
 		B21A2BC017A5671100C809ED /* GPAppDelegateWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPAppDelegateWrapper.m; sourceTree = "<group>"; };
@@ -84,21 +70,11 @@
 		B21A2BD017A5671100C809ED /* GPEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPEvent.m; sourceTree = "<group>"; };
 		B21A2BD117A5671100C809ED /* GPEventService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPEventService.h; sourceTree = "<group>"; };
 		B21A2BD217A5671100C809ED /* GPEventService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPEventService.m; sourceTree = "<group>"; };
-		B21A2BD317A5671100C809ED /* GPHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPHttpClient.h; sourceTree = "<group>"; };
-		B21A2BD417A5671100C809ED /* GPHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPHttpClient.m; sourceTree = "<group>"; };
-		B21A2BD517A5671100C809ED /* GPHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPHttpRequest.h; sourceTree = "<group>"; };
-		B21A2BD617A5671100C809ED /* GPHttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPHttpRequest.m; sourceTree = "<group>"; };
-		B21A2BD717A5671100C809ED /* GPHttpResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPHttpResponse.h; sourceTree = "<group>"; };
-		B21A2BD817A5671100C809ED /* GPHttpResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPHttpResponse.m; sourceTree = "<group>"; };
-		B21A2BD917A5671100C809ED /* GPHttpUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPHttpUtils.h; sourceTree = "<group>"; };
-		B21A2BDA17A5671100C809ED /* GPHttpUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPHttpUtils.m; sourceTree = "<group>"; };
 		B21A2BDB17A5671100C809ED /* GPOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPOS.h; sourceTree = "<group>"; };
 		B21A2BDC17A5671100C809ED /* GPOSUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPOSUtils.h; sourceTree = "<group>"; };
 		B21A2BDD17A5671100C809ED /* GPOSUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPOSUtils.m; sourceTree = "<group>"; };
 		B21A2BDE17A5671100C809ED /* GPPreference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPPreference.h; sourceTree = "<group>"; };
 		B21A2BDF17A5671100C809ED /* GPPreference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPPreference.m; sourceTree = "<group>"; };
-		B21A2BE017A5671100C809ED /* GPRequestMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPRequestMethod.h; sourceTree = "<group>"; };
-		B21A2BE117A5671100C809ED /* GPRequestMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPRequestMethod.m; sourceTree = "<group>"; };
 		B21A2BE217A5671100C809ED /* GPService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPService.h; sourceTree = "<group>"; };
 		B21A2BE317A5671100C809ED /* GPService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPService.m; sourceTree = "<group>"; };
 		B21A2BE417A5671100C809ED /* GPTagService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPTagService.h; sourceTree = "<group>"; };
@@ -191,15 +167,9 @@
 				B21A2BCD17A5671100C809ED /* GPEnvironmentUtils.h */,
 				B21A2BCF17A5671100C809ED /* GPEvent.h */,
 				B21A2BD117A5671100C809ED /* GPEventService.h */,
-				B21A2BD317A5671100C809ED /* GPHttpClient.h */,
-				24D9435B1902D9ED0000C3AE /* GPHTTPOperation.h */,
-				B21A2BD517A5671100C809ED /* GPHttpRequest.h */,
-				B21A2BD717A5671100C809ED /* GPHttpResponse.h */,
-				B21A2BD917A5671100C809ED /* GPHttpUtils.h */,
 				B21A2BDB17A5671100C809ED /* GPOS.h */,
 				B21A2BDC17A5671100C809ED /* GPOSUtils.h */,
 				B21A2BDE17A5671100C809ED /* GPPreference.h */,
-				B21A2BE017A5671100C809ED /* GPRequestMethod.h */,
 				B21A2BE217A5671100C809ED /* GPService.h */,
 				B21A2BE417A5671100C809ED /* GPTagService.h */,
 				B21A2BE617A5671100C809ED /* GPUtils.h */,
@@ -222,14 +192,8 @@
 				B21A2BCE17A5671100C809ED /* GPEnvironmentUtils.m */,
 				B21A2BD017A5671100C809ED /* GPEvent.m */,
 				B21A2BD217A5671100C809ED /* GPEventService.m */,
-				B21A2BD417A5671100C809ED /* GPHttpClient.m */,
-				24D9435D1902D9FC0000C3AE /* GPHTTPOperation.m */,
-				B21A2BD617A5671100C809ED /* GPHttpRequest.m */,
-				B21A2BD817A5671100C809ED /* GPHttpResponse.m */,
-				B21A2BDA17A5671100C809ED /* GPHttpUtils.m */,
 				B21A2BDD17A5671100C809ED /* GPOSUtils.m */,
 				B21A2BDF17A5671100C809ED /* GPPreference.m */,
-				B21A2BE117A5671100C809ED /* GPRequestMethod.m */,
 				B21A2BE317A5671100C809ED /* GPService.m */,
 				B21A2BE517A5671100C809ED /* GPTagService.m */,
 				B21A2BE817A5671100C809ED /* GPViewController.m */,
@@ -258,15 +222,9 @@
 				B21A2BFC17A5671100C809ED /* GPEnvironmentUtils.h in Headers */,
 				B21A2BFE17A5671100C809ED /* GPEvent.h in Headers */,
 				B21A2C0017A5671100C809ED /* GPEventService.h in Headers */,
-				B21A2C0217A5671100C809ED /* GPHttpClient.h in Headers */,
-				B21A2C0417A5671100C809ED /* GPHttpRequest.h in Headers */,
-				24D9435C1902D9F40000C3AE /* GPHTTPOperation.h in Headers */,
-				B21A2C0617A5671100C809ED /* GPHttpResponse.h in Headers */,
-				B21A2C0817A5671100C809ED /* GPHttpUtils.h in Headers */,
 				B21A2C0A17A5671100C809ED /* GPOS.h in Headers */,
 				B21A2C0B17A5671100C809ED /* GPOSUtils.h in Headers */,
 				B21A2C0D17A5671100C809ED /* GPPreference.h in Headers */,
-				B21A2C0F17A5671100C809ED /* GPRequestMethod.h in Headers */,
 				B21A2C1117A5671100C809ED /* GPService.h in Headers */,
 				B21A2C1317A5671100C809ED /* GPTagService.h in Headers */,
 				B21A2C1517A5671100C809ED /* GPUtils.h in Headers */,
@@ -392,14 +350,8 @@
 				B21A2BFD17A5671100C809ED /* GPEnvironmentUtils.m in Sources */,
 				B21A2BFF17A5671100C809ED /* GPEvent.m in Sources */,
 				B21A2C0117A5671100C809ED /* GPEventService.m in Sources */,
-				B21A2C0317A5671100C809ED /* GPHttpClient.m in Sources */,
-				B21A2C0517A5671100C809ED /* GPHttpRequest.m in Sources */,
-				B21A2C0717A5671100C809ED /* GPHttpResponse.m in Sources */,
-				B21A2C0917A5671100C809ED /* GPHttpUtils.m in Sources */,
-				24D9435E1902D9FC0000C3AE /* GPHTTPOperation.m in Sources */,
 				B21A2C0C17A5671100C809ED /* GPOSUtils.m in Sources */,
 				B21A2C0E17A5671100C809ED /* GPPreference.m in Sources */,
-				B21A2C1017A5671100C809ED /* GPRequestMethod.m in Sources */,
 				B21A2C1217A5671100C809ED /* GPService.m in Sources */,
 				B21A2C1417A5671100C809ED /* GPTagService.m in Sources */,
 				B21A2C1717A5671100C809ED /* GPViewController.m in Sources */,

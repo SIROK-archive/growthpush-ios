@@ -7,10 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GPHttpClient.h"
 
 @interface GPService : NSObject
 
-- (void)httpRequest:(GPHttpRequest *)httpRequest success:(void(^) (GPHttpResponse * httpResponse)) success fail:(void(^) (GPHttpResponse * httpResponse))fail;
+- (void)httpRequest:(GBHttpRequest *)httpRequest success:(void(^) (GBHttpResponse * httpResponse)) success fail:(void(^) (GBHttpResponse * httpResponse))fail;
 
 @end

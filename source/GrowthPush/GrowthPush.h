@@ -81,6 +81,10 @@
  */
 + (void)clearBadge;
 
++ (GrowthPush *) sharedInstance;
+- (GBLogger *)logger;
+- (GBHttpClient *)httpClient;
+
 @end
 
 @interface EasyGrowthPush : GrowthPush

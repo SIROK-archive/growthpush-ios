@@ -12,8 +12,6 @@
 
 @interface GrowthPush ()
 
-+ (id) sharedInstance;
-
 - (void) setApplicationId:(NSInteger)newApplicationId secret:(NSString *)newSecret environment:(GPEnvironment)newEnvironment debug:(BOOL)newDebug;
 - (void) log:(NSString *)format, ...;
 

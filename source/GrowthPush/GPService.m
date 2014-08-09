@@ -7,12 +7,20 @@
 //
 
 #import "GPService.h"
+#import "GrowthPush.h"
 
 @implementation GPService
 
-- (void) httpRequest:(GPHttpRequest *)httpRequest success:(void (^)(GPHttpResponse *httpResponse))success fail:(void (^)(GPHttpResponse *httpResponse))fail {
+- (void) httpRequest:(GBHttpRequest *)httpRequest success:(void (^)(GBHttpResponse *httpResponse))success fail:(void (^)(GBHttpResponse *httpResponse))fail {
 
-    [[GPHttpClient sharedInstance] httpRequest:httpRequest success:success fail:fail];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+        GBHttpResponse *httpResponse = [[[GrowthPush sharedInstance] httpClient] httpRequest:httpRequest];
+        if(httpResponse.success) {
+            success(httpResponse);
+        } else {
+            fail(httpResponse);
+        }
+    });
 
 }
 

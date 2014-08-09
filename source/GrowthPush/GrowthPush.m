@@ -23,6 +23,7 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 @interface GrowthPush () {
 
     GBLogger *logger;
+    GBHttpClient *httpClient;
     
     NSInteger applicationId;
     NSString *secret;
@@ -36,6 +37,7 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 }
 
 @property (nonatomic, retain) GBLogger *logger;
+@property (nonatomic, retain) GBHttpClient *httpClient;
 @property (nonatomic, assign) NSInteger applicationId;
 @property (nonatomic, retain) NSString *secret;
 @property (nonatomic, assign) GPEnvironment environment;
@@ -50,6 +52,7 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 @implementation GrowthPush
 
 @synthesize logger;
+@synthesize httpClient;
 @synthesize applicationId;
 @synthesize secret;
 @synthesize environment;
@@ -111,7 +114,7 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
     self = [super init];
     if (self) {
         self.logger = [[[GBLogger alloc] initWithTag:@"Growth Push"] autorelease];
-        [[GPHttpClient sharedInstance] setBaseUrl:[NSURL URLWithString:kGPBaseUrl]];
+        self.httpClient = [[GBHttpClient alloc] initWithBaseUrl:[NSURL URLWithString:kGPBaseUrl]];
     }
     return self;
 }

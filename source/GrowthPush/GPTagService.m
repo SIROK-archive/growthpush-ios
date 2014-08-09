@@ -41,13 +41,13 @@ static GPTagService *sharedInstance = nil;
         [body setObject:value forKey:@"value"];
     }
 
-    GPHttpRequest *httpRequest = [GPHttpRequest instanceWithRequestMethod:GPRequestMethodPost path:path query:nil body:body];
+    GBHttpRequest *httpRequest = [GBHttpRequest instanceWithMethod:GBRequestMethodPost path:path query:nil body:body];
 
-    [self httpRequest:httpRequest success:^(GPHttpResponse *httpResponse) {
+    [self httpRequest:httpRequest success:^(GBHttpResponse *httpResponse) {
         if (success) {
             success();
         }
-    } fail:^(GPHttpResponse *httpResponse) {
+    } fail:^(GBHttpResponse *httpResponse) {
         if (fail) {
             fail(httpResponse.httpUrlResponse.statusCode, httpResponse.error);
         }

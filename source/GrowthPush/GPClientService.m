@@ -44,15 +44,15 @@ static GPClientService *sharedInstance = nil;
     if (NSStringFromGPEnvironment(environment)) {
         [body setObject:NSStringFromGPEnvironment(environment) forKey:@"environment"];
     }
+    
+    GBHttpRequest *httpRequest = [GBHttpRequest instanceWithMethod:GBRequestMethodPost path:path query:nil body:body];
 
-    GPHttpRequest *httpRequest = [GPHttpRequest instanceWithRequestMethod:GPRequestMethodPost path:path query:nil body:body];
-
-    [self httpRequest:httpRequest success:^(GPHttpResponse *httpResponse) {
+    [self httpRequest:httpRequest success:^(GBHttpResponse *httpResponse) {
         GPClient *client = [GPClient domainWithDictionary:httpResponse.body];
         if (success) {
             success(client);
         }
-    } fail:^(GPHttpResponse *httpResponse) {
+    } fail:^(GBHttpResponse *httpResponse) {
         if (fail) {
             fail(httpResponse.httpUrlResponse.statusCode, httpResponse.error);
         }
@@ -75,14 +75,14 @@ static GPClientService *sharedInstance = nil;
         [body setObject:NSStringFromGPEnvironment(environment) forKey:@"environment"];
     }
 
-    GPHttpRequest *httpRequest = [GPHttpRequest instanceWithRequestMethod:GPRequestMethodPut path:path query:nil body:body];
+    GBHttpRequest *httpRequest = [GBHttpRequest instanceWithMethod:GBRequestMethodPut path:path query:nil body:body];
 
-    [self httpRequest:httpRequest success:^(GPHttpResponse *httpResponse) {
+    [self httpRequest:httpRequest success:^(GBHttpResponse *httpResponse) {
         GPClient *client = [GPClient domainWithDictionary:httpResponse.body];
         if (success) {
             success(client);
         }
-    } fail:^(GPHttpResponse *httpResponse) {
+    } fail:^(GBHttpResponse *httpResponse) {
         if (fail) {
             fail(httpResponse.httpUrlResponse.statusCode, httpResponse.error);
         }
