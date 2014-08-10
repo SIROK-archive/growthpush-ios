@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GrowthbeatCore.h"
 #import "GPEnvironment.h"
 
 #ifdef DEBUG

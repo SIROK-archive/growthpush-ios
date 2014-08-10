@@ -26,8 +26,6 @@
 		B25A640E19978B5600E26665 /* GPService.m in Sources */ = {isa = PBXBuildFile; fileRef = B25A63F819978B5600E26665 /* GPService.m */; };
 		B25A640F19978B5600E26665 /* GPTagService.h in Headers */ = {isa = PBXBuildFile; fileRef = B25A63F919978B5600E26665 /* GPTagService.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B25A641019978B5600E26665 /* GPTagService.m in Sources */ = {isa = PBXBuildFile; fileRef = B25A63FA19978B5600E26665 /* GPTagService.m */; };
-		B25A641119978B5600E26665 /* GPViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B25A63FB19978B5600E26665 /* GPViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B25A641219978B5600E26665 /* GPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B25A63FC19978B5600E26665 /* GPViewController.m */; };
 		B25A641319978B5600E26665 /* GrowthPush.h in Headers */ = {isa = PBXBuildFile; fileRef = B25A63FD19978B5600E26665 /* GrowthPush.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B25A641419978B5600E26665 /* GrowthPush.m in Sources */ = {isa = PBXBuildFile; fileRef = B25A63FE19978B5600E26665 /* GrowthPush.m */; };
 		B2701B4219978AF500FEE878 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2701B4119978AF500FEE878 /* Foundation.framework */; };
@@ -54,8 +52,6 @@
 		B25A63F819978B5600E26665 /* GPService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPService.m; sourceTree = "<group>"; };
 		B25A63F919978B5600E26665 /* GPTagService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPTagService.h; sourceTree = "<group>"; };
 		B25A63FA19978B5600E26665 /* GPTagService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPTagService.m; sourceTree = "<group>"; };
-		B25A63FB19978B5600E26665 /* GPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPViewController.h; sourceTree = "<group>"; };
-		B25A63FC19978B5600E26665 /* GPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPViewController.m; sourceTree = "<group>"; };
 		B25A63FD19978B5600E26665 /* GrowthPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrowthPush.h; sourceTree = "<group>"; };
 		B25A63FE19978B5600E26665 /* GrowthPush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrowthPush.m; sourceTree = "<group>"; };
 		B2701B3E19978AF500FEE878 /* GrowthPush.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework.static; includeInIndex = 0; path = GrowthPush.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +74,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B2421E6B199792F200E91C23 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				B25A63E919978B5600E26665 /* GPClient.h */,
+				B25A63EB19978B5600E26665 /* GPClientService.h */,
+				B25A63ED19978B5600E26665 /* GPDomain.h */,
+				B25A63EF19978B5600E26665 /* GPEnvironment.h */,
+				B25A63F119978B5600E26665 /* GPEvent.h */,
+				B25A63F319978B5600E26665 /* GPEventService.h */,
+				B25A63F519978B5600E26665 /* GPOS.h */,
+				B25A63F719978B5600E26665 /* GPService.h */,
+				B25A63F919978B5600E26665 /* GPTagService.h */,
+				B25A63FD19978B5600E26665 /* GrowthPush.h */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		B2421E6C199792F700E91C23 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B25A63EA19978B5600E26665 /* GPClient.m */,
+				B25A63EC19978B5600E26665 /* GPClientService.m */,
+				B25A63EE19978B5600E26665 /* GPDomain.m */,
+				B25A63F019978B5600E26665 /* GPEnvironmentUtils.m */,
+				B25A63F219978B5600E26665 /* GPEvent.m */,
+				B25A63F419978B5600E26665 /* GPEventService.m */,
+				B25A63F619978B5600E26665 /* GPOS.m */,
+				B25A63F819978B5600E26665 /* GPService.m */,
+				B25A63FA19978B5600E26665 /* GPTagService.m */,
+				B25A63FE19978B5600E26665 /* GrowthPush.m */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
 		B2701B3319978AF500FEE878 = {
 			isa = PBXGroup;
 			children = (
@@ -107,28 +137,8 @@
 		B2701B4319978AF500FEE878 /* GrowthPush */ = {
 			isa = PBXGroup;
 			children = (
-				B25A63E919978B5600E26665 /* GPClient.h */,
-				B25A63EA19978B5600E26665 /* GPClient.m */,
-				B25A63EB19978B5600E26665 /* GPClientService.h */,
-				B25A63EC19978B5600E26665 /* GPClientService.m */,
-				B25A63ED19978B5600E26665 /* GPDomain.h */,
-				B25A63EE19978B5600E26665 /* GPDomain.m */,
-				B25A63EF19978B5600E26665 /* GPEnvironment.h */,
-				B25A63F019978B5600E26665 /* GPEnvironmentUtils.m */,
-				B25A63F119978B5600E26665 /* GPEvent.h */,
-				B25A63F219978B5600E26665 /* GPEvent.m */,
-				B25A63F319978B5600E26665 /* GPEventService.h */,
-				B25A63F419978B5600E26665 /* GPEventService.m */,
-				B25A63F519978B5600E26665 /* GPOS.h */,
-				B25A63F619978B5600E26665 /* GPOS.m */,
-				B25A63F719978B5600E26665 /* GPService.h */,
-				B25A63F819978B5600E26665 /* GPService.m */,
-				B25A63F919978B5600E26665 /* GPTagService.h */,
-				B25A63FA19978B5600E26665 /* GPTagService.m */,
-				B25A63FB19978B5600E26665 /* GPViewController.h */,
-				B25A63FC19978B5600E26665 /* GPViewController.m */,
-				B25A63FD19978B5600E26665 /* GrowthPush.h */,
-				B25A63FE19978B5600E26665 /* GrowthPush.m */,
+				B2421E6B199792F200E91C23 /* Headers */,
+				B2421E6C199792F700E91C23 /* Sources */,
 				B2701B4419978AF500FEE878 /* Supporting Files */,
 			);
 			path = GrowthPush;
@@ -153,7 +163,6 @@
 			files = (
 				B25A640319978B5600E26665 /* GPDomain.h in Headers */,
 				B25A640D19978B5600E26665 /* GPService.h in Headers */,
-				B25A641119978B5600E26665 /* GPViewController.h in Headers */,
 				B25A640719978B5600E26665 /* GPEvent.h in Headers */,
 				B25A640919978B5600E26665 /* GPEventService.h in Headers */,
 				B25A640F19978B5600E26665 /* GPTagService.h in Headers */,
@@ -254,7 +263,6 @@
 				B25A640019978B5600E26665 /* GPClient.m in Sources */,
 				B25A640A19978B5600E26665 /* GPEventService.m in Sources */,
 				B25A640419978B5600E26665 /* GPDomain.m in Sources */,
-				B25A641219978B5600E26665 /* GPViewController.m in Sources */,
 				B25A640E19978B5600E26665 /* GPService.m in Sources */,
 				B25A640219978B5600E26665 /* GPClientService.m in Sources */,
 			);
@@ -358,6 +366,11 @@
 				FRAMEWORK_VERSION = 1.1.4;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GrowthPush/GrowthPush-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../submodules/growthbeat-core-ios/source/GrowthbeatCore/",
+				);
 				INFOPLIST_FILE = "GrowthPush/GrowthPush-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -381,6 +394,11 @@
 				FRAMEWORK_VERSION = 1.1.4;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GrowthPush/GrowthPush-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../submodules/growthbeat-core-ios/source/GrowthbeatCore/",
+				);
 				INFOPLIST_FILE = "GrowthPush/GrowthPush-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
