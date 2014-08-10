@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		24A90B0B190976D600AE7727 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24A90B0A190976D600AE7727 /* MainWindow.xib */; };
+		B25A641619978E2A00E26665 /* GrowthbeatCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B25A641519978E2A00E26665 /* GrowthbeatCore.framework */; };
 		B28611DE19059EF000C285E1 /* EventTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B28611DD19059EF000C285E1 /* EventTests.m */; };
 		B28611E119059F4000C285E1 /* TagTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B28611E019059F4000C285E1 /* TagTests.m */; };
 		B28611E71905A91400C285E1 /* GrowthPushTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B28611E61905A91400C285E1 /* GrowthPushTests.m */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		24A90B0A190976D600AE7727 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		B25A641519978E2A00E26665 /* GrowthbeatCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GrowthbeatCore.framework; path = "../submodules/growthbeat-core-ios/GrowthbeatCore.framework"; sourceTree = "<group>"; };
 		B28611DD19059EF000C285E1 /* EventTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTests.m; sourceTree = "<group>"; };
 		B28611DF19059F4000C285E1 /* TagTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagTests.h; sourceTree = "<group>"; };
 		B28611E019059F4000C285E1 /* TagTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagTests.m; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				B2B7EF2419057B4400BE82EE /* UIKit.framework in Frameworks */,
 				B2B7EF2019057B4400BE82EE /* Foundation.framework in Frameworks */,
 				B2B7EF5A19057D0B00BE82EE /* GrowthPush.framework in Frameworks */,
+				B25A641619978E2A00E26665 /* GrowthbeatCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +119,7 @@
 		B2B7EF1E19057B4400BE82EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B25A641519978E2A00E26665 /* GrowthbeatCore.framework */,
 				B2B7EF2119057B4400BE82EE /* CoreGraphics.framework */,
 				B2B7EF1F19057B4400BE82EE /* Foundation.framework */,
 				B2B7EF5919057D0B00BE82EE /* GrowthPush.framework */,
@@ -405,7 +409,8 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/../",
+					"$(SRCROOT)/../",
+					"$(SRCROOT)/../submodules/growthbeat-core-ios",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GrowthPushSample/GrowthPushSample-Prefix.pch";
@@ -425,7 +430,8 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/../",
+					"$(SRCROOT)/../",
+					"$(SRCROOT)/../submodules/growthbeat-core-ios",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GrowthPushSample/GrowthPushSample-Prefix.pch";

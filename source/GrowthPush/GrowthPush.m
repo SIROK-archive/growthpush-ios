@@ -124,11 +124,13 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 }
 
 - (void)initializeWithApplicationId:(NSString *)newApplicationId credentialId:(NSString *)newCredentialId environment:(GPEnvironment)newEnvironment {
-
+    
     self.applicationId = newApplicationId;
     self.credentialId = newCredentialId;
     self.environment = newEnvironment;
-
+    
+    [GrowthbeatCore initializeWithApplicationId:applicationId credentialId:credentialId];
+    
     self.tags = [self loadTags];
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{

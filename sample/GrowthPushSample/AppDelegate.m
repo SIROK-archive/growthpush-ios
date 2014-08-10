@@ -12,8 +12,8 @@
 
 - (BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-    [EasyGrowthPush setApplicationId:1070 secret:@"BhcrsJHoEvWT85437EnSJ1COUhflEg1E" environment:kGrowthPushEnvironment debug:YES];
-
+    [GrowthPush initializeWithApplicationId:@"dy6VlRMnN3juhW9L" credentialId:@"NuvkVhQtRDG2nrNeDzHXzZO5c6j0Xu5t" environment:kGrowthPushEnvironment];
+    
     [_window makeKeyAndVisible];
 
     return YES;
