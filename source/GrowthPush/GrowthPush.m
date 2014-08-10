@@ -137,6 +137,12 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
     }
 
     self.tags = [self loadTags];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+        GBClient *growthbeatClient = [[GrowthbeatCore sharedInstance] waitClient];
+        // TODO Check if client is new
+        [self requestDeviceToken];
+    });
 
 }
 
