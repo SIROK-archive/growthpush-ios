@@ -24,8 +24,8 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
     GBHttpClient *httpClient;
     GBPreference *preference;
     
-    NSInteger applicationId;
-    NSString *secret;
+    NSString *applicationId;
+    NSString *credentialId;
     GPEnvironment environment;
     BOOL debug;
     NSString *token;
@@ -39,8 +39,8 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 @property (nonatomic, strong) GBHttpClient *httpClient;
 @property (nonatomic, strong) GBPreference *preference;
 
-@property (nonatomic, assign) NSInteger applicationId;
-@property (nonatomic, strong) NSString *secret;
+@property (nonatomic, strong) NSString *applicationId;
+@property (nonatomic, strong) NSString *credentialId;
 @property (nonatomic, assign) GPEnvironment environment;
 @property (nonatomic, assign) BOOL debug;
 @property (nonatomic, strong) NSString *token;
@@ -57,7 +57,7 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 @synthesize preference;
 
 @synthesize applicationId;
-@synthesize secret;
+@synthesize credentialId;
 @synthesize environment;
 @synthesize debug;
 @synthesize token;
@@ -77,8 +77,8 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
     }
 }
 
-+ (void) setApplicationId:(NSInteger)applicationId secret:(NSString *)secret environment:(GPEnvironment)environment debug:(BOOL)debug {
-    [[self sharedInstance] setApplicationId:applicationId secret:secret environment:environment debug:debug];
++ (void)initializeWithApplicationId:(NSString *)applicationId credentialId:(NSString *)credentialId environment:(GPEnvironment)environment {
+    [[self sharedInstance] initializeWithApplicationId:applicationId credentialId:credentialId environment:environment];
 }
 
 + (void) requestDeviceToken {
@@ -123,24 +123,20 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
     return self;
 }
 
-
-- (void) setApplicationId:(NSInteger)newApplicationId secret:(NSString *)newSecret environment:(GPEnvironment)newEnvironment debug:(BOOL)newDebug {
+- (void)initializeWithApplicationId:(NSString *)newApplicationId credentialId:(NSString *)newCredentialId environment:(GPEnvironment)newEnvironment {
 
     self.applicationId = newApplicationId;
-    self.secret = newSecret;
+    self.credentialId = newCredentialId;
     self.environment = newEnvironment;
-    self.debug = newDebug;
-
-    self.client = [self loadClient];
-    if (self.client && self.client.applicationId != newApplicationId) {
-        [self clearClient];
-    }
 
     self.tags = [self loadTags];
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
         GBClient *growthbeatClient = [[GrowthbeatCore sharedInstance] waitClient];
-        // TODO Check if client is new
+        self.client = [self loadClient];
+        if (self.client && self.client.growthbeatClientId && ![self.client.growthbeatClientId isEqualToString:growthbeatClient.id]) {
+            [self clearClient];
+        }
         [self requestDeviceToken];
     });
 
@@ -251,7 +247,7 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 
     if (!client) {
         [logger info:@"Registering client... (applicationId: %d, environment: %@)", applicationId, NSStringFromGPEnvironment(environment)];
-        [[GPClientService sharedInstance] createWithApplicationId:applicationId secret:secret token:token environment:environment success:^(GPClient *createdClient) {
+        [[GPClientService sharedInstance] createWithApplicationId:applicationId credentialId:credentialId token:token environment:environment success:^(GPClient *createdClient) {
             [logger info:@"Registering client success. (clientId: %lld)", createdClient.id];
             [logger info:@"See https://growthpush.com/applications/%d/clients to check the client registration.", applicationId];
             self.client = createdClient;

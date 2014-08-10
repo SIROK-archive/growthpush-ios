@@ -13,6 +13,7 @@
 @interface GPClient : GPDomain <NSCoding> {
 
     long long id;
+    NSString *growthbeatClientId;
     NSInteger applicationId;
     NSString *code;
     NSString *token;
@@ -23,6 +24,7 @@
 }
 
 @property (nonatomic, assign) long long id;
+@property (nonatomic, strong) NSString *growthbeatClientId;
 @property (nonatomic, assign) NSInteger applicationId;
 @property (nonatomic, strong) NSString *code;
 @property (nonatomic, strong) NSString *token;

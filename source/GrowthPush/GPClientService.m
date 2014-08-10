@@ -23,16 +23,16 @@ static GPClientService *sharedInstance = nil;
 
 }
 
-- (void) createWithApplicationId:(NSInteger)applicationId secret:(NSString *)secret token:(NSString *)token environment:(GPEnvironment)environment success:(void (^)(GPClient *client))success fail:(void (^)(NSInteger status, NSError *error))fail {
+- (void) createWithApplicationId:(NSString *)applicationId credentialId:(NSString *)credentialId token:(NSString *)token environment:(GPEnvironment)environment success:(void (^)(GPClient *client))success fail:(void (^)(NSInteger status, NSError *error))fail {
 
     NSString *path = @"/1/clients";
     NSMutableDictionary *body = [NSMutableDictionary dictionary];
 
     if (applicationId) {
-        [body setObject:@(applicationId) forKey:@"applicationId"];
+        [body setObject:applicationId forKey:@"applicationId"];
     }
-    if (secret) {
-        [body setObject:secret forKey:@"secret"];
+    if (credentialId) {
+        [body setObject:credentialId forKey:@"credentialId"];
     }
     if (token) {
         [body setObject:token forKey:@"token"];
