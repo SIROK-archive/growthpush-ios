@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "GPEnvironment.h"
-#import "EGPOption.h"
 
 #ifdef DEBUG
 #define kGrowthPushEnvironment (GPEnvironmentDevelopment)
@@ -81,19 +80,9 @@
  */
 + (void)clearBadge;
 
-@end
-
-@interface EasyGrowthPush : GrowthPush
-
-/**
- * Initialize GrowthPush instance and register the client device if not yet been registered
- *
- * @param applicationId Application ID
- * @param secret Secret key for application
- * @param environment Build configuration (debug or release)
- * @param debug Debug mode
- * @param option option flags
- */
-+ (void)setApplicationId:(NSInteger)applicationId secret:(NSString *)secret environment:(GPEnvironment)environment debug:(BOOL)debug option:(EGPOption)option;
++ (GrowthPush *) sharedInstance;
+- (GBLogger *)logger;
+- (GBHttpClient *)httpClient;
+- (GBPreference *)preference;
 
 @end

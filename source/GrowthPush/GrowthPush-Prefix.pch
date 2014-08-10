@@ -1,14 +1,10 @@
 //
-// Prefix header for all source files of the 'GrowthPush' target in the 'GrowthPush' project
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
 //
 
 #ifdef __OBJC__
-#import <UIKit/UIKit.h>
-#import <Foundation/Foundation.h>
-#import <SystemConfiguration/SystemConfiguration.h>
-#import <MobileCoreServices/MobileCoreServices.h>
-#import <GrowthbeatCore/GrowthbeatCore.h>
+    #import <Foundation/Foundation.h>
+    #import <GrowthbeatCore/GrowthbeatCore.h>
 #endif
-
-#define NSJSONSerialization NSClassFromString(@"NSJSONSerialization")
-
