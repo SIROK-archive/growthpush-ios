@@ -1,58 +1,55 @@
-GrowthPush SDK for iOS
-==================
+# GrowthPush SDK for iOS
 
-GrowthPush is push notification and analysis platform for smart devices.
+[Growth Push](https://growthpush.com/) is push notification and analysis platform for mobile apps.
 
-https://growthpush.com/
+## Usage 
 
-## Easy usage
+1. Install [Growthbeat Core SDK](https://github.com/SIROK/growthbeat-core-ios).
 
-```objc
-[EasyGrowthPush setApplicationId:YOUR_APP_ID secret:@"YOUR_APP_SECRET" environment:kGrowthPushEnvironment debug:YES]; 
-```
+1. Add GrowthPush.framework into your project.
 
-That's all. GrowthPush instance will get APNS device token, send it to server, track launching event and tag the device information. You can get the app ID and secret on web site of GrowthPush. 
+1. Import the framework header.
 
-You can get furthermore information on [GrowthPush documetations](https://growthpush.com/documents).
+	```objc
+	#import <GrowthPush/GrowthPush.h>
+	```
 
-## Install with script
+1. Write initialization code.
 
-Run install script.
+	```objc
+	[GrowthPush initializeWithApplicationId:@"APPLICATION_ID" credentialId:@"CREDENTIAL_ID" environment:kGrowthPushEnvironment];
+	```
 
-```bash
-ruby ./install.rb -l ./GrowthPush.framework -p /path/to/your_project -i APPLICATION_ID -s APPLICATION_SECRET
-```
+	GrowthPush instance will get APNS device token, send it to server. You can get the APPLICATION_ID and CREDENTIAL_ID on web site of GrowthPush. 
 
-## Install with CocoaPods
+1. (Optional) If you would like to use analytics platform or segment notification, track events or set tags with following code.
 
-Add GrowthPush dependency to Podfile.
+	```objc
+	[GrowthPush trackEvent:@"NAME" value:@"VALUE"];
+	[GrowthPush setTag:@"NAME" value:@"VALUE"];
+	```
 
-```bash
-platform :ios, '7.0'
-pod 'GrowthPush' 
-```
+## Growthbeat Full SDK
 
-Then run pod command
+You can use Growthbeat SDK instead of this SDK. Growthbeat is growth hack tool for mobile apps. You can use full functions include Growth Push when you use the following SDK.
 
-```bash
-pod install
-```
+* [Growthbeat SDK for iOS](https://github.com/SIROK/growthbeat-ios/)
+* [Growthbeat SDK for Android](https://github.com/SIROK/growthbeat-android/)
 
-## Building GrowthPush.framework
+# Building framework
 
 [iOS-Universal-Framework](https://github.com/kstenerud/iOS-Universal-Framework) is required.
 
-```shell
+```bash
 git clone https://github.com/kstenerud/iOS-Universal-Framework.git
 cd ./iOS-Universal-Framework/Real\ Framework/
 ./install.sh
 ```
 
-1. Set the build configuration of "Run" to Release.
-2. Select the destination to "iOS device"
-3. Build the framework
-4. The framework will be generated under "Products"
+Archive the project on Xcode and you will get framework package.
 
 ## License
 
-Licensed under the Apache License.
+Apache License, Version 2.0
+
+
