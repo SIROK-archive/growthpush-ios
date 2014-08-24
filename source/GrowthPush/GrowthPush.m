@@ -6,6 +6,7 @@
 //  Copyright (c) 2013年 SIROK, Inc. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
 #import "GrowthPush.h"
 #import "GPPreference.h"
 #import "GPClientService.h"

@@ -411,7 +411,7 @@
 				GCC_PREFIX_HEADER = "GrowthPushSample/GrowthPushSample-Prefix.pch";
 				INFOPLIST_FILE = "GrowthPushSample/GrowthPushSample-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "C0925ABA-C7F9-44F9-BF3F-802CFF2B8F06";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
