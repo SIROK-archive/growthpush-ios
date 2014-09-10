@@ -450,9 +450,7 @@
 		B2ECCEBF19A9C36300312B0C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_VERSION = 1.1.5;
+				FRAMEWORK_VERSION = 1.2.0;
 				INFOPLIST_FILE = GrowthPush/Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -463,9 +461,7 @@
 		B2ECCEC019A9C36300312B0C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_VERSION = 1.1.5;
+				FRAMEWORK_VERSION = 1.2.0;
 				INFOPLIST_FILE = GrowthPush/Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
