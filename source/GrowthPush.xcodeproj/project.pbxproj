@@ -7,283 +7,264 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		24D9435C1902D9F40000C3AE /* GPHTTPOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 24D9435B1902D9ED0000C3AE /* GPHTTPOperation.h */; };
-		24D9435E1902D9FC0000C3AE /* GPHTTPOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D9435D1902D9FC0000C3AE /* GPHTTPOperation.m */; };
-		B21923071796668800B0E513 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2AF90DD1793029800FA90EC /* Foundation.framework */; };
-		B21A2BEB17A5671100C809ED /* EasyGrowthPush.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BBC17A5671100C809ED /* EasyGrowthPush.m */; };
-		B21A2BEE17A5671100C809ED /* GPAppDelegateWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BBF17A5671100C809ED /* GPAppDelegateWrapper.h */; };
-		B21A2BEF17A5671100C809ED /* GPAppDelegateWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BC017A5671100C809ED /* GPAppDelegateWrapper.m */; };
-		B21A2BF017A5671100C809ED /* GPAppDelegateWrapperDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BC117A5671100C809ED /* GPAppDelegateWrapperDelegate.h */; };
-		B21A2BF117A5671100C809ED /* GPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BC217A5671100C809ED /* GPClient.h */; };
-		B21A2BF217A5671100C809ED /* GPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BC317A5671100C809ED /* GPClient.m */; };
-		B21A2BF317A5671100C809ED /* GPClientService.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BC417A5671100C809ED /* GPClientService.h */; };
-		B21A2BF417A5671100C809ED /* GPClientService.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BC517A5671100C809ED /* GPClientService.m */; };
-		B21A2BF517A5671100C809ED /* GPDateUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BC617A5671100C809ED /* GPDateUtils.h */; };
-		B21A2BF617A5671100C809ED /* GPDateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BC717A5671100C809ED /* GPDateUtils.m */; };
-		B21A2BF717A5671100C809ED /* GPDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BC817A5671100C809ED /* GPDevice.h */; };
-		B21A2BF817A5671100C809ED /* GPDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BC917A5671100C809ED /* GPDevice.m */; };
-		B21A2BF917A5671100C809ED /* GPDomain.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BCA17A5671100C809ED /* GPDomain.h */; };
-		B21A2BFA17A5671100C809ED /* GPDomain.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BCB17A5671100C809ED /* GPDomain.m */; };
-		B21A2BFB17A5671100C809ED /* GPEnvironment.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BCC17A5671100C809ED /* GPEnvironment.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B21A2BFC17A5671100C809ED /* GPEnvironmentUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BCD17A5671100C809ED /* GPEnvironmentUtils.h */; };
-		B21A2BFD17A5671100C809ED /* GPEnvironmentUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BCE17A5671100C809ED /* GPEnvironmentUtils.m */; };
-		B21A2BFE17A5671100C809ED /* GPEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BCF17A5671100C809ED /* GPEvent.h */; };
-		B21A2BFF17A5671100C809ED /* GPEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BD017A5671100C809ED /* GPEvent.m */; };
-		B21A2C0017A5671100C809ED /* GPEventService.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BD117A5671100C809ED /* GPEventService.h */; };
-		B21A2C0117A5671100C809ED /* GPEventService.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BD217A5671100C809ED /* GPEventService.m */; };
-		B21A2C0217A5671100C809ED /* GPHttpClient.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BD317A5671100C809ED /* GPHttpClient.h */; };
-		B21A2C0317A5671100C809ED /* GPHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BD417A5671100C809ED /* GPHttpClient.m */; };
-		B21A2C0417A5671100C809ED /* GPHttpRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BD517A5671100C809ED /* GPHttpRequest.h */; };
-		B21A2C0517A5671100C809ED /* GPHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BD617A5671100C809ED /* GPHttpRequest.m */; };
-		B21A2C0617A5671100C809ED /* GPHttpResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BD717A5671100C809ED /* GPHttpResponse.h */; };
-		B21A2C0717A5671100C809ED /* GPHttpResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BD817A5671100C809ED /* GPHttpResponse.m */; };
-		B21A2C0817A5671100C809ED /* GPHttpUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BD917A5671100C809ED /* GPHttpUtils.h */; };
-		B21A2C0917A5671100C809ED /* GPHttpUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BDA17A5671100C809ED /* GPHttpUtils.m */; };
-		B21A2C0A17A5671100C809ED /* GPOS.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BDB17A5671100C809ED /* GPOS.h */; };
-		B21A2C0B17A5671100C809ED /* GPOSUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BDC17A5671100C809ED /* GPOSUtils.h */; };
-		B21A2C0C17A5671100C809ED /* GPOSUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BDD17A5671100C809ED /* GPOSUtils.m */; };
-		B21A2C0D17A5671100C809ED /* GPPreference.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BDE17A5671100C809ED /* GPPreference.h */; };
-		B21A2C0E17A5671100C809ED /* GPPreference.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BDF17A5671100C809ED /* GPPreference.m */; };
-		B21A2C0F17A5671100C809ED /* GPRequestMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BE017A5671100C809ED /* GPRequestMethod.h */; };
-		B21A2C1017A5671100C809ED /* GPRequestMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BE117A5671100C809ED /* GPRequestMethod.m */; };
-		B21A2C1117A5671100C809ED /* GPService.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BE217A5671100C809ED /* GPService.h */; };
-		B21A2C1217A5671100C809ED /* GPService.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BE317A5671100C809ED /* GPService.m */; };
-		B21A2C1317A5671100C809ED /* GPTagService.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BE417A5671100C809ED /* GPTagService.h */; };
-		B21A2C1417A5671100C809ED /* GPTagService.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BE517A5671100C809ED /* GPTagService.m */; };
-		B21A2C1517A5671100C809ED /* GPUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BE617A5671100C809ED /* GPUtils.h */; };
-		B21A2C1617A5671100C809ED /* GPViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BE717A5671100C809ED /* GPViewController.h */; };
-		B21A2C1717A5671100C809ED /* GPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BE817A5671100C809ED /* GPViewController.m */; };
-		B21A2C1817A5671100C809ED /* GrowthPush.h in Headers */ = {isa = PBXBuildFile; fileRef = B21A2BE917A5671100C809ED /* GrowthPush.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B21A2C1917A5671100C809ED /* GrowthPush.m in Sources */ = {isa = PBXBuildFile; fileRef = B21A2BEA17A5671100C809ED /* GrowthPush.m */; };
-		B2AF90E41793029800FA90EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B2AF90E21793029800FA90EC /* InfoPlist.strings */; };
-		B2C68C0C17ECC5AB001F0BF7 /* EGPOption.h in Headers */ = {isa = PBXBuildFile; fileRef = B2C68C0B17ECC5AB001F0BF7 /* EGPOption.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B2ECCEB519A9C36300312B0C /* GrowthPush-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = B2ECCEB419A9C36300312B0C /* GrowthPush-Prefix.pch */; };
+		B2ECCEF119A9C3DC00312B0C /* EasyGrowthPush.m in Sources */ = {isa = PBXBuildFile; fileRef = B2ECCEC119A9C3DC00312B0C /* EasyGrowthPush.m */; };
+		B2ECCEF219A9C3DC00312B0C /* EGPOption.h in Headers */ = {isa = PBXBuildFile; fileRef = B2ECCEC219A9C3DC00312B0C /* EGPOption.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B2ECCEF319A9C3DC00312B0C /* GPAppDelegateWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = B2ECCEC319A9C3DC00312B0C /* GPAppDelegateWrapper.h */; };
+		B2ECCEF419A9C3DC00312B0C /* GPAppDelegateWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = B2ECCEC419A9C3DC00312B0C /* GPAppDelegateWrapper.m */; };
+		B2ECCEF519A9C3DC00312B0C /* GPAppDelegateWrapperDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = B2ECCEC519A9C3DC00312B0C /* GPAppDelegateWrapperDelegate.h */; };
+		B2ECCEF619A9C3DC00312B0C /* GPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = B2ECCEC619A9C3DC00312B0C /* GPClient.h */; };
+		B2ECCEF719A9C3DC00312B0C /* GPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B2ECCEC719A9C3DC00312B0C /* GPClient.m */; };
+		B2ECCEF819A9C3DC00312B0C /* GPClientService.h in Headers */ = {isa = PBXBuildFile; fileRef = B2ECCEC819A9C3DC00312B0C /* GPClientService.h */; };
+		B2ECCEF919A9C3DC00312B0C /* GPClientService.m in Sources */ = {isa = PBXBuildFile; fileRef = B2ECCEC919A9C3DC00312B0C /* GPClientService.m */; };
+		B2ECCEFA19A9C3DC00312B0C /* GPDateUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = B2ECCECA19A9C3DC00312B0C /* GPDateUtils.h */; };
+		B2ECCEFB19A9C3DC00312B0C /* GPDateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B2ECCECB19A9C3DC00312B0C /* GPDateUtils.m */; };
+		B2ECCEFC19A9C3DC00312B0C /* GPDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = B2ECCECC19A9C3DC00312B0C /* GPDevice.h */; };
+		B2ECCEFD19A9C3DC00312B0C /* GPDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = B2ECCECD19A9C3DC00312B0C /* GPDevice.m */; };
+		B2ECCEFE19A9C3DC00312B0C /* GPDomain.h in Headers */ = {isa = PBXBuildFile; fileRef = B2ECCECE19A9C3DC00312B0C /* GPDomain.h */; };
+		B2ECCEFF19A9C3DC00312B0C /* GPDomain.m in Sources */ = {isa = PBXBuildFile; fileRef = B2ECCECF19A9C3DC00312B0C /* GPDomain.m */; };
+		B2ECCF0019A9C3DC00312B0C /* GPEnvironment.h in Headers */ = {isa = PBXBuildFile; fileRef = B2ECCED019A9C3DC00312B0C /* GPEnvironment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B2ECCF0119A9C3DC00312B0C /* GPEnvironmentUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = B2ECCED119A9C3DC00312B0C /* GPEnvironmentUtils.h */; };
+		B2ECCF0219A9C3DC00312B0C /* GPEnvironmentUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B2ECCED219A9C3DC00312B0C /* GPEnvironmentUtils.m */; };
+		B2ECCF0319A9C3DC00312B0C /* GPEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = B2ECCED319A9C3DC00312B0C /* GPEvent.h */; };
+		B2ECCF0419A9C3DC00312B0C /* GPEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = B2ECCED419A9C3DC00312B0C /* GPEvent.m */; };
+		B2ECCF0519A9C3DC00312B0C /* GPEventService.h in Headers */ = {isa = PBXBuildFile; fileRef = B2ECCED519A9C3DC00312B0C /* GPEventService.h */; };
+		B2ECCF0619A9C3DC00312B0C /* GPEventService.m in Sources */ = {isa = PBXBuildFile; fileRef = B2ECCED619A9C3DC00312B0C /* GPEventService.m */; };
+		B2ECCF0719A9C3DC00312B0C /* GPHttpClient.h in Headers */ = {isa = PBXBuildFile; fileRef = B2ECCED719A9C3DC00312B0C /* GPHttpClient.h */; };
+		B2ECCF0819A9C3DC00312B0C /* GPHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B2ECCED819A9C3DC00312B0C /* GPHttpClient.m */; };
+		B2ECCF0919A9C3DC00312B0C /* GPHTTPOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = B2ECCED919A9C3DC00312B0C /* GPHTTPOperation.h */; };
+		B2ECCF0A19A9C3DC00312B0C /* GPHTTPOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B2ECCEDA19A9C3DC00312B0C /* GPHTTPOperation.m */; };
+		B2ECCF0B19A9C3DC00312B0C /* GPHttpRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = B2ECCEDB19A9C3DC00312B0C /* GPHttpRequest.h */; };
+		B2ECCF0C19A9C3DC00312B0C /* GPHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B2ECCEDC19A9C3DC00312B0C /* GPHttpRequest.m */; };
+		B2ECCF0D19A9C3DC00312B0C /* GPHttpResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = B2ECCEDD19A9C3DC00312B0C /* GPHttpResponse.h */; };
+		B2ECCF0E19A9C3DC00312B0C /* GPHttpResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = B2ECCEDE19A9C3DC00312B0C /* GPHttpResponse.m */; };
+		B2ECCF0F19A9C3DC00312B0C /* GPHttpUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = B2ECCEDF19A9C3DC00312B0C /* GPHttpUtils.h */; };
+		B2ECCF1019A9C3DC00312B0C /* GPHttpUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B2ECCEE019A9C3DC00312B0C /* GPHttpUtils.m */; };
+		B2ECCF1119A9C3DC00312B0C /* GPOS.h in Headers */ = {isa = PBXBuildFile; fileRef = B2ECCEE119A9C3DC00312B0C /* GPOS.h */; };
+		B2ECCF1219A9C3DC00312B0C /* GPOSUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = B2ECCEE219A9C3DC00312B0C /* GPOSUtils.h */; };
+		B2ECCF1319A9C3DC00312B0C /* GPOSUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B2ECCEE319A9C3DC00312B0C /* GPOSUtils.m */; };
+		B2ECCF1419A9C3DC00312B0C /* GPPreference.h in Headers */ = {isa = PBXBuildFile; fileRef = B2ECCEE419A9C3DC00312B0C /* GPPreference.h */; };
+		B2ECCF1519A9C3DC00312B0C /* GPPreference.m in Sources */ = {isa = PBXBuildFile; fileRef = B2ECCEE519A9C3DC00312B0C /* GPPreference.m */; };
+		B2ECCF1619A9C3DC00312B0C /* GPRequestMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = B2ECCEE619A9C3DC00312B0C /* GPRequestMethod.h */; };
+		B2ECCF1719A9C3DC00312B0C /* GPRequestMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = B2ECCEE719A9C3DC00312B0C /* GPRequestMethod.m */; };
+		B2ECCF1819A9C3DC00312B0C /* GPService.h in Headers */ = {isa = PBXBuildFile; fileRef = B2ECCEE819A9C3DC00312B0C /* GPService.h */; };
+		B2ECCF1919A9C3DC00312B0C /* GPService.m in Sources */ = {isa = PBXBuildFile; fileRef = B2ECCEE919A9C3DC00312B0C /* GPService.m */; };
+		B2ECCF1A19A9C3DC00312B0C /* GPTagService.h in Headers */ = {isa = PBXBuildFile; fileRef = B2ECCEEA19A9C3DC00312B0C /* GPTagService.h */; };
+		B2ECCF1B19A9C3DC00312B0C /* GPTagService.m in Sources */ = {isa = PBXBuildFile; fileRef = B2ECCEEB19A9C3DC00312B0C /* GPTagService.m */; };
+		B2ECCF1C19A9C3DC00312B0C /* GPUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = B2ECCEEC19A9C3DC00312B0C /* GPUtils.h */; };
+		B2ECCF1D19A9C3DC00312B0C /* GPViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B2ECCEED19A9C3DC00312B0C /* GPViewController.h */; };
+		B2ECCF1E19A9C3DC00312B0C /* GPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2ECCEEE19A9C3DC00312B0C /* GPViewController.m */; };
+		B2ECCF1F19A9C3DC00312B0C /* GrowthPush.h in Headers */ = {isa = PBXBuildFile; fileRef = B2ECCEEF19A9C3DC00312B0C /* GrowthPush.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B2ECCF2019A9C3DC00312B0C /* GrowthPush.m in Sources */ = {isa = PBXBuildFile; fileRef = B2ECCEF019A9C3DC00312B0C /* GrowthPush.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		24D9435B1902D9ED0000C3AE /* GPHTTPOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPHTTPOperation.h; sourceTree = "<group>"; };
-		24D9435D1902D9FC0000C3AE /* GPHTTPOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPHTTPOperation.m; sourceTree = "<group>"; };
-		B21A2BBC17A5671100C809ED /* EasyGrowthPush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyGrowthPush.m; sourceTree = "<group>"; };
-		B21A2BBF17A5671100C809ED /* GPAppDelegateWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPAppDelegateWrapper.h; sourceTree = "<group>"; };
-		B21A2BC017A5671100C809ED /* GPAppDelegateWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPAppDelegateWrapper.m; sourceTree = "<group>"; };
-		B21A2BC117A5671100C809ED /* GPAppDelegateWrapperDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPAppDelegateWrapperDelegate.h; sourceTree = "<group>"; };
-		B21A2BC217A5671100C809ED /* GPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPClient.h; sourceTree = "<group>"; };
-		B21A2BC317A5671100C809ED /* GPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPClient.m; sourceTree = "<group>"; };
-		B21A2BC417A5671100C809ED /* GPClientService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPClientService.h; sourceTree = "<group>"; };
-		B21A2BC517A5671100C809ED /* GPClientService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPClientService.m; sourceTree = "<group>"; };
-		B21A2BC617A5671100C809ED /* GPDateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPDateUtils.h; sourceTree = "<group>"; };
-		B21A2BC717A5671100C809ED /* GPDateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPDateUtils.m; sourceTree = "<group>"; };
-		B21A2BC817A5671100C809ED /* GPDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPDevice.h; sourceTree = "<group>"; };
-		B21A2BC917A5671100C809ED /* GPDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPDevice.m; sourceTree = "<group>"; };
-		B21A2BCA17A5671100C809ED /* GPDomain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPDomain.h; sourceTree = "<group>"; };
-		B21A2BCB17A5671100C809ED /* GPDomain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPDomain.m; sourceTree = "<group>"; };
-		B21A2BCC17A5671100C809ED /* GPEnvironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPEnvironment.h; sourceTree = "<group>"; };
-		B21A2BCD17A5671100C809ED /* GPEnvironmentUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPEnvironmentUtils.h; sourceTree = "<group>"; };
-		B21A2BCE17A5671100C809ED /* GPEnvironmentUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPEnvironmentUtils.m; sourceTree = "<group>"; };
-		B21A2BCF17A5671100C809ED /* GPEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPEvent.h; sourceTree = "<group>"; };
-		B21A2BD017A5671100C809ED /* GPEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPEvent.m; sourceTree = "<group>"; };
-		B21A2BD117A5671100C809ED /* GPEventService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPEventService.h; sourceTree = "<group>"; };
-		B21A2BD217A5671100C809ED /* GPEventService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPEventService.m; sourceTree = "<group>"; };
-		B21A2BD317A5671100C809ED /* GPHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPHttpClient.h; sourceTree = "<group>"; };
-		B21A2BD417A5671100C809ED /* GPHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPHttpClient.m; sourceTree = "<group>"; };
-		B21A2BD517A5671100C809ED /* GPHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPHttpRequest.h; sourceTree = "<group>"; };
-		B21A2BD617A5671100C809ED /* GPHttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPHttpRequest.m; sourceTree = "<group>"; };
-		B21A2BD717A5671100C809ED /* GPHttpResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPHttpResponse.h; sourceTree = "<group>"; };
-		B21A2BD817A5671100C809ED /* GPHttpResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPHttpResponse.m; sourceTree = "<group>"; };
-		B21A2BD917A5671100C809ED /* GPHttpUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPHttpUtils.h; sourceTree = "<group>"; };
-		B21A2BDA17A5671100C809ED /* GPHttpUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPHttpUtils.m; sourceTree = "<group>"; };
-		B21A2BDB17A5671100C809ED /* GPOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPOS.h; sourceTree = "<group>"; };
-		B21A2BDC17A5671100C809ED /* GPOSUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPOSUtils.h; sourceTree = "<group>"; };
-		B21A2BDD17A5671100C809ED /* GPOSUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPOSUtils.m; sourceTree = "<group>"; };
-		B21A2BDE17A5671100C809ED /* GPPreference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPPreference.h; sourceTree = "<group>"; };
-		B21A2BDF17A5671100C809ED /* GPPreference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPPreference.m; sourceTree = "<group>"; };
-		B21A2BE017A5671100C809ED /* GPRequestMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPRequestMethod.h; sourceTree = "<group>"; };
-		B21A2BE117A5671100C809ED /* GPRequestMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPRequestMethod.m; sourceTree = "<group>"; };
-		B21A2BE217A5671100C809ED /* GPService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPService.h; sourceTree = "<group>"; };
-		B21A2BE317A5671100C809ED /* GPService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPService.m; sourceTree = "<group>"; };
-		B21A2BE417A5671100C809ED /* GPTagService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPTagService.h; sourceTree = "<group>"; };
-		B21A2BE517A5671100C809ED /* GPTagService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPTagService.m; sourceTree = "<group>"; };
-		B21A2BE617A5671100C809ED /* GPUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPUtils.h; sourceTree = "<group>"; };
-		B21A2BE717A5671100C809ED /* GPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPViewController.h; sourceTree = "<group>"; };
-		B21A2BE817A5671100C809ED /* GPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPViewController.m; sourceTree = "<group>"; };
-		B21A2BE917A5671100C809ED /* GrowthPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrowthPush.h; sourceTree = "<group>"; };
-		B21A2BEA17A5671100C809ED /* GrowthPush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrowthPush.m; sourceTree = "<group>"; };
-		B2AF90DA1793029800FA90EC /* GrowthPush.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework.static; includeInIndex = 0; path = GrowthPush.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B2AF90DD1793029800FA90EC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		B2AF90E11793029800FA90EC /* GrowthPush-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GrowthPush-Info.plist"; sourceTree = "<group>"; };
-		B2AF90E31793029800FA90EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		B2AF90E51793029800FA90EC /* GrowthPush-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GrowthPush-Prefix.pch"; sourceTree = "<group>"; };
-		B2C68C0B17ECC5AB001F0BF7 /* EGPOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGPOption.h; sourceTree = "<group>"; };
+		B2ECCEAC19A9C36300312B0C /* GrowthPush.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework.static; includeInIndex = 0; path = GrowthPush.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2ECCEAF19A9C36300312B0C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		B2ECCEB319A9C36300312B0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2ECCEB419A9C36300312B0C /* GrowthPush-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GrowthPush-Prefix.pch"; sourceTree = "<group>"; };
+		B2ECCEC119A9C3DC00312B0C /* EasyGrowthPush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyGrowthPush.m; sourceTree = "<group>"; };
+		B2ECCEC219A9C3DC00312B0C /* EGPOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGPOption.h; sourceTree = "<group>"; };
+		B2ECCEC319A9C3DC00312B0C /* GPAppDelegateWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPAppDelegateWrapper.h; sourceTree = "<group>"; };
+		B2ECCEC419A9C3DC00312B0C /* GPAppDelegateWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPAppDelegateWrapper.m; sourceTree = "<group>"; };
+		B2ECCEC519A9C3DC00312B0C /* GPAppDelegateWrapperDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPAppDelegateWrapperDelegate.h; sourceTree = "<group>"; };
+		B2ECCEC619A9C3DC00312B0C /* GPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPClient.h; sourceTree = "<group>"; };
+		B2ECCEC719A9C3DC00312B0C /* GPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPClient.m; sourceTree = "<group>"; };
+		B2ECCEC819A9C3DC00312B0C /* GPClientService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPClientService.h; sourceTree = "<group>"; };
+		B2ECCEC919A9C3DC00312B0C /* GPClientService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPClientService.m; sourceTree = "<group>"; };
+		B2ECCECA19A9C3DC00312B0C /* GPDateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPDateUtils.h; sourceTree = "<group>"; };
+		B2ECCECB19A9C3DC00312B0C /* GPDateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPDateUtils.m; sourceTree = "<group>"; };
+		B2ECCECC19A9C3DC00312B0C /* GPDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPDevice.h; sourceTree = "<group>"; };
+		B2ECCECD19A9C3DC00312B0C /* GPDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPDevice.m; sourceTree = "<group>"; };
+		B2ECCECE19A9C3DC00312B0C /* GPDomain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPDomain.h; sourceTree = "<group>"; };
+		B2ECCECF19A9C3DC00312B0C /* GPDomain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPDomain.m; sourceTree = "<group>"; };
+		B2ECCED019A9C3DC00312B0C /* GPEnvironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPEnvironment.h; sourceTree = "<group>"; };
+		B2ECCED119A9C3DC00312B0C /* GPEnvironmentUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPEnvironmentUtils.h; sourceTree = "<group>"; };
+		B2ECCED219A9C3DC00312B0C /* GPEnvironmentUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPEnvironmentUtils.m; sourceTree = "<group>"; };
+		B2ECCED319A9C3DC00312B0C /* GPEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPEvent.h; sourceTree = "<group>"; };
+		B2ECCED419A9C3DC00312B0C /* GPEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPEvent.m; sourceTree = "<group>"; };
+		B2ECCED519A9C3DC00312B0C /* GPEventService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPEventService.h; sourceTree = "<group>"; };
+		B2ECCED619A9C3DC00312B0C /* GPEventService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPEventService.m; sourceTree = "<group>"; };
+		B2ECCED719A9C3DC00312B0C /* GPHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPHttpClient.h; sourceTree = "<group>"; };
+		B2ECCED819A9C3DC00312B0C /* GPHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPHttpClient.m; sourceTree = "<group>"; };
+		B2ECCED919A9C3DC00312B0C /* GPHTTPOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPHTTPOperation.h; sourceTree = "<group>"; };
+		B2ECCEDA19A9C3DC00312B0C /* GPHTTPOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPHTTPOperation.m; sourceTree = "<group>"; };
+		B2ECCEDB19A9C3DC00312B0C /* GPHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPHttpRequest.h; sourceTree = "<group>"; };
+		B2ECCEDC19A9C3DC00312B0C /* GPHttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPHttpRequest.m; sourceTree = "<group>"; };
+		B2ECCEDD19A9C3DC00312B0C /* GPHttpResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPHttpResponse.h; sourceTree = "<group>"; };
+		B2ECCEDE19A9C3DC00312B0C /* GPHttpResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPHttpResponse.m; sourceTree = "<group>"; };
+		B2ECCEDF19A9C3DC00312B0C /* GPHttpUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPHttpUtils.h; sourceTree = "<group>"; };
+		B2ECCEE019A9C3DC00312B0C /* GPHttpUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPHttpUtils.m; sourceTree = "<group>"; };
+		B2ECCEE119A9C3DC00312B0C /* GPOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPOS.h; sourceTree = "<group>"; };
+		B2ECCEE219A9C3DC00312B0C /* GPOSUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPOSUtils.h; sourceTree = "<group>"; };
+		B2ECCEE319A9C3DC00312B0C /* GPOSUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPOSUtils.m; sourceTree = "<group>"; };
+		B2ECCEE419A9C3DC00312B0C /* GPPreference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPPreference.h; sourceTree = "<group>"; };
+		B2ECCEE519A9C3DC00312B0C /* GPPreference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPPreference.m; sourceTree = "<group>"; };
+		B2ECCEE619A9C3DC00312B0C /* GPRequestMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPRequestMethod.h; sourceTree = "<group>"; };
+		B2ECCEE719A9C3DC00312B0C /* GPRequestMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPRequestMethod.m; sourceTree = "<group>"; };
+		B2ECCEE819A9C3DC00312B0C /* GPService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPService.h; sourceTree = "<group>"; };
+		B2ECCEE919A9C3DC00312B0C /* GPService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPService.m; sourceTree = "<group>"; };
+		B2ECCEEA19A9C3DC00312B0C /* GPTagService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPTagService.h; sourceTree = "<group>"; };
+		B2ECCEEB19A9C3DC00312B0C /* GPTagService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPTagService.m; sourceTree = "<group>"; };
+		B2ECCEEC19A9C3DC00312B0C /* GPUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPUtils.h; sourceTree = "<group>"; };
+		B2ECCEED19A9C3DC00312B0C /* GPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPViewController.h; sourceTree = "<group>"; };
+		B2ECCEEE19A9C3DC00312B0C /* GPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPViewController.m; sourceTree = "<group>"; };
+		B2ECCEEF19A9C3DC00312B0C /* GrowthPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrowthPush.h; sourceTree = "<group>"; };
+		B2ECCEF019A9C3DC00312B0C /* GrowthPush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrowthPush.m; sourceTree = "<group>"; };
+		B2ECCF2119A9C47900312B0C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B2AF90D41793029800FA90EC /* Frameworks */ = {
+		B2ECCEA719A9C36300312B0C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B21923071796668800B0E513 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B2AF90CD1793029800FA90EC = {
+		B2ECCEA119A9C36300312B0C = {
 			isa = PBXGroup;
 			children = (
-				B2AF90DF1793029800FA90EC /* GrowthPush */,
-				B2AF90DC1793029800FA90EC /* Frameworks */,
-				B2AF90DB1793029800FA90EC /* Products */,
+				B2ECCEB119A9C36300312B0C /* GrowthPush */,
+				B2ECCEAE19A9C36300312B0C /* Frameworks */,
+				B2ECCEAD19A9C36300312B0C /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		B2AF90DB1793029800FA90EC /* Products */ = {
+		B2ECCEAD19A9C36300312B0C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B2AF90DA1793029800FA90EC /* GrowthPush.framework */,
+				B2ECCEAC19A9C36300312B0C /* GrowthPush.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B2AF90DC1793029800FA90EC /* Frameworks */ = {
+		B2ECCEAE19A9C36300312B0C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B2AF90DD1793029800FA90EC /* Foundation.framework */,
+				B2ECCF2119A9C47900312B0C /* UIKit.framework */,
+				B2ECCEAF19A9C36300312B0C /* Foundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B2AF90DF1793029800FA90EC /* GrowthPush */ = {
+		B2ECCEB119A9C36300312B0C /* GrowthPush */ = {
 			isa = PBXGroup;
 			children = (
-				B2AF90EB179302F000FA90EC /* Headers */,
-				B2AF91141793033900FA90EC /* Sources */,
-				B2AF90E01793029800FA90EC /* Supporting Files */,
+				B2ECCEC119A9C3DC00312B0C /* EasyGrowthPush.m */,
+				B2ECCEC219A9C3DC00312B0C /* EGPOption.h */,
+				B2ECCEC319A9C3DC00312B0C /* GPAppDelegateWrapper.h */,
+				B2ECCEC419A9C3DC00312B0C /* GPAppDelegateWrapper.m */,
+				B2ECCEC519A9C3DC00312B0C /* GPAppDelegateWrapperDelegate.h */,
+				B2ECCEC619A9C3DC00312B0C /* GPClient.h */,
+				B2ECCEC719A9C3DC00312B0C /* GPClient.m */,
+				B2ECCEC819A9C3DC00312B0C /* GPClientService.h */,
+				B2ECCEC919A9C3DC00312B0C /* GPClientService.m */,
+				B2ECCECA19A9C3DC00312B0C /* GPDateUtils.h */,
+				B2ECCECB19A9C3DC00312B0C /* GPDateUtils.m */,
+				B2ECCECC19A9C3DC00312B0C /* GPDevice.h */,
+				B2ECCECD19A9C3DC00312B0C /* GPDevice.m */,
+				B2ECCECE19A9C3DC00312B0C /* GPDomain.h */,
+				B2ECCECF19A9C3DC00312B0C /* GPDomain.m */,
+				B2ECCED019A9C3DC00312B0C /* GPEnvironment.h */,
+				B2ECCED119A9C3DC00312B0C /* GPEnvironmentUtils.h */,
+				B2ECCED219A9C3DC00312B0C /* GPEnvironmentUtils.m */,
+				B2ECCED319A9C3DC00312B0C /* GPEvent.h */,
+				B2ECCED419A9C3DC00312B0C /* GPEvent.m */,
+				B2ECCED519A9C3DC00312B0C /* GPEventService.h */,
+				B2ECCED619A9C3DC00312B0C /* GPEventService.m */,
+				B2ECCED719A9C3DC00312B0C /* GPHttpClient.h */,
+				B2ECCED819A9C3DC00312B0C /* GPHttpClient.m */,
+				B2ECCED919A9C3DC00312B0C /* GPHTTPOperation.h */,
+				B2ECCEDA19A9C3DC00312B0C /* GPHTTPOperation.m */,
+				B2ECCEDB19A9C3DC00312B0C /* GPHttpRequest.h */,
+				B2ECCEDC19A9C3DC00312B0C /* GPHttpRequest.m */,
+				B2ECCEDD19A9C3DC00312B0C /* GPHttpResponse.h */,
+				B2ECCEDE19A9C3DC00312B0C /* GPHttpResponse.m */,
+				B2ECCEDF19A9C3DC00312B0C /* GPHttpUtils.h */,
+				B2ECCEE019A9C3DC00312B0C /* GPHttpUtils.m */,
+				B2ECCEE119A9C3DC00312B0C /* GPOS.h */,
+				B2ECCEE219A9C3DC00312B0C /* GPOSUtils.h */,
+				B2ECCEE319A9C3DC00312B0C /* GPOSUtils.m */,
+				B2ECCEE419A9C3DC00312B0C /* GPPreference.h */,
+				B2ECCEE519A9C3DC00312B0C /* GPPreference.m */,
+				B2ECCEE619A9C3DC00312B0C /* GPRequestMethod.h */,
+				B2ECCEE719A9C3DC00312B0C /* GPRequestMethod.m */,
+				B2ECCEE819A9C3DC00312B0C /* GPService.h */,
+				B2ECCEE919A9C3DC00312B0C /* GPService.m */,
+				B2ECCEEA19A9C3DC00312B0C /* GPTagService.h */,
+				B2ECCEEB19A9C3DC00312B0C /* GPTagService.m */,
+				B2ECCEEC19A9C3DC00312B0C /* GPUtils.h */,
+				B2ECCEED19A9C3DC00312B0C /* GPViewController.h */,
+				B2ECCEEE19A9C3DC00312B0C /* GPViewController.m */,
+				B2ECCEB419A9C36300312B0C /* GrowthPush-Prefix.pch */,
+				B2ECCEEF19A9C3DC00312B0C /* GrowthPush.h */,
+				B2ECCEF019A9C3DC00312B0C /* GrowthPush.m */,
+				B2ECCEB219A9C36300312B0C /* Supporting Files */,
 			);
 			path = GrowthPush;
 			sourceTree = "<group>";
 		};
-		B2AF90E01793029800FA90EC /* Supporting Files */ = {
+		B2ECCEB219A9C36300312B0C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B2AF90E11793029800FA90EC /* GrowthPush-Info.plist */,
-				B2AF90E51793029800FA90EC /* GrowthPush-Prefix.pch */,
-				B2AF90E21793029800FA90EC /* InfoPlist.strings */,
+				B2ECCEB319A9C36300312B0C /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		B2AF90EB179302F000FA90EC /* Headers */ = {
-			isa = PBXGroup;
-			children = (
-				B2C68C0B17ECC5AB001F0BF7 /* EGPOption.h */,
-				B21A2BBF17A5671100C809ED /* GPAppDelegateWrapper.h */,
-				B21A2BC117A5671100C809ED /* GPAppDelegateWrapperDelegate.h */,
-				B21A2BC217A5671100C809ED /* GPClient.h */,
-				B21A2BC417A5671100C809ED /* GPClientService.h */,
-				B21A2BC617A5671100C809ED /* GPDateUtils.h */,
-				B21A2BC817A5671100C809ED /* GPDevice.h */,
-				B21A2BCA17A5671100C809ED /* GPDomain.h */,
-				B21A2BCC17A5671100C809ED /* GPEnvironment.h */,
-				B21A2BCD17A5671100C809ED /* GPEnvironmentUtils.h */,
-				B21A2BCF17A5671100C809ED /* GPEvent.h */,
-				B21A2BD117A5671100C809ED /* GPEventService.h */,
-				B21A2BD317A5671100C809ED /* GPHttpClient.h */,
-				24D9435B1902D9ED0000C3AE /* GPHTTPOperation.h */,
-				B21A2BD517A5671100C809ED /* GPHttpRequest.h */,
-				B21A2BD717A5671100C809ED /* GPHttpResponse.h */,
-				B21A2BD917A5671100C809ED /* GPHttpUtils.h */,
-				B21A2BDB17A5671100C809ED /* GPOS.h */,
-				B21A2BDC17A5671100C809ED /* GPOSUtils.h */,
-				B21A2BDE17A5671100C809ED /* GPPreference.h */,
-				B21A2BE017A5671100C809ED /* GPRequestMethod.h */,
-				B21A2BE217A5671100C809ED /* GPService.h */,
-				B21A2BE417A5671100C809ED /* GPTagService.h */,
-				B21A2BE617A5671100C809ED /* GPUtils.h */,
-				B21A2BE717A5671100C809ED /* GPViewController.h */,
-				B21A2BE917A5671100C809ED /* GrowthPush.h */,
-			);
-			name = Headers;
-			sourceTree = "<group>";
-		};
-		B2AF91141793033900FA90EC /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				B21A2BBC17A5671100C809ED /* EasyGrowthPush.m */,
-				B21A2BC017A5671100C809ED /* GPAppDelegateWrapper.m */,
-				B21A2BC317A5671100C809ED /* GPClient.m */,
-				B21A2BC517A5671100C809ED /* GPClientService.m */,
-				B21A2BC717A5671100C809ED /* GPDateUtils.m */,
-				B21A2BC917A5671100C809ED /* GPDevice.m */,
-				B21A2BCB17A5671100C809ED /* GPDomain.m */,
-				B21A2BCE17A5671100C809ED /* GPEnvironmentUtils.m */,
-				B21A2BD017A5671100C809ED /* GPEvent.m */,
-				B21A2BD217A5671100C809ED /* GPEventService.m */,
-				B21A2BD417A5671100C809ED /* GPHttpClient.m */,
-				24D9435D1902D9FC0000C3AE /* GPHTTPOperation.m */,
-				B21A2BD617A5671100C809ED /* GPHttpRequest.m */,
-				B21A2BD817A5671100C809ED /* GPHttpResponse.m */,
-				B21A2BDA17A5671100C809ED /* GPHttpUtils.m */,
-				B21A2BDD17A5671100C809ED /* GPOSUtils.m */,
-				B21A2BDF17A5671100C809ED /* GPPreference.m */,
-				B21A2BE117A5671100C809ED /* GPRequestMethod.m */,
-				B21A2BE317A5671100C809ED /* GPService.m */,
-				B21A2BE517A5671100C809ED /* GPTagService.m */,
-				B21A2BE817A5671100C809ED /* GPViewController.m */,
-				B21A2BEA17A5671100C809ED /* GrowthPush.m */,
-			);
-			name = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		B2AF90D51793029800FA90EC /* Headers */ = {
+		B2ECCEA819A9C36300312B0C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B21A2C1817A5671100C809ED /* GrowthPush.h in Headers */,
-				B21A2BFB17A5671100C809ED /* GPEnvironment.h in Headers */,
-				B2C68C0C17ECC5AB001F0BF7 /* EGPOption.h in Headers */,
-				B21A2BEE17A5671100C809ED /* GPAppDelegateWrapper.h in Headers */,
-				B21A2BF017A5671100C809ED /* GPAppDelegateWrapperDelegate.h in Headers */,
-				B21A2BF117A5671100C809ED /* GPClient.h in Headers */,
-				B21A2BF317A5671100C809ED /* GPClientService.h in Headers */,
-				B21A2BF517A5671100C809ED /* GPDateUtils.h in Headers */,
-				B21A2BF717A5671100C809ED /* GPDevice.h in Headers */,
-				B21A2BF917A5671100C809ED /* GPDomain.h in Headers */,
-				B21A2BFC17A5671100C809ED /* GPEnvironmentUtils.h in Headers */,
-				B21A2BFE17A5671100C809ED /* GPEvent.h in Headers */,
-				B21A2C0017A5671100C809ED /* GPEventService.h in Headers */,
-				B21A2C0217A5671100C809ED /* GPHttpClient.h in Headers */,
-				B21A2C0417A5671100C809ED /* GPHttpRequest.h in Headers */,
-				24D9435C1902D9F40000C3AE /* GPHTTPOperation.h in Headers */,
-				B21A2C0617A5671100C809ED /* GPHttpResponse.h in Headers */,
-				B21A2C0817A5671100C809ED /* GPHttpUtils.h in Headers */,
-				B21A2C0A17A5671100C809ED /* GPOS.h in Headers */,
-				B21A2C0B17A5671100C809ED /* GPOSUtils.h in Headers */,
-				B21A2C0D17A5671100C809ED /* GPPreference.h in Headers */,
-				B21A2C0F17A5671100C809ED /* GPRequestMethod.h in Headers */,
-				B21A2C1117A5671100C809ED /* GPService.h in Headers */,
-				B21A2C1317A5671100C809ED /* GPTagService.h in Headers */,
-				B21A2C1517A5671100C809ED /* GPUtils.h in Headers */,
-				B21A2C1617A5671100C809ED /* GPViewController.h in Headers */,
+				B2ECCF1F19A9C3DC00312B0C /* GrowthPush.h in Headers */,
+				B2ECCEF219A9C3DC00312B0C /* EGPOption.h in Headers */,
+				B2ECCF0019A9C3DC00312B0C /* GPEnvironment.h in Headers */,
+				B2ECCEB519A9C36300312B0C /* GrowthPush-Prefix.pch in Headers */,
+				B2ECCF0119A9C3DC00312B0C /* GPEnvironmentUtils.h in Headers */,
+				B2ECCF1119A9C3DC00312B0C /* GPOS.h in Headers */,
+				B2ECCEFA19A9C3DC00312B0C /* GPDateUtils.h in Headers */,
+				B2ECCEF819A9C3DC00312B0C /* GPClientService.h in Headers */,
+				B2ECCF0B19A9C3DC00312B0C /* GPHttpRequest.h in Headers */,
+				B2ECCEF619A9C3DC00312B0C /* GPClient.h in Headers */,
+				B2ECCF0719A9C3DC00312B0C /* GPHttpClient.h in Headers */,
+				B2ECCF0519A9C3DC00312B0C /* GPEventService.h in Headers */,
+				B2ECCF0F19A9C3DC00312B0C /* GPHttpUtils.h in Headers */,
+				B2ECCEF319A9C3DC00312B0C /* GPAppDelegateWrapper.h in Headers */,
+				B2ECCF1419A9C3DC00312B0C /* GPPreference.h in Headers */,
+				B2ECCF1619A9C3DC00312B0C /* GPRequestMethod.h in Headers */,
+				B2ECCF0319A9C3DC00312B0C /* GPEvent.h in Headers */,
+				B2ECCF1D19A9C3DC00312B0C /* GPViewController.h in Headers */,
+				B2ECCF1A19A9C3DC00312B0C /* GPTagService.h in Headers */,
+				B2ECCF1819A9C3DC00312B0C /* GPService.h in Headers */,
+				B2ECCF1C19A9C3DC00312B0C /* GPUtils.h in Headers */,
+				B2ECCEFE19A9C3DC00312B0C /* GPDomain.h in Headers */,
+				B2ECCEF519A9C3DC00312B0C /* GPAppDelegateWrapperDelegate.h in Headers */,
+				B2ECCEFC19A9C3DC00312B0C /* GPDevice.h in Headers */,
+				B2ECCF0D19A9C3DC00312B0C /* GPHttpResponse.h in Headers */,
+				B2ECCF0919A9C3DC00312B0C /* GPHTTPOperation.h in Headers */,
+				B2ECCF1219A9C3DC00312B0C /* GPOSUtils.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		B2AF90D91793029800FA90EC /* GrowthPush */ = {
+		B2ECCEAB19A9C36300312B0C /* GrowthPush */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B2AF90E81793029800FA90EC /* Build configuration list for PBXNativeTarget "GrowthPush" */;
+			buildConfigurationList = B2ECCEBE19A9C36300312B0C /* Build configuration list for PBXNativeTarget "GrowthPush" */;
 			buildPhases = (
-				B2AF90D21793029800FA90EC /* ShellScript */,
-				B2AF90D31793029800FA90EC /* Sources */,
-				B2AF90D41793029800FA90EC /* Frameworks */,
-				B2AF90D51793029800FA90EC /* Headers */,
-				B2AF90D61793029800FA90EC /* Resources */,
-				B2AF90D71793029800FA90EC /* ShellScript */,
-				B2AF90D81793029800FA90EC /* ShellScript */,
+				B2ECCEA619A9C36300312B0C /* Sources */,
+				B2ECCEA719A9C36300312B0C /* Frameworks */,
+				B2ECCEA819A9C36300312B0C /* Headers */,
+				B2ECCEA919A9C36300312B0C /* Resources */,
+				B2ECCEAA19A9C36300312B0C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -291,48 +272,52 @@
 			);
 			name = GrowthPush;
 			productName = GrowthPush;
-			productReference = B2AF90DA1793029800FA90EC /* GrowthPush.framework */;
+			productReference = B2ECCEAC19A9C36300312B0C /* GrowthPush.framework */;
 			productType = "com.apple.product-type.framework.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		B2AF90CE1793029800FA90EC /* Project object */ = {
+		B2ECCEA219A9C36300312B0C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "SIROK, Inc.";
+				TargetAttributes = {
+					B2ECCEAB19A9C36300312B0C = {
+						CreatedOnToolsVersion = 6.0;
+					};
+				};
 			};
-			buildConfigurationList = B2AF90D11793029800FA90EC /* Build configuration list for PBXProject "GrowthPush" */;
+			buildConfigurationList = B2ECCEA519A9C36300312B0C /* Build configuration list for PBXProject "GrowthPush" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = B2AF90CD1793029800FA90EC;
-			productRefGroup = B2AF90DB1793029800FA90EC /* Products */;
+			mainGroup = B2ECCEA119A9C36300312B0C;
+			productRefGroup = B2ECCEAD19A9C36300312B0C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B2AF90D91793029800FA90EC /* GrowthPush */,
+				B2ECCEAB19A9C36300312B0C /* GrowthPush */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B2AF90D61793029800FA90EC /* Resources */ = {
+		B2ECCEA919A9C36300312B0C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2AF90E41793029800FA90EC /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B2AF90D21793029800FA90EC /* ShellScript */ = {
+		B2ECCEAA19A9C36300312B0C /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -342,94 +327,68 @@
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n    # Nothing for the slave script to do\n    exit 0\nfi\nset -u\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    UFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n\tUFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version  from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    UFW_OTHER_PLATFORM=iphonesimulator\nelse\n    UFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\n    UFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\nONLY_ACTIVE_PLATFORM=${ONLY_ACTIVE_PLATFORM:-$ONLY_ACTIVE_ARCH}\n\n# Short-circuit if all binaries are up to date\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n   [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n   [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n  ([[ \"${ONLY_ACTIVE_PLATFORM}\" == \"YES\" ]] || \\\n    ([[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n     [[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n     [[ ! \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\n    )\n  )\nthen\n    exit 0\nfi\n\n\n# Clean other platform if needed\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && [[ \"${ONLY_ACTIVE_PLATFORM}\" != \"YES\" ]]\nthen\n\techo \"Platform \\\"$UFW_SDK_PLATFORM\\\" was cleaned recently. Cleaning \\\"$UFW_OTHER_PLATFORM\\\" as well\"\n\techo xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\n\txcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\nfi\n\n\n# Make sure we are building from fresh binaries\n\nrm -rf \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\n\nif [[ \"${ONLY_ACTIVE_PLATFORM}\" != \"YES\" ]]\nthen\n    rm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\n    rm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nfi\n";
-		};
-		B2AF90D71793029800FA90EC /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "HEADERS_ROOT=$SRCROOT/$PRODUCT_NAME\nFRAMEWORK_HEADERS_DIR=\"$BUILT_PRODUCTS_DIR/$WRAPPER_NAME/Versions/$FRAMEWORK_VERSION/Headers\"\n\n## only header files expected at this point\nPUBLIC_HEADERS=$(find $FRAMEWORK_HEADERS_DIR/. -not -type d 2> /dev/null | sed -e \"s@.*/@@g\")\n\nFIND_OPTS=\"\"\nfor PUBLIC_HEADER in $PUBLIC_HEADERS; do\n  if [ -n \"$FIND_OPTS\" ]; then\n    FIND_OPTS=\"$FIND_OPTS -o\"\n  fi\n  FIND_OPTS=\"$FIND_OPTS -name '$PUBLIC_HEADER'\"\ndone\n\nif [ -n \"$FIND_OPTS\" ]; then\n  for ORIG_HEADER in $(eval \"find $HEADERS_ROOT/. $FIND_OPTS\" 2> /dev/null | sed -e \"s@^$HEADERS_ROOT/./@@g\"); do\n    PUBLIC_HEADER=$(basename $ORIG_HEADER)\n    RELATIVE_PATH=$(dirname $ORIG_HEADER)\n    if [ -e $FRAMEWORK_HEADERS_DIR/$PUBLIC_HEADER ]; then\n      mkdir -p \"$FRAMEWORK_HEADERS_DIR/$RELATIVE_PATH\"\n      mv \"$FRAMEWORK_HEADERS_DIR/$PUBLIC_HEADER\" \"$FRAMEWORK_HEADERS_DIR/$RELATIVE_PATH/$PUBLIC_HEADER\"\n    fi\n  done\nfi\n";
-		};
-		B2AF90D81793029800FA90EC /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n    # Nothing for the slave script to do\n    exit 0\nfi\nset -u\nexport UFW_MASTER_SCRIPT_RUNNING=1\n\n\n# Functions\n\n## List files in the specified directory, storing to the specified array.\n#\n# @param $1 The path to list\n# @param $2 The name of the array to fill\n#\n##\nlist_files ()\n{\n    filelist=$(ls \"$1\")\n    while read line\n    do\n        eval \"$2[\\${#$2[*]}]=\\\"\\$line\\\"\"\n    done <<< \"$filelist\"\n}\n\n\n# Sanity check\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]]\nthen\n    echo \"Framework target \\\"${TARGET_NAME}\\\" had no source files to build from. Make sure your source files have the correct target membership\"\n    exit 1\nfi\n\n\n# Gather information\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    UFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n    UFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    UFW_OTHER_PLATFORM=iphonesimulator\nelse\n    UFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\n    UFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\nONLY_ACTIVE_PLATFORM=${ONLY_ACTIVE_PLATFORM:-$ONLY_ACTIVE_ARCH}\n\n# Short-circuit if all binaries are up to date.\n# We already checked the other platform in the prerun script.\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\nthen\n    exit 0\nfi\n\nif [ \"${ONLY_ACTIVE_PLATFORM}\" == \"YES\" ]\nthen\n    echo \"ONLY_ACTIVE_PLATFORM=${ONLY_ACTIVE_PLATFORM}: Skipping other platform build\"\nelse\n    # Make sure the other platform gets built\n    \n    echo \"Build other platform\"\n    \n    echo xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\n    xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\n    \n    \n    # Build the fat static library binary\n    \n    echo \"Create universal static library\"\n    \nif [[ \"$XCODE_VERSION_MAJOR\" = \"0500\" ]]\nthen\n    echo \"$DT_TOOLCHAIN_DIR/usr/bin/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n    \"$DT_TOOLCHAIN_DIR/usr/bin/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\nelse\n    echo \"$PLATFORM_DEVELOPER_BIN_DIR/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n    \"$PLATFORM_DEVELOPER_BIN_DIR/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\nfi \n    echo mv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\n    mv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nfi\n\n# Build embedded framework structure\n\necho \"Build Embedded Framework\"\n\necho rm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\necho mkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\necho cp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\ncp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\n\ndeclare -a UFW_FILE_LIST\nlist_files \"${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\" UFW_FILE_LIST\nfor filename in \"${UFW_FILE_LIST[@]}\"\ndo\n    if [[ \"${filename}\" != \"Info.plist\" ]] && [[ ! \"${filename}\" =~ .*\\.lproj$ ]]\n    then\n        echo ln -sfh \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\n        ln -sfh \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\n    fi\ndone\n\n\nif [ \"${ONLY_ACTIVE_PLATFORM}\" != \"YES\" ]\nthen\n    # Replace other platform's framework with a copy of this one (so that both have the same universal binary)\n    \n    echo \"Copy from $UFW_SDK_PLATFORM to $UFW_OTHER_PLATFORM\"\n    \n    echo rm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n    rm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n    echo cp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n    cp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\nfi\n";
+			shellPath = /usr/bin/python;
+			shellScript = "# TAG: BUILD SCRIPT (do not remove this comment)\n# Build script generated using https://github.com/kstenerud/iOS-Universal-Framework Mk 8 (beta 2012-06-16)\nimport logging\n\n\n##############################################################################\n#\n# Configuration\n#\n##############################################################################\n\n# Select which kind of framework to build.\n#\n# Note: Due to issues with Xcode's build process, if you select\n#       'embeddedframework', it will still show the regular framework\n#       (as a symlink) along side of the embedded framework. Be sure to\n#       instruct your users to copy/move the embedded framework in this case!\n#\n# If your framework contains resources such as images, nibs, momds, plists,\n# zipfiles and such, choose 'embeddedframework'.\n#\n# If your framework contains no resources, choose 'framework'.\n#\nconfig_framework_type = 'framework'\n#config_framework_type = 'embeddedframework'\n\n# Open the build directory in Finder when the universal framework is\n# successfully built.\n#\n# This value can be overridden by setting the UFW_OPEN_BUILD_DIR env variable\n# to True or False.\n#\n# Recommended setting: True\n#\nconfig_open_build_dir = True\n\n# If true, ensures that all public headers are stored in the framework under\n# the same directory hierarchy as they were in the source tree.\n#\n# Xcode by default places all headers at the same top level, but every other\n# build tool in the known universe preserves directory structure. For simple\n# libraries it doesn't really matter much, but for ports of existing software\n# packages or for bigger libraries, it makes sense to have more structure.\n#\n# The default is set to \"False\" since that's what most Xcode users are used to.\n#\n# Recommended setting: True for deep hierarchy projects, False otherwise.\n#\nconfig_deep_header_hierarchy = False\n\n# Specify where the top of the public header hierarchy is. This path is\n# relative to the project's dir (PROJECT_DIR). You can reference environment\n# variables using templating syntax (e.g. \"${TARGET_NAME}/Some/Subdir\")\n#\n# NOTE: Only used if config_deep_header_hierarchy is True.\n#\n# If this is set to None, the script will attempt to figure out for itself\n# where the top of the header hierarchy is by looking for common path prefixes\n# in the public header files. This process can fail if:\n# - You only have one public header file.\n# - Your source header files don't all have a common root.\n#\n# A common approach is to use \"${TARGET_NAME}\", working under the assumption\n# that all of your header files share the common root of a directory under\n# your project with the same name as your target (which is the Xcode default).\n#\n# Recommended setting: \"${TARGET_NAME}\"\n#\nconfig_deep_header_top = \"${TARGET_NAME}\"\n\n# Warn when \"DerivedData\" is detected in any of the header, library, or\n# framework search paths. In almost all cases, references to directories under\n# DerivedData are added as a result of an Xcode bug and must be manually\n# removed.\n#\n# Recommended setting: True\n#\nconfig_warn_derived_data = True\n\n# Warn if no headers were marked public in this framework.\n#\n# Recommended setting: True\n#\nconfig_warn_no_public_headers = True\n\n# Cause the build to fail if any warnings are issued.\n#\n# Recommended setting: True\n#\nconfig_fail_on_warnings = True\n\n# Minimum log level\n#\n# Recommended setting: logging.INFO\n#\nconfig_log_level = logging.INFO\n\n\n##############################################################################\n#\n# Don't touch anything below here unless you know what you're doing.\n#\n##############################################################################\n\nimport collections\nimport json\nimport os\nimport re\nimport shlex\nimport shutil\nimport string\nimport subprocess\nimport sys\nimport time\nimport traceback\n\n\n##############################################################################\n#\n# Globals\n#\n##############################################################################\n\nlog = logging.getLogger('UFW')\n\nissued_warnings = False\n\n\n##############################################################################\n#\n# Classes\n#\n##############################################################################\n\n# Allows the slave build to communicate with the master build.\n#\nclass BuildState:\n\n    def __init__(self):\n        self.reload()\n\n    def reset(self):\n        self.slave_platform = None\n        self.slave_architectures = []\n        self.slave_linked_archive_paths = []\n        self.slave_built_fw_path = None\n        self.slave_built_embedded_fw_path = None\n\n    def set_slave_properties(self, architectures,\n                             linked_archive_paths,\n                             built_fw_path,\n                             built_embedded_fw_path):\n        self.slave_platform = os.environ['PLATFORM_NAME']\n        self.slave_architectures = architectures\n        self.slave_linked_archive_paths = linked_archive_paths\n        self.slave_built_fw_path = built_fw_path\n        self.slave_built_embedded_fw_path = built_embedded_fw_path\n\n    def get_save_path(self):\n        return os.path.join(os.environ['PROJECT_TEMP_DIR'], \"ufw_build_state.json\")\n\n    def persist(self):\n        filename = self.get_save_path()\n        parent = os.path.dirname(filename)\n        if not os.path.isdir(parent):\n            os.makedirs(parent)\n        with open(filename, \"w\") as f:\n            f.write(json.dumps(self.__dict__))\n\n    def reload(self):\n        self.reset()\n        filename = self.get_save_path()\n        if os.path.exists(filename):\n            with open(filename, \"r\") as f:\n                new_dict = json.loads(f.read())\n                if new_dict is not None:\n                    self.__dict__ = dict(self.__dict__.items() + new_dict.items())\n\n\n# Holds information about the current project and build environment.\n#\nclass Project:\n\n    def __init__(self, filename):\n        sourcecode_types = ['sourcecode.c.c',\n                            'sourcecode.c.objc',\n                            'sourcecode.cpp.cpp',\n                            'sourcecode.cpp.objcpp',\n                            'sourcecode.asm.asm',\n                            'sourcecode.asm.llvm',\n                            'sourcecode.nasm']\n\n        self.build_state = BuildState()\n        self.project_data = self.load_from_file(filename)\n        self.target = filter(lambda x: x['name'] == os.environ['TARGET_NAME'], self.project_data['targets'])[0]\n        self.public_headers = self.get_build_phase_files('PBXHeadersBuildPhase', lambda x: x.get('settings', False) and x['settings'].get('ATTRIBUTES', False) and 'Public' in x['settings']['ATTRIBUTES'])\n        self.static_libraries = self.get_build_phase_files('PBXFrameworksBuildPhase', lambda x: x['fileRef']['fileType'] == 'archive.ar' and x['fileRef']['sourceTree'] not in ['DEVELOPER_DIR', 'SDKROOT'])\n        self.static_frameworks = self.get_build_phase_files('PBXFrameworksBuildPhase', lambda x: x['fileRef']['fileType'] == 'wrapper.framework' and x['fileRef']['sourceTree'] not in ['DEVELOPER_DIR', 'SDKROOT'])\n        self.compilable_sources = self.get_build_phase_files('PBXSourcesBuildPhase', lambda x: x['fileRef']['fileType'] in sourcecode_types)\n        self.header_paths = [os.path.join(*x['pathComponents']) for x in self.public_headers]\n\n        self.headers_dir = os.path.join(os.environ['TARGET_BUILD_DIR'], os.environ['CONTENTS_FOLDER_PATH'], 'Headers')\n        self.libtool_path = os.path.join(os.environ['DT_TOOLCHAIN_DIR'], 'usr', 'bin', 'libtool')\n        self.project_filename = os.path.join(os.environ['PROJECT_FILE_PATH'], \"project.pbxproj\")\n        self.local_exe_path = os.path.join(os.environ['TARGET_BUILD_DIR'], os.environ['EXECUTABLE_PATH'])\n        self.local_architectures = os.environ['ARCHS'].split(' ')\n        self.local_built_fw_path = os.path.join(os.environ['TARGET_BUILD_DIR'], os.environ['WRAPPER_NAME'])\n        self.local_built_embedded_fw_path = os.path.splitext(self.local_built_fw_path)[0] + \".embeddedframework\"\n        self.local_linked_archive_paths = [self.get_linked_ufw_archive_path(arch) for arch in self.local_architectures]\n        self.local_platform = os.environ['PLATFORM_NAME']\n        other_platforms = os.environ['SUPPORTED_PLATFORMS'].split(' ')\n        other_platforms.remove(self.local_platform)\n        self.other_platform = other_platforms[0]\n\n        sdk_name = os.environ['SDK_NAME']\n        if not sdk_name.startswith(self.local_platform):\n            raise Exception(\"%s didn't start with %s\" % (sdk_name, self.local_platform))\n        self.sdk_version = sdk_name[len(self.local_platform):]\n\n    # Load an Xcode project file.\n    #\n    def load_from_file(self, filename):\n        project_file = json.loads(subprocess.check_output([\"plutil\", \"-convert\", \"json\", \"-o\", \"-\", filename]))\n        all_objects = project_file['objects']\n        del project_file['objects']\n        for obj in all_objects.values():\n            self.fix_keys(obj)\n        self.unpack_objects(self.build_dereference_list(all_objects, None, None, project_file))\n        self.unpack_objects(self.build_dereference_list(all_objects, None, None, all_objects.values()))\n        project_data = project_file['rootObject']\n        self.build_full_paths(project_data, splitpath(os.environ['SOURCE_ROOT']))\n        return project_data\n\n    def is_key(self, obj):        \n        return isinstance(obj, basestring) and len(obj) == 24 and re.search('^[0-9a-fA-F]+$', obj) is not None\n    \n    def build_dereference_list(self, all_objects, parent, key, obj):\n        deref_list = []\n        if self.is_key(obj):\n            dereferenced = all_objects.get(obj, obj)\n            if dereferenced is not obj:\n                deref_list.append((parent, key, obj, dereferenced))\n        elif isinstance(obj, collections.Mapping):\n            for k, v in obj.iteritems():\n                deref_list += self.build_dereference_list(all_objects, obj, k, v)\n        elif isinstance(obj, collections.Iterable) and not isinstance(obj, basestring):\n            for item in obj:\n                deref_list += self.build_dereference_list(all_objects, obj, None, item)\n        return deref_list\n    \n    def unpack_objects(self, deref_list):\n        for parent, key, orig, obj in deref_list:\n            if key is None:\n                parent.remove(orig)\n                parent.append(obj)\n            else:\n                parent[key] = obj\n\n    # Store the full path, separated into components, to a node inside the node\n    # as \"pathComponents\". Also recurse into that node if it's a group.\n    #\n    def build_full_paths(self, node, base_path):\n        # Some nodes are relative to a different source tree, specified as an\n        # env variable.\n        if node.get('sourceTree', '<group>') != '<group>':\n            new_base_path = os.environ.get(node['sourceTree'], None)\n            if new_base_path:\n                base_path = splitpath(new_base_path)\n        # Add the current node's path, if any.\n        if node.get('path', False):\n            base_path = base_path + splitpath(node['path'])\n        node['pathComponents'] = base_path\n        # Recurse if this is a group.\n        if node['isa'] == 'PBXGroup':\n            for child in node['children']:\n                self.build_full_paths(child, base_path)\n        elif node['isa'] == 'PBXProject':\n            self.build_full_paths(node['mainGroup'], base_path)\n            self.build_full_paths(node['productRefGroup'], base_path)\n            for child in node['targets']:\n                self.build_full_paths(child, base_path)\n            projectRefs = node.get('projectReferences', None)\n            if projectRefs is not None:\n                for child in projectRefs[0].values():\n                    self.build_full_paths(child, base_path)\n\n    # Fix up any inconvenient keys.\n    #\n    def fix_keys(self, obj):\n        key_remappings = {'lastKnownFileType': 'fileType', 'explicitFileType': 'fileType'}\n        for key in list(set(key_remappings.keys()) & set(obj.keys())):\n            obj[key_remappings[key]] = obj[key]\n            del obj[key]\n\n    # Get the files from a build phase.\n    #\n    def get_build_phase_files(self, build_phase_name, filter_func):\n        build_phase = filter(lambda x: x['isa'] == build_phase_name, self.target['buildPhases'])[0]\n        build_files = filter(filter_func, build_phase['files'])\n        return [x['fileRef'] for x in build_files]\n\n    # Get the truncated paths of all headers that start with the specified\n    # relative path. Paths are read and returned as fully separated lists.\n    # e.g. ['Some', 'Path', 'To', 'A', 'Header'] with relative_path of\n    # ['Some', 'Path'] gets truncated to ['To', 'A', 'Header']\n    #\n    def movable_headers_relative_to(self, relative_path):\n        rel_path_length = len(relative_path)\n        result = filter(lambda path: len(path) >= rel_path_length and\n                                     path[:rel_path_length] == relative_path, self.header_paths)\n        return [path[rel_path_length:] for path in result]\n\n    # Get the full path to where a linkable archive (library or framework)\n    # is supposed to be.\n    #\n    def get_linked_archive_path(self, architecture):\n        return os.path.join(os.environ['OBJECT_FILE_DIR_%s' % os.environ['CURRENT_VARIANT']],\n                            architecture,\n                            os.environ['EXECUTABLE_NAME'])\n\n    # Get the full path to our custom linked archive of the project.\n    #\n    def get_linked_ufw_archive_path(self, architecture):\n        return self.get_linked_archive_path(architecture) + \".ufwbuild\"\n\n    # Get the full path to the executable of an archive.\n    #\n    def get_exe_path(self, node):\n        path = os.path.join(*node['pathComponents'])\n        if node['fileType'] == 'wrapper.framework':\n            # Frameworks are directories, so go one deeper\n            path = os.path.join(path, os.path.splitext(node['pathComponents'][-1])[0])\n        return path\n\n    # Get the path to the directory containing the archive.\n    #\n    def get_containing_path(self, node):\n        return os.path.join(*node['pathComponents'])\n    \n    def get_archive_search_paths(self):\n        log.info(\"Search paths = %s\" % set([self.get_containing_path(fw) for fw in self.static_frameworks] + [self.get_containing_path(fw) for fw in self.static_libraries]))\n        return set([self.get_containing_path(fw) for fw in self.static_frameworks] + [self.get_containing_path(fw) for fw in self.static_libraries])\n\n    # Command to link all objects of a single architecture.\n    #\n    def get_single_arch_link_command(self, architecture):\n        cmd = [self.libtool_path,\n               \"-static\",\n               \"-arch_only\", architecture,\n               \"-syslibroot\", os.environ['SDKROOT'],\n               \"-L%s\" % os.environ['TARGET_BUILD_DIR'],\n               \"-filelist\", os.environ['LINK_FILE_LIST_%s_%s' % (os.environ['CURRENT_VARIANT'], architecture)]]\n        if os.environ.get('OTHER_LDFLAGS', False):\n            cmd += [os.environ['OTHER_LDFLAGS']]\n        if os.environ.get('WARNING_LDFLAGS', False):\n            cmd += [os.environ['WARNING_LDFLAGS']]\n#        cmd += [\"-L%s\" % libpath for libpath in self.get_archive_search_paths()]\n        cmd += [self.get_exe_path(fw) for fw in self.static_frameworks]\n        cmd += [self.get_exe_path(lib) for lib in self.static_libraries]\n        cmd += [\"-o\", self.get_linked_ufw_archive_path(architecture)]\n        return cmd\n\n    # Command to link all local architectures for the current configuration\n    # into an archive. This reads all libraries + the UFW-built archives and\n    # overwrites the final product.\n    #\n    def get_local_archs_link_command(self):\n        cmd = [self.libtool_path,\n               \"-static\"]\n        cmd += self.local_linked_archive_paths\n        cmd += [self.get_exe_path(fw) for fw in self.static_frameworks]\n        cmd += [self.get_exe_path(lib) for lib in self.static_libraries]\n        cmd += [\"-o\", os.path.join(os.environ['TARGET_BUILD_DIR'], os.environ['EXECUTABLE_PATH'])]\n        return cmd\n\n    # Command to link all architectures into a universal archive.\n    # This reads all UFW-built archives and overwrites the final product.\n    #\n    def get_all_archs_link_command(self):\n        cmd = [self.libtool_path,\n               \"-static\"]\n        cmd += self.local_linked_archive_paths + self.build_state.slave_linked_archive_paths\n        cmd += [\"-o\", os.path.join(os.environ['TARGET_BUILD_DIR'], os.environ['EXECUTABLE_PATH'])]\n        return cmd\n\n    # Build up an environment for the slave process. This uses BUILD_ROOT\n    # and TEMP_ROOT to convert all environment variables to values suitable\n    # for the slave build environment so that xcodebuild doesn't try to build\n    # in the project directory under \"build\".\n    #\n    def get_slave_environment(self):\n        ignored = ['LD_MAP_FILE_PATH',\n        'HEADER_SEARCH_PATHS',\n        'LIBRARY_SEARCH_PATHS',\n        'FRAMEWORK_SEARCH_PATHS']\n        build_root = os.environ['BUILD_ROOT']\n        temp_root = os.environ['TEMP_ROOT']\n        newenv = {}\n        for key, value in os.environ.items():\n            if key not in ignored and not key.startswith('LINK_FILE_LIST_') and not key.startswith('LD_DEPENDENCY_'):\n                if build_root in value or temp_root in value:\n                    newenv[key] = value.replace(self.local_platform, self.other_platform)\n        return newenv\n\n    # Command to invoke xcodebuild on the slave platform.\n    #\n    def get_slave_project_build_command(self):\n        cmd = [\"xcodebuild\",\n               \"-project\",\n               os.environ['PROJECT_FILE_PATH'],\n               \"-target\",\n               os.environ['TARGET_NAME'],\n               \"-configuration\",\n               os.environ['CONFIGURATION'],\n               \"-sdk\",\n               self.other_platform + self.sdk_version]\n        cmd += [\"%s=%s\" % (key, value) for key, value in self.get_slave_environment().items()]\n        cmd += [\"UFW_MASTER_PLATFORM=\" + os.environ['PLATFORM_NAME']]\n        cmd += [os.environ['ACTION']]\n        return cmd\n\n\n\n##############################################################################\n#\n# Utility Functions\n#\n##############################################################################\n\n# Split a path into a list of path components.\n#\ndef splitpath(path, maxdepth=20):\n     (head, tail) = os.path.split(path)\n     return splitpath(head, maxdepth - 1) + [tail] if maxdepth and head and head != path else [ head or tail ]\n\n# Remove all subdirectories under a path.\n#\ndef remove_subdirs(path, ignore_files):\n    if os.path.exists(path):\n        for filename in filter(lambda x: x not in ignore_files, os.listdir(path)):\n            fullpath = os.path.join(path, filename)\n            if os.path.isdir(fullpath):\n                log.info(\"Remove %s\" % fullpath)\n                shutil.rmtree(fullpath)\n\n# Make whatever parent paths are necessary for a path to exist.\n#\ndef ensure_path_exists(path):\n    if not os.path.isdir(path):\n        os.makedirs(path)\n\n# Make whatever parent paths are necessary for a path's parent to exist.\n#\ndef ensure_parent_exists(path):\n    parent = os.path.dirname(path)\n    if not os.path.isdir(parent):\n        os.makedirs(parent)\n\n# Remove a file or dir if it exists.\n#\ndef remove_path(path):\n    if os.path.exists(path):\n        if os.path.isdir(path) and not os.path.islink(path):\n            shutil.rmtree(path)\n        else:\n            os.remove(path)\n\n# Move a file or dir, replacing the destination if it exists.\n#\ndef move_file(src, dst):\n    if src == dst or not os.path.isfile(src):\n        return\n    log.info(\"Move %s to %s\" % (src, dst))\n    ensure_parent_exists(dst)\n    remove_path(dst)\n    shutil.move(src, dst)\n\n# Copy a file or dir, replacing the destination if it exists already.\n#\ndef copy_overwrite(src, dst):\n    if src != dst:\n        remove_path(dst)\n        ensure_parent_exists(dst)\n        shutil.copytree(src, dst, symlinks=True)\n\n# Attempt to symlink link_path -> link_to.\n# link_to must be a path relative to link_path's parent and must exist.\n# If link_path already exists, do nothing.\n#\ndef attempt_symlink(link_path, link_to):\n    # Only allow linking to an existing file\n    os.stat(os.path.abspath(os.path.join(link_path, \"..\", link_to)))\n\n    # Only make the link if it hasn't already been made\n    if not os.path.exists(link_path):\n        log.info(\"Symlink %s -> %s\" % (link_path, link_to))\n        os.symlink(link_to, link_path)\n\n# Takes the last entry in an array-based path and returns a normal path\n# relative to base_path.\n#\ndef top_level_file_path(base_path, path_list):\n    return os.path.join(base_path, os.path.split(path_list[-1])[-1])\n\n# Takes all entries in an array-based path and returns a normal path\n# relative to base_path.\n#\ndef full_file_path(base_path, path_list):\n    return os.path.join(*([base_path] + path_list))\n\n# Print a command before executing it.\n# Also print out all output from the command to STDOUT.\n#\ndef print_and_call(cmd):\n    log.info(\"Cmd \" + \" \".join(cmd))\n    p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)\n    result = p.communicate()[0]\n    if len(result) > 0:\n        log.info(result)\n    if p.returncode != 0:\n        raise subprocess.CalledProcessError(p.returncode, cmd)\n\n# Special print-and-call command for the slave build that strips out\n# xcodebuild's spammy list of environment variables.\n#\ndef print_and_call_slave_build(cmd, other_platform):\n    separator = '=== BUILD NATIVE TARGET '\n    p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)\n    result = p.communicate()[0].split(separator)\n    if len(result) == 1:\n        result = result[0]\n    else:\n        result = separator + result[1]\n    log.info(\"Cmd \" + \" \".join(cmd) + \"\\n\" + result)\n    if p.returncode != 0:\n        raise subprocess.CalledProcessError(p.returncode, cmd)\n\n# Issue a warning and record that a warning has been issued.\n#\ndef issue_warning(msg, *args, **kwargs):\n    global issued_warnings\n    issued_warnings = True\n    log.warn(msg, *args, **kwargs)\n\n\n\n##############################################################################\n#\n# Main Application\n#\n##############################################################################\n\n# Check if we are running as master.\n#\ndef is_master():\n    return os.environ.get('UFW_MASTER_PLATFORM', os.environ['PLATFORM_NAME']) == os.environ['PLATFORM_NAME']\n\n# DerivedData should almost never appear in any framework, library, or header\n# search paths. However, Xcode will sometimes add them in, so we check to make\n# sure.\n#\ndef check_for_derived_data_in_search_paths(project):\n    search_path_keys = [\"FRAMEWORK_SEARCH_PATHS\", \"LIBRARY_SEARCH_PATHS\", \"HEADER_SEARCH_PATHS\"]\n    build_configs = project.target['buildConfigurationList']['buildConfigurations']\n    build_settings = filter(lambda x: x['name'] == os.environ['CONFIGURATION'], build_configs)[0]['buildSettings']\n    \n    found_something = False\n    for path_key in filter(lambda x: x in build_settings, search_path_keys):\n        path = build_settings[path_key]\n        if \"DerivedData\" in path:\n            found_something = True\n            log.warn(\"Derived data in %s\" % path)\n            issue_warning(\"'%s' contains reference to 'DerivedData'.\" % path_key)\n    if found_something:\n        log.warn(\"Check your build settings and remove any entries that contain paths inside the DerivedData folder.\")\n        log.warn(\"Otherwise you can disable this warning by changing 'config_warn_derived_data' in this script.\")\n\n# Link local architectures into their respective archives.\n#\ndef link_local_archs(project):\n    for arch in project.local_architectures:\n        print_and_call(project.get_single_arch_link_command(arch))\n\n# Link only the local architectures into the final product, not the slave\n# architectures. For iphoneos, this will be armv6, armv7. For simulator, this\n# will be i386.\n#\ndef link_combine_local_archs(project):\n    print_and_call(project.get_local_archs_link_command())\n\n# Link all architectures into the final product.\n#\ndef link_combine_all_archs(project):\n    print_and_call(project.get_all_archs_link_command())\n\n# Check if we should open the build directory after a successful build.\n#\ndef should_open_build_dir():\n    env_setting = os.environ.get('UFW_OPEN_BUILD_DIR', None)\n    if env_setting is not None:\n        return env_setting\n\n    return config_open_build_dir\n\n# Open the build dir in Finder.\n#\ndef open_build_dir():\n    print_and_call(['open', os.environ['TARGET_BUILD_DIR']])\n\n# Check if the build was started by selecting \"Archive\" under \"Product\" in\n# Xcode.\n#\ndef is_archive_build():\n    # ACTION is always 'build', but perhaps Apple will fix this someday?\n    archive_build = os.environ['ACTION'] == 'archive'\n\n    if not archive_build:\n        # This can be passed in as an env variable when building from command line.\n        archive_build = os.environ.get('UFW_ACTION', None) == 'archive'\n\n    build_dir = splitpath(os.environ['BUILD_DIR'])\n    if not archive_build:\n        # This partial path is used when you select \"archive\" from within Xcode.\n        archive_build = 'ArchiveIntermediates' in build_dir\n\n    # It only counts as a full archive build if this target is being built into\n    # its own build dir (not being built as a dependency of another target)\n    if archive_build:\n        archive_build = os.environ['TARGET_NAME'] in build_dir\n    \n    return archive_build\n\n# Xcode by default throws all public headers into the top level directory.\n# This function moves them to their expected deep hierarchy.\n#\ndef build_deep_header_hierarchy(project):\n    header_path_top = config_deep_header_top\n    if not header_path_top:\n        header_path_top = os.path.commonprefix(project.header_paths)\n    else:\n        header_path_top = splitpath(header_path_top)\n\n    built_headers_path = os.path.join(os.environ['TARGET_BUILD_DIR'], os.environ['PUBLIC_HEADERS_FOLDER_PATH'])\n    movable_headers = project.movable_headers_relative_to(header_path_top)\n\n    # Remove subdirs if they only contain files that have been rebuilt\n    ignore_headers = filter(lambda x: not os.path.isfile(top_level_file_path(built_headers_path, x)), movable_headers)\n    remove_subdirs(built_headers_path, [file[0] for file in ignore_headers])\n\n    # Move rebuilt headers into their proper subdirs\n    for header in movable_headers:\n        move_file(top_level_file_path(built_headers_path, header), full_file_path(built_headers_path, header))\n\n# Add all symlinks needed to make a full framework structure:\n#\n# MyFramework.framework\n# |-- MyFramework -> Versions/Current/MyFramework\n# |-- Headers -> Versions/Current/Headers\n# |-- Resources -> Versions/Current/Resources\n# `-- Versions\n#     |-- A\n#     |   |-- MyFramework\n#     |   |-- Headers\n#     |   |   `-- MyFramework.h\n#     |   `-- Resources\n#     |       |-- Info.plist\n#     |       |-- MyViewController.nib\n#     |       `-- en.lproj\n#     |           `-- InfoPlist.strings\n#     `-- Current -> A\n#\ndef add_symlinks_to_framework(project):\n    base_dir = project.local_built_fw_path\n    attempt_symlink(os.path.join(base_dir, \"Versions\", \"Current\"), os.environ['FRAMEWORK_VERSION'])\n    if os.path.isdir(os.path.join(base_dir, \"Versions\", \"Current\", \"Headers\")):\n        attempt_symlink(os.path.join(base_dir, \"Headers\"), os.path.join(\"Versions\", \"Current\", \"Headers\"))\n    if os.path.isdir(os.path.join(base_dir, \"Versions\", \"Current\", \"Resources\")):\n        attempt_symlink(os.path.join(base_dir, \"Resources\"), os.path.join(\"Versions\", \"Current\", \"Resources\"))\n    attempt_symlink(os.path.join(base_dir, os.environ['EXECUTABLE_NAME']), os.path.join(\"Versions\", \"Current\", os.environ['EXECUTABLE_NAME']))\n\n# Build an embedded framework structure.\n# An embedded framework contains the actual framework, plus a \"Resources\"\n# directory containing symlinks to all resources found in the actual framework,\n# with the exception of \"Info.plist\" and anything ending in \".lproj\":\n#\n# MyFramework.embeddedframework\n# |-- MyFramework.framework\n# |   |-- MyFramework -> Versions/Current/MyFramework\n# |   |-- Headers -> Versions/Current/Headers\n# |   |-- Resources -> Versions/Current/Resources\n# |   `-- Versions\n# |       |-- A\n# |       |   |-- MyFramework\n# |       |   |-- Headers\n# |       |   |   `-- MyFramework.h\n# |       |   `-- Resources\n# |       |       |-- Info.plist\n# |       |       |-- MyViewController.nib\n# |       |       `-- en.lproj\n# |       |           `-- InfoPlist.strings\n# |       `-- Current -> A\n# `-- Resources\n#     `-- MyViewController.nib -> ../MyFramework.framework/Resources/MyViewController.nib\n#\ndef build_embedded_framework(project):\n    fw_path = project.local_built_fw_path\n    embedded_path = project.local_built_embedded_fw_path\n    fw_name = os.environ['WRAPPER_NAME']\n\n    if (os.path.islink(fw_path)):\n        # If the framework path is a link, the build result already in embeddedframework.\n        # Just recreate embeddedframework's Resources\n        remove_path(os.path.join(embedded_path, \"Resources\"))\n    else:\n        remove_path(embedded_path)\n        ensure_path_exists(embedded_path)\n        copy_overwrite(fw_path, os.path.join(embedded_path, fw_name))\n\n    # Create embeddedframework's Resources        \n    ensure_path_exists(os.path.join(embedded_path, \"Resources\"))\n    symlink_source = os.path.join(\"..\", fw_name, \"Resources\")\n    symlink_path = os.path.join(embedded_path, \"Resources\")\n    if os.path.isdir(os.path.join(fw_path, \"Resources\")):\n        for file in filter(lambda x: x != \"Info.plist\" and not x.endswith(\".lproj\"), os.listdir(os.path.join(fw_path, \"Resources\"))):\n            attempt_symlink(os.path.join(symlink_path, file), os.path.join(symlink_source, file))\n\n    # Remove the normal framework and replace it with a symlink to the copy\n    # in the embedded framework. This is needed because Xcode runs its strip\n    # phase AFTER the script runs.\n    embed_fw_wrapper = os.path.splitext(os.environ['WRAPPER_NAME'])[0] + \".embeddedframework\"\n    remove_path(fw_path)\n    attempt_symlink(fw_path, os.path.join(embed_fw_wrapper, os.environ['WRAPPER_NAME']))\n\n\n# Run the build process in slave mode to build the other configuration\n# (device/simulator).\n#\ndef run_slave_build(project):\n    print_and_call_slave_build(project.get_slave_project_build_command(), project.other_platform)\n\n# Run the build process.\n#\ndef run_build():\n    project = Project(os.path.join(os.environ['PROJECT_FILE_PATH'], \"project.pbxproj\"))\n\n    # Issue warnings only if we're master.\n    if is_master():\n        if len(project.compilable_sources) == 0:\n            raise Exception(\"No compilable sources found. Please add at least one source file to build target %s.\" % os.environ['TARGET_NAME'])\n\n        if config_warn_derived_data:\n            check_for_derived_data_in_search_paths(project)\n        if config_warn_no_public_headers and len(project.public_headers) == 0:\n            issue_warning('No headers in build target %s were marked public. Please move at least one header to \"Public\" in the \"Copy Headers\" build phase.' % os.environ['TARGET_NAME'])\n\n    # Only build slave if this is an archive build.\n    if is_archive_build():\n        if is_master():\n            log.debug(\"Building as MASTER\")\n            # The slave-side linker tries to include this (nonexistent) path as\n            # a library path.\n            ensure_path_exists(project.get_slave_environment()['BUILT_PRODUCTS_DIR'])\n            project.build_state.persist()\n            run_slave_build(project)\n            project.build_state.reload()\n        else:\n            log.debug(\"Building as SLAVE\")\n            project.build_state.reload()\n            project.build_state.set_slave_properties(project.local_architectures,\n                                                     project.local_linked_archive_paths,\n                                                     project.local_built_fw_path,\n                                                     project.local_built_embedded_fw_path)\n            project.build_state.persist()\n\n    link_local_archs(project)\n    \n    # Only do a universal binary when building an archive.\n    if is_archive_build() and is_master():\n        link_combine_all_archs(project)\n    else:\n        link_combine_local_archs(project)\n\n    if config_deep_header_hierarchy:\n        build_deep_header_hierarchy(project)\n\n    # add_symlinks_to_framework(project)\n    \n    if is_master():\n        base_dir = project.local_built_fw_path\n        os.unlink(os.path.join(base_dir, \"lib\" + os.environ['EXECUTABLE_NAME'] + \".a\"))\n        if config_framework_type == 'embeddedframework':\n            build_embedded_framework(project)\n        elif config_framework_type != 'framework':\n            raise Exception(\"%s: Unknown framework type for config_framework_type\" % config_framework_type)\n\nif __name__ == \"__main__\":\n    log_handler = logging.StreamHandler()\n    log_handler.setFormatter(logging.Formatter(\"%(name)s (\" + os.environ['PLATFORM_NAME'] + \"): %(levelname)s: %(message)s\"))\n    log.addHandler(log_handler)\n    log.setLevel(config_log_level)\n\n    error_code = 0\n    prefix = \"M\" if is_master() else \"S\"\n    log_handler.setFormatter(logging.Formatter(\"%(name)s (\" + prefix + \" \" + os.environ['PLATFORM_NAME'] + \"): %(levelname)s: %(message)s\"))\n\n    log.debug(\"Begin build process\")\n\n    if config_deep_header_top:\n        config_deep_header_top = string.Template(config_deep_header_top).substitute(os.environ)\n\n    try:\n        run_build()\n        if issued_warnings:\n            if config_fail_on_warnings:\n                error_code = 1\n            log.warn(\"Build completed with warnings\")\n        else:\n            log.info(\"Build completed\")\n        if not is_archive_build():\n            log.info(\"Note: This is *NOT* a universal framework build. To build as a universal framework, do an archive build.\")\n            log.info(\"To do an archive build from command line, use \\\"xcodebuild -configuration Release UFW_ACTION=archive clean build\\\"\")\n    except Exception:\n        traceback.print_exc(file=sys.stdout)\n        error_code = 1\n        log.error(\"Build failed\")\n    finally:\n        if error_code == 0 and is_archive_build() and is_master():\n            log.info(\"Built framework is in \" + os.environ['TARGET_BUILD_DIR'])\n            if should_open_build_dir():\n                open_build_dir()\n        sys.exit(error_code)\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B2AF90D31793029800FA90EC /* Sources */ = {
+		B2ECCEA619A9C36300312B0C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B21A2BEB17A5671100C809ED /* EasyGrowthPush.m in Sources */,
-				B21A2BEF17A5671100C809ED /* GPAppDelegateWrapper.m in Sources */,
-				B21A2BF217A5671100C809ED /* GPClient.m in Sources */,
-				B21A2BF417A5671100C809ED /* GPClientService.m in Sources */,
-				B21A2BF617A5671100C809ED /* GPDateUtils.m in Sources */,
-				B21A2BF817A5671100C809ED /* GPDevice.m in Sources */,
-				B21A2BFA17A5671100C809ED /* GPDomain.m in Sources */,
-				B21A2BFD17A5671100C809ED /* GPEnvironmentUtils.m in Sources */,
-				B21A2BFF17A5671100C809ED /* GPEvent.m in Sources */,
-				B21A2C0117A5671100C809ED /* GPEventService.m in Sources */,
-				B21A2C0317A5671100C809ED /* GPHttpClient.m in Sources */,
-				B21A2C0517A5671100C809ED /* GPHttpRequest.m in Sources */,
-				B21A2C0717A5671100C809ED /* GPHttpResponse.m in Sources */,
-				B21A2C0917A5671100C809ED /* GPHttpUtils.m in Sources */,
-				24D9435E1902D9FC0000C3AE /* GPHTTPOperation.m in Sources */,
-				B21A2C0C17A5671100C809ED /* GPOSUtils.m in Sources */,
-				B21A2C0E17A5671100C809ED /* GPPreference.m in Sources */,
-				B21A2C1017A5671100C809ED /* GPRequestMethod.m in Sources */,
-				B21A2C1217A5671100C809ED /* GPService.m in Sources */,
-				B21A2C1417A5671100C809ED /* GPTagService.m in Sources */,
-				B21A2C1717A5671100C809ED /* GPViewController.m in Sources */,
-				B21A2C1917A5671100C809ED /* GrowthPush.m in Sources */,
+				B2ECCF2019A9C3DC00312B0C /* GrowthPush.m in Sources */,
+				B2ECCF1319A9C3DC00312B0C /* GPOSUtils.m in Sources */,
+				B2ECCF0C19A9C3DC00312B0C /* GPHttpRequest.m in Sources */,
+				B2ECCF0819A9C3DC00312B0C /* GPHttpClient.m in Sources */,
+				B2ECCEF119A9C3DC00312B0C /* EasyGrowthPush.m in Sources */,
+				B2ECCEF719A9C3DC00312B0C /* GPClient.m in Sources */,
+				B2ECCEFD19A9C3DC00312B0C /* GPDevice.m in Sources */,
+				B2ECCF0619A9C3DC00312B0C /* GPEventService.m in Sources */,
+				B2ECCEFF19A9C3DC00312B0C /* GPDomain.m in Sources */,
+				B2ECCF0219A9C3DC00312B0C /* GPEnvironmentUtils.m in Sources */,
+				B2ECCEF419A9C3DC00312B0C /* GPAppDelegateWrapper.m in Sources */,
+				B2ECCF0E19A9C3DC00312B0C /* GPHttpResponse.m in Sources */,
+				B2ECCF0A19A9C3DC00312B0C /* GPHTTPOperation.m in Sources */,
+				B2ECCF1519A9C3DC00312B0C /* GPPreference.m in Sources */,
+				B2ECCF1B19A9C3DC00312B0C /* GPTagService.m in Sources */,
+				B2ECCEF919A9C3DC00312B0C /* GPClientService.m in Sources */,
+				B2ECCF1019A9C3DC00312B0C /* GPHttpUtils.m in Sources */,
+				B2ECCEFB19A9C3DC00312B0C /* GPDateUtils.m in Sources */,
+				B2ECCF0419A9C3DC00312B0C /* GPEvent.m in Sources */,
+				B2ECCF1719A9C3DC00312B0C /* GPRequestMethod.m in Sources */,
+				B2ECCF1E19A9C3DC00312B0C /* GPViewController.m in Sources */,
+				B2ECCF1919A9C3DC00312B0C /* GPService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		B2AF90E21793029800FA90EC /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B2AF90E31793029800FA90EC /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		B2AF90E61793029800FA90EC /* Debug */ = {
+		B2ECCEBC19A9C36300312B0C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					armv7s,
+				);
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_VERSION = 1.1.4;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -438,62 +397,76 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
-		B2AF90E71793029800FA90EC /* Release */ = {
+		B2ECCEBD19A9C36300312B0C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					armv7s,
+				);
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
-				FRAMEWORK_VERSION = 1.1.4;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		B2AF90E91793029800FA90EC /* Debug */ = {
+		B2ECCEBF19A9C36300312B0C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DYLIB_COMPATIBILITY_VERSION = 3;
-				DYLIB_CURRENT_VERSION = 3;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GrowthPush/GrowthPush-Prefix.pch";
-				GCC_THUMB_SUPPORT = NO;
-				INFOPLIST_FILE = "GrowthPush/GrowthPush-Info.plist";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = 1.1.5;
+				INFOPLIST_FILE = GrowthPush/Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
 		};
-		B2AF90EA1793029800FA90EC /* Release */ = {
+		B2ECCEC019A9C36300312B0C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DYLIB_COMPATIBILITY_VERSION = 3;
-				DYLIB_CURRENT_VERSION = 3;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GrowthPush/GrowthPush-Prefix.pch";
-				GCC_THUMB_SUPPORT = NO;
-				INFOPLIST_FILE = "GrowthPush/GrowthPush-Info.plist";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = 1.1.5;
+				INFOPLIST_FILE = GrowthPush/Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = framework;
@@ -503,25 +476,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B2AF90D11793029800FA90EC /* Build configuration list for PBXProject "GrowthPush" */ = {
+		B2ECCEA519A9C36300312B0C /* Build configuration list for PBXProject "GrowthPush" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B2AF90E61793029800FA90EC /* Debug */,
-				B2AF90E71793029800FA90EC /* Release */,
+				B2ECCEBC19A9C36300312B0C /* Debug */,
+				B2ECCEBD19A9C36300312B0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B2AF90E81793029800FA90EC /* Build configuration list for PBXNativeTarget "GrowthPush" */ = {
+		B2ECCEBE19A9C36300312B0C /* Build configuration list for PBXNativeTarget "GrowthPush" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B2AF90E91793029800FA90EC /* Debug */,
-				B2AF90EA1793029800FA90EC /* Release */,
+				B2ECCEBF19A9C36300312B0C /* Debug */,
+				B2ECCEC019A9C36300312B0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = B2AF90CE1793029800FA90EC /* Project object */;
+	rootObject = B2ECCEA219A9C36300312B0C /* Project object */;
 }

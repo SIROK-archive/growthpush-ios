@@ -48,7 +48,7 @@ else
 	exit 1;
 fi
 
-EXPECTED_ARCHITECTURES=('armv7' 'armv7s' 'arm64' 'i386')
+EXPECTED_ARCHITECTURES=('armv7' 'armv7s' 'arm64' 'i386' 'x86_64')
 ARCHITECTURES=`xcrun -sdk iphoneos lipo -info ${ROOT_DIR}/GrowthPush.framework/GrowthPush | sed 's/^.*: \(.*\)$/\1/' | tr -s ' ' '\n'`
 for EXPECTED_ARCHITECTURE in ${EXPECTED_ARCHITECTURES[@]}; do
 	echo -n "Check architecture ${EXPECTED_ARCHITECTURE}... "
