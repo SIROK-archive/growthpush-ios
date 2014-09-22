@@ -28,7 +28,6 @@ ruby ./install.rb -l ./GrowthPush.framework -p /path/to/your_project -i APPLICAT
 Add GrowthPush dependency to Podfile.
 
 ```bash
-platform :ios, '7.0'
 pod 'GrowthPush' 
 ```
 
