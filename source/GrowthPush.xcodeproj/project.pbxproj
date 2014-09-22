@@ -450,7 +450,7 @@
 		B2ECCEBF19A9C36300312B0C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_VERSION = 1.2.0;
+				FRAMEWORK_VERSION = 1.2.1;
 				INFOPLIST_FILE = GrowthPush/Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -461,7 +461,7 @@
 		B2ECCEC019A9C36300312B0C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_VERSION = 1.2.0;
+				FRAMEWORK_VERSION = 1.2.1;
 				INFOPLIST_FILE = GrowthPush/Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
