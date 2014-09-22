@@ -58,7 +58,7 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 
 + (GrowthPush *) sharedInstance {
     @synchronized(self) {
-        if ([[[UIDevice currentDevice] systemVersion] floatValue] < 5.0f) {
+        if ([[[UIDevice currentDevice] systemVersion] floatValue] < 6.0f) {
             return nil;
         }
         if (!sharedInstance) {
