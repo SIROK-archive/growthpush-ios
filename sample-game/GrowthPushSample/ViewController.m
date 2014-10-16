@@ -8,8 +8,11 @@
 
 #import "ViewController.h"
 
-static NSString *playerSelect = nil;
-static NSString *enemySelect = nil;
+static int playerSelect = -1;
+static UIImage *img1;
+static UIImage *img2;
+static UIImage *img3;
+static NSArray *imgs;
 
 @interface ViewController ()
 
@@ -19,10 +22,10 @@ static NSString *enemySelect = nil;
 
 - (void) viewDidLoad {
     [super viewDidLoad];
-    UIImage *img1 = [UIImage imageNamed:@"Rock.png"];
-    UIImage *img2 = [UIImage imageNamed:@"Paper.png"];
-    UIImage *img3 = [UIImage imageNamed:@"Scissors.png"];
-    NSArray *imgs = [NSArray arrayWithObjects:img1, img2, img3, nil];
+    img1 = [UIImage imageNamed:@"Rock.png"];
+    img2 = [UIImage imageNamed:@"Paper.png"];
+    img3 = [UIImage imageNamed:@"Scissors.png"];
+    imgs = [NSArray arrayWithObjects:img1, img2, img3, nil];
     self.enemySelectImage.animationImages = imgs;
     self.enemySelectImage.animationDuration = 0.4;
     [self.enemySelectImage startAnimating];
@@ -34,59 +37,49 @@ static NSString *enemySelect = nil;
 }
 
 - (IBAction)rockSelect:(id)sender {
-    playerSelect = @"Rock";
+    playerSelect = 0;
 }
 
 - (IBAction)paperSelect:(id)sender {
-    playerSelect = @"Paper";
+    playerSelect = 1;
 }
 
 - (IBAction)scissorsSelect:(id)sender {
-    playerSelect = @"Scissors";
+    playerSelect = 2;
 }
 
 - (IBAction)selectRPS:(id)sender {
-    self.playerSelectImage.image = [UIImage imageNamed:playerSelect];
+    self.playerSelectImage.image = imgs[playerSelect];
     self.resultLabel.text = @"VS";
     [self.enemySelectImage startAnimating];
 }
 
+- (Result)resultsCall:(Call)playerCall
+         computerCall:(Call)computerCall {
+    static Result results[3][3] = {{Tie, Loss, Win}, {Win, Tie, Loss}, {Loss, Win, Tie}};
+    return results[playerCall][computerCall];
+}
+
 - (IBAction)playGame:(id)sender {
     [self.enemySelectImage stopAnimating];
-    if( playerSelect != nil ) {
-        int enemyRandom = rand() % (3);
-        switch (enemyRandom) {
-            case 0:
-                enemySelect = @"Rock";
+    if( playerSelect != -1 ) {
+        int enemySelect = rand() % 3;
+        Result result = [self resultsCall:playerSelect
+                             computerCall:enemySelect];
+        switch (result) {
+            case Win:
+                self.resultLabel.text = @"勝ち";
                 break;
-            case 1:
-                enemySelect = @"Paper";
+            case Loss:
+                self.resultLabel.text = @"負け";
                 break;
-            case 2:
-                enemySelect = @"Scissors";
+            case Tie:
+                self.resultLabel.text = @"引き分け";
                 break;
             default:
                 break;
         }
-        self.enemySelectImage.image = [UIImage imageNamed:enemySelect];
-        if(playerSelect == enemySelect) {
-            //Tie
-            self.resultLabel.text = @"引き分け";
-        }else{
-            if([playerSelect isEqual: @"Rock"] && [enemySelect isEqual:@"Scissors"]) {
-                //Win
-                self.resultLabel.text = @"勝ち";
-            }else if([playerSelect isEqual: @"Paper"] && [enemySelect isEqual:@"Rock"]) {
-                //Win
-                self.resultLabel.text = @"勝ち";
-            }else if([playerSelect isEqual: @"Scissors"] && [enemySelect isEqual:@"Paper"]) {
-                //Win
-                self.resultLabel.text = @"勝ち";
-            }else{
-                //make
-                self.resultLabel.text = @"負け";
-            }
-        }
+        self.enemySelectImage.image = imgs[enemySelect];
     }
 }
 

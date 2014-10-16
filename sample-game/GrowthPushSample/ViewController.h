@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum {
+    Rock = 0, Paper = 1, Scissors = 2
+} Call;
+
+typedef enum {
+    Win = 0, Loss = 1, Tie = 2
+} Result;
+
 @interface ViewController : UIViewController
 
 - (IBAction)rockSelect:(id)sender;
