@@ -24,6 +24,7 @@ typedef enum {
 - (IBAction)selectRPS:(id)sender;
 - (IBAction)playGame:(id)sender;
 
+@property (strong, nonatomic) IBOutlet UISegmentedControl *segmentTag;
 @property (strong, nonatomic) IBOutlet UIImageView *playerSelectImage;
 @property (strong, nonatomic) IBOutlet UIImageView *enemySelectImage;
 @property (weak, nonatomic) IBOutlet UILabel *resultLabel;

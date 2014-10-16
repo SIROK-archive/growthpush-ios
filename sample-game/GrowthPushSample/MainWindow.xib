@@ -89,6 +89,14 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="cet-84-I3K">
+                    <rect key="frame" x="73" y="40" width="174" height="29"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <segments>
+                        <segment title="男性"/>
+                        <segment title="女性"/>
+                    </segments>
+                </segmentedControl>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <point key="canvasLocation" x="554" y="323"/>
@@ -98,6 +106,7 @@
                 <outlet property="enemySelectImage" destination="c2j-Oy-AVb" id="pp2-Mx-XHU"/>
                 <outlet property="playerSelectImage" destination="yKs-uE-7iT" id="ej0-j7-J19"/>
                 <outlet property="resultLabel" destination="3nl-tP-UwQ" id="naq-68-Ksw"/>
+                <outlet property="segmentTag" destination="cet-84-I3K" id="RCm-6O-eWT"/>
                 <outlet property="view" destination="R5X-JU-8sX" id="2xp-1d-kOH"/>
             </connections>
         </viewController>
