@@ -39,9 +39,9 @@ static NSArray *imgs = nil;
     // Dispose of any resources that can be recreated.
 }
 
-- (Result)resultsCall:(Call)playerCall
-         computerCall:(Call)computerCall {
-    static Result results[3][3] = {{Tie, Loss, Win}, {Win, Tie, Loss}, {Loss, Win, Tie}};
+- (NSString *)resultsCall:(int)playerCall
+             computerCall:(int)computerCall {
+    NSString *results[3][3] = {{@"引き分け", @"負け", @"勝ち"},{@"勝ち", @"引き分け", @"負け"},{@"負け", @"勝ち", @"引き分け"}};
     return results[playerCall][computerCall];
 }
 
@@ -68,22 +68,8 @@ static NSArray *imgs = nil;
     if( playerSelect != -1 ) {
         enemySelect = rand() % 3;
         self.enemySelectImage.image = imgs[enemySelect];
-        Result result = [self resultsCall:playerSelect
-                             computerCall:enemySelect];
-        switch (result) {
-            case Win:
-                self.resultLabel.text = @"勝ち";
-                break;
-            case Loss:
-                self.resultLabel.text = @"負け";
-                break;
-            case Tie:
-                self.resultLabel.text = @"引き分け";
-                break;
-            default:
-                break;
-        }
-        
+        self.resultLabel.text = [self resultsCall:playerSelect
+                                     computerCall:enemySelect];
         /*
          * Event Post
          */
