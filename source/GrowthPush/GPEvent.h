@@ -6,9 +6,9 @@
 //  Copyright (c) 2013年 SIROK, Inc. All rights reserved.
 //
 
-#import "GPDomain.h"
+#import "GBDomain.h"
 
-@interface GPEvent : GPDomain {
+@interface GPEvent : GBDomain {
 
     NSInteger goalId;
     long long timestamp;

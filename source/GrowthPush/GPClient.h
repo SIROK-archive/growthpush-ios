@@ -6,11 +6,11 @@
 //  Copyright (c) 2013年 SIROK, Inc. All rights reserved.
 //
 
-#import "GPDomain.h"
+#import "GBDomain.h"
 #import "GPOS.h"
 #import "GPEnvironment.h"
 
-@interface GPClient : GPDomain <NSCoding> {
+@interface GPClient : GBDomain <NSCoding> {
 
     long long id;
     NSString *growthbeatClientId;

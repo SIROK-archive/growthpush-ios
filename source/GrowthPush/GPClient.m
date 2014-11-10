@@ -7,6 +7,7 @@
 //
 
 #import "GPClient.h"
+#import "GBUtils.h"
 
 @implementation GPClient
 
