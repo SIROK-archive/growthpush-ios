@@ -25,16 +25,12 @@
 		B2AF4C381A110E7100DFDAD6 /* GrowthAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2AF4C371A110E7100DFDAD6 /* GrowthAnalytics.framework */; };
 		B2DB247A1A0C3EEB005D5C80 /* libGrowthPush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2DB246E1A0C3EEB005D5C80 /* libGrowthPush.a */; };
 		B2FA9CFA1A0C3F0B0015E28B /* GPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FA9CE71A0C3F0B0015E28B /* GPClient.m */; };
-		B2FA9CFB1A0C3F0B0015E28B /* GPClientService.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FA9CE91A0C3F0B0015E28B /* GPClientService.m */; };
 		B2FA9CFD1A0C3F0B0015E28B /* GPEnvironmentUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FA9CED1A0C3F0B0015E28B /* GPEnvironmentUtils.m */; };
 		B2FA9D001A0C3F0B0015E28B /* GPOS.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FA9CF31A0C3F0B0015E28B /* GPOS.m */; };
-		B2FA9D011A0C3F0B0015E28B /* GPService.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FA9CF51A0C3F0B0015E28B /* GPService.m */; };
 		B2FA9D031A0C3F0B0015E28B /* GrowthPush.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FA9CF91A0C3F0B0015E28B /* GrowthPush.m */; };
 		B2FA9D071A0C3FB00015E28B /* GPClient.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B2FA9CE61A0C3F0B0015E28B /* GPClient.h */; };
-		B2FA9D081A0C3FB00015E28B /* GPClientService.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B2FA9CE81A0C3F0B0015E28B /* GPClientService.h */; };
 		B2FA9D0A1A0C3FB00015E28B /* GPEnvironment.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B2FA9CEC1A0C3F0B0015E28B /* GPEnvironment.h */; };
 		B2FA9D0D1A0C3FB00015E28B /* GPOS.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B2FA9CF21A0C3F0B0015E28B /* GPOS.h */; };
-		B2FA9D0E1A0C3FB00015E28B /* GPService.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B2FA9CF41A0C3F0B0015E28B /* GPService.h */; };
 		B2FA9D101A0C3FB00015E28B /* GrowthPush.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B2FA9CF81A0C3F0B0015E28B /* GrowthPush.h */; };
 		B2FA9D1A1A0C401C0015E28B /* GrowthbeatCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2FA9D191A0C401C0015E28B /* GrowthbeatCore.framework */; };
 /* End PBXBuildFile section */
@@ -64,10 +60,8 @@
 			dstSubfolderSpec = 16;
 			files = (
 				B2FA9D071A0C3FB00015E28B /* GPClient.h in CopyFiles */,
-				B2FA9D081A0C3FB00015E28B /* GPClientService.h in CopyFiles */,
 				B2FA9D0A1A0C3FB00015E28B /* GPEnvironment.h in CopyFiles */,
 				B2FA9D0D1A0C3FB00015E28B /* GPOS.h in CopyFiles */,
-				B2FA9D0E1A0C3FB00015E28B /* GPService.h in CopyFiles */,
 				B2FA9D101A0C3FB00015E28B /* GrowthPush.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,14 +75,10 @@
 		B2DB247F1A0C3EEB005D5C80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2FA9CE61A0C3F0B0015E28B /* GPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPClient.h; sourceTree = "<group>"; };
 		B2FA9CE71A0C3F0B0015E28B /* GPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPClient.m; sourceTree = "<group>"; };
-		B2FA9CE81A0C3F0B0015E28B /* GPClientService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPClientService.h; sourceTree = "<group>"; };
-		B2FA9CE91A0C3F0B0015E28B /* GPClientService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPClientService.m; sourceTree = "<group>"; };
 		B2FA9CEC1A0C3F0B0015E28B /* GPEnvironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPEnvironment.h; sourceTree = "<group>"; };
 		B2FA9CED1A0C3F0B0015E28B /* GPEnvironmentUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPEnvironmentUtils.m; sourceTree = "<group>"; };
 		B2FA9CF21A0C3F0B0015E28B /* GPOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPOS.h; sourceTree = "<group>"; };
 		B2FA9CF31A0C3F0B0015E28B /* GPOS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPOS.m; sourceTree = "<group>"; };
-		B2FA9CF41A0C3F0B0015E28B /* GPService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPService.h; sourceTree = "<group>"; };
-		B2FA9CF51A0C3F0B0015E28B /* GPService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPService.m; sourceTree = "<group>"; };
 		B2FA9CF81A0C3F0B0015E28B /* GrowthPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrowthPush.h; sourceTree = "<group>"; };
 		B2FA9CF91A0C3F0B0015E28B /* GrowthPush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrowthPush.m; sourceTree = "<group>"; };
 		B2FA9D191A0C401C0015E28B /* GrowthbeatCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GrowthbeatCore.framework; path = "../submodules/growthbeat-core-ios/GrowthbeatCore.framework"; sourceTree = "<group>"; };
@@ -163,10 +153,8 @@
 			isa = PBXGroup;
 			children = (
 				B2FA9CE61A0C3F0B0015E28B /* GPClient.h */,
-				B2FA9CE81A0C3F0B0015E28B /* GPClientService.h */,
 				B2FA9CEC1A0C3F0B0015E28B /* GPEnvironment.h */,
 				B2FA9CF21A0C3F0B0015E28B /* GPOS.h */,
-				B2FA9CF41A0C3F0B0015E28B /* GPService.h */,
 				B2FA9CF81A0C3F0B0015E28B /* GrowthPush.h */,
 			);
 			name = Headers;
@@ -176,10 +164,8 @@
 			isa = PBXGroup;
 			children = (
 				B2FA9CE71A0C3F0B0015E28B /* GPClient.m */,
-				B2FA9CE91A0C3F0B0015E28B /* GPClientService.m */,
 				B2FA9CED1A0C3F0B0015E28B /* GPEnvironmentUtils.m */,
 				B2FA9CF31A0C3F0B0015E28B /* GPOS.m */,
-				B2FA9CF51A0C3F0B0015E28B /* GPService.m */,
 				B2FA9CF91A0C3F0B0015E28B /* GrowthPush.m */,
 			);
 			name = Sources;
@@ -320,8 +306,6 @@
 				B2FA9CFD1A0C3F0B0015E28B /* GPEnvironmentUtils.m in Sources */,
 				B2FA9D001A0C3F0B0015E28B /* GPOS.m in Sources */,
 				B2FA9CFA1A0C3F0B0015E28B /* GPClient.m in Sources */,
-				B2FA9D011A0C3F0B0015E28B /* GPService.m in Sources */,
-				B2FA9CFB1A0C3F0B0015E28B /* GPClientService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
