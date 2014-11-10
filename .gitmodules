@@ -1,3 +1,6 @@
 [submodule "submodules/growthbeat-core-ios"]
 	path = submodules/growthbeat-core-ios
 	url = https://github.com/SIROK/growthbeat-core-ios.git
+[submodule "submodules/growthanalytics-ios"]
+	path = submodules/growthanalytics-ios
+	url = https://github.com/SIROK/growthanalytics-ios.git

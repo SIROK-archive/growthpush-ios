@@ -22,6 +22,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		B2AF4C381A110E7100DFDAD6 /* GrowthAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2AF4C371A110E7100DFDAD6 /* GrowthAnalytics.framework */; };
 		B2DB247A1A0C3EEB005D5C80 /* libGrowthPush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2DB246E1A0C3EEB005D5C80 /* libGrowthPush.a */; };
 		B2FA9CFA1A0C3F0B0015E28B /* GPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FA9CE71A0C3F0B0015E28B /* GPClient.m */; };
 		B2FA9CFB1A0C3F0B0015E28B /* GPClientService.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FA9CE91A0C3F0B0015E28B /* GPClientService.m */; };
@@ -83,6 +84,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B2AF4C371A110E7100DFDAD6 /* GrowthAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GrowthAnalytics.framework; path = "../submodules/growthanalytics-ios/GrowthAnalytics.framework"; sourceTree = "<group>"; };
 		B2DB246E1A0C3EEB005D5C80 /* libGrowthPush.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGrowthPush.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2DB24791A0C3EEB005D5C80 /* GrowthPushTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GrowthPushTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2DB247F1A0C3EEB005D5C80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2AF4C381A110E7100DFDAD6 /* GrowthAnalytics.framework in Frameworks */,
 				B2FA9D1A1A0C401C0015E28B /* GrowthbeatCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -207,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				B2FA9D191A0C401C0015E28B /* GrowthbeatCore.framework */,
+				B2AF4C371A110E7100DFDAD6 /* GrowthAnalytics.framework */,
 			);
 			name = Framework;
 			sourceTree = "<group>";
@@ -450,11 +454,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../submodules/growthbeat-core-ios",
+					"/Users/kataoka/growthpush-ios/submodules/growthanalytics-ios",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../submodules/growthbeat-core-ios/GrowthbeatCore.framework/Headers/",
+					"$(SRCROOT)/../submodules/growthanalytics-ios/GrowthAnalytics.framework/Headers",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -469,11 +475,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../submodules/growthbeat-core-ios",
+					"/Users/kataoka/growthpush-ios/submodules/growthanalytics-ios",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../submodules/growthbeat-core-ios/GrowthbeatCore.framework/Headers/",
+					"$(SRCROOT)/../submodules/growthanalytics-ios/GrowthAnalytics.framework/Headers",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
