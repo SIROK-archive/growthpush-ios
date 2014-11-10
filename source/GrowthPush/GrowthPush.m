@@ -65,7 +65,7 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 @synthesize tags;
 @synthesize registeringClient;
 
-+ (GrowthPush *) sharedInstance {
++ (instancetype) sharedInstance {
     @synchronized(self) {
         if ([[[UIDevice currentDevice] systemVersion] floatValue] < 5.0f) {
             return nil;
@@ -75,42 +75,6 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
         }
         return sharedInstance;
     }
-}
-
-+ (void)initializeWithApplicationId:(NSString *)applicationId credentialId:(NSString *)credentialId environment:(GPEnvironment)environment {
-    [[self sharedInstance] initializeWithApplicationId:applicationId credentialId:credentialId environment:environment];
-}
-
-+ (void) requestDeviceToken {
-    [[self sharedInstance] requestDeviceToken];
-}
-
-+ (void) setDeviceToken:(NSData *)deviceToken {
-    [[self sharedInstance] setDeviceToken:deviceToken];
-}
-
-+ (void) trackEvent:(NSString *)name {
-    [[self sharedInstance] trackEvent:name value:nil];
-}
-
-+ (void) trackEvent:(NSString *)name value:(NSString *)value {
-    [[self sharedInstance] trackEvent:name value:value];
-}
-
-+ (void) setTag:(NSString *)name {
-    [[self sharedInstance] setTag:name value:nil];
-}
-
-+ (void) setTag:(NSString *)name value:(NSString *)value {
-    [[self sharedInstance] setTag:name value:value];
-}
-
-+ (void) setDeviceTags {
-    [[self sharedInstance] setDeviceTags];
-}
-
-+ (void) clearBadge {
-    [[self sharedInstance] clearBadge];
 }
 
 - (id) init {
@@ -157,6 +121,10 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 
 }
 
+- (void) trackEvent:(NSString *)name {
+    [self trackEvent:name value:nil];
+}
+
 - (void) trackEvent:(NSString *)name value:(NSString *)value {
     
     [logger info:@"Tracking event... (name: %@)", name];
@@ -172,6 +140,10 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
     
     // TODO Clear client when response code is 401.
     
+}
+
+- (void) setTag:(NSString *)name {
+    [self setTag:name value:nil];
 }
 
 - (void) setTag:(NSString *)name value:(NSString *)value {
