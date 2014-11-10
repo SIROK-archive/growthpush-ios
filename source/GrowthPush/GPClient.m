@@ -8,6 +8,8 @@
 
 #import "GPClient.h"
 #import "GBUtils.h"
+#import "GBHttpClient.h"
+#import "GrowthPush.h"
 
 @implementation GPClient
 
@@ -19,6 +21,64 @@
 @synthesize os;
 @synthesize environment;
 @synthesize created;
+
++ (GPClient *) createWithApplicationId:(NSString *)applicationId credentialId:(NSString *)credentialId token:(NSString *)token environment:(GPEnvironment)environment {
+    
+    NSString *path = @"/1/clients";
+    NSMutableDictionary *body = [NSMutableDictionary dictionary];
+    
+    if (applicationId) {
+        [body setObject:applicationId forKey:@"applicationId"];
+    }
+    if (credentialId) {
+        [body setObject:credentialId forKey:@"credentialId"];
+    }
+    if (token) {
+        [body setObject:token forKey:@"token"];
+    }
+    if (NSStringFromGPOS(GPOSIos)) {
+        [body setObject:NSStringFromGPOS(GPOSIos) forKey:@"os"];
+    }
+    if (NSStringFromGPEnvironment(environment)) {
+        [body setObject:NSStringFromGPEnvironment(environment) forKey:@"environment"];
+    }
+    
+    GBHttpRequest *httpRequest = [GBHttpRequest instanceWithMethod:GBRequestMethodPost path:path query:nil body:body];
+    GBHttpResponse *httpResponse = [[[GrowthPush sharedInstance] httpClient] httpRequest:httpRequest];
+    if(!httpResponse.success){
+        [[[GrowthPush sharedInstance] logger] error:@"Filed to create client. %@", httpResponse.error];
+        return nil;
+    }
+    
+    return [GPClient domainWithDictionary:httpResponse.body];
+    
+}
+
++ (GPClient *) updateWithId:(long long)id code:(NSString *)code token:(NSString *)token environment:(GPEnvironment)environment {
+    
+    NSString *path = [NSString stringWithFormat:@"/1/clients/%lld", id];
+    NSMutableDictionary *body = [NSMutableDictionary dictionary];
+    
+    if (code) {
+        [body setObject:code forKey:@"code"];
+    }
+    if (token) {
+        [body setObject:token forKey:@"token"];
+    }
+    if (NSStringFromGPEnvironment(environment)) {
+        [body setObject:NSStringFromGPEnvironment(environment) forKey:@"environment"];
+    }
+    
+    GBHttpRequest *httpRequest = [GBHttpRequest instanceWithMethod:GBRequestMethodPut path:path query:nil body:body];
+    GBHttpResponse *httpResponse = [[[GrowthPush sharedInstance] httpClient] httpRequest:httpRequest];
+    if(!httpResponse.success){
+        [[[GrowthPush sharedInstance] logger] error:@"Filed to update client. %@", httpResponse.error];
+        return nil;
+    }
+    
+    return [GPClient domainWithDictionary:httpResponse.body];
+
+}
 
 - (id) initWithDictionary:(NSDictionary *)dictionary {
 

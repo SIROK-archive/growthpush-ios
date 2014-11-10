@@ -137,8 +137,8 @@
 		B2DB24701A0C3EEB005D5C80 /* GrowthPush */ = {
 			isa = PBXGroup;
 			children = (
-				B2FA9D051A0C3F150015E28B /* Sources */,
 				B2FA9D041A0C3F100015E28B /* Headers */,
+				B2FA9D051A0C3F150015E28B /* Sources */,
 			);
 			path = GrowthPush;
 			sourceTree = "<group>";
