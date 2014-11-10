@@ -12,8 +12,9 @@
 #import "GPTagService.h"
 
 static GrowthPush *sharedInstance = nil;
-static NSString *const kGPBaseUrl = @"https://api.growthpush.com/";
-static NSString *const kGPPreferenceDefaultFileName = @"growthpush-preferences";
+static NSString *const kGBLoggerDefaultTag = @"GrowthPush";
+static NSString *const kGBHttpClientDefaultBaseUrl = @"https://api.growthpush.com/";
+static NSString *const kGBPreferenceDefaultFileName = @"growthpush-preferences";
 static NSString *const kGPPreferenceClientKey = @"client";
 static NSString *const kGPPreferenceTagsKey = @"tags";
 static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
@@ -116,9 +117,9 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 - (id) init {
     self = [super init];
     if (self) {
-        self.logger = [[GBLogger alloc] initWithTag:@"Growth Push"];
-        self.httpClient = [[GBHttpClient alloc] initWithBaseUrl:[NSURL URLWithString:kGPBaseUrl]];
-        self.preference = [[GBPreference alloc] initWithFileName:kGPPreferenceDefaultFileName];
+        self.logger = [[GBLogger alloc] initWithTag:kGBLoggerDefaultTag];
+        self.httpClient = [[GBHttpClient alloc] initWithBaseUrl:[NSURL URLWithString:kGBHttpClientDefaultBaseUrl]];
+        self.preference = [[GBPreference alloc] initWithFileName:kGBPreferenceDefaultFileName];
     }
     return self;
 }
