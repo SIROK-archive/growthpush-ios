@@ -8,8 +8,7 @@
 
 #import "GrowthPush.h"
 #import "GPClientService.h"
-#import "GPEventService.h"
-#import "GPTagService.h"
+#import "GrowthAnalytics.h"
 
 static GrowthPush *sharedInstance = nil;
 static NSString *const kGBLoggerDefaultTag = @"GrowthPush";
@@ -159,54 +158,31 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 }
 
 - (void) trackEvent:(NSString *)name value:(NSString *)value {
-
-    if (!name) {
-        [logger warn:@"Event name cannot be nil."];
-        return;
+    
+    [logger info:@"Tracking event... (name: %@)", name];
+    
+    NSString *eventId = [NSString stringWithFormat:@"Event:Custom:%@", name];
+    NSDictionary *properties = nil;
+    if (value) {
+        properties = @{
+                       @"value":value
+                       };
     }
-
-    [self runAfterRegister:^{
-        [logger info:@"Sending event ... (name: %@)", name];
-        [[GPEventService sharedInstance] createWithClientId:client.id code:client.code name:name value:value success:^(GPEvent *event) {
-            [logger info:@"Sending event success. (timestamp: %lld)", event.timestamp];
-        } fail:^(NSInteger status, NSError *error) {
-            [logger info:@"Sending event fail. %@", error];
-            if (status == 401) {
-                [self clearClient];
-            }
-        }];
-    }];
-
+    [[GrowthAnalytics sharedInstance] trackEvent:eventId properties:properties];
+    
+    // TODO Clear client when response code is 401.
+    
 }
 
 - (void) setTag:(NSString *)name value:(NSString *)value {
-
-    if (!name) {
-        [logger warn:@"Tag name cannot be nil."];
-        return;
-    }
-
-    [self runAfterRegister:^{
-
-        NSString *existValue = [tags objectForKey:name];
-        if (existValue && [existValue isEqualToString:value ? value:@""]) {
-            return;
-        }
-
-        [logger info:@"Sending tag... (key: %@, value: %@)", name, value];
-        [[GPTagService sharedInstance] updateWithClientId:client.id code:client.code name:name value:value success:^{
-            [logger info:@"Sending tag success."];
-            [tags setObject:value ? value:@"" forKey:name];
-            [self saveTags:tags];
-        } fail:^(NSInteger status, NSError *error) {
-            [logger info:@"Sending tag fail. %@", error];
-            if (status == 401) {
-                [self clearClient];
-            }
-        }];
-
-    }];
-
+    
+    [logger info:@"Setting tag... (name: %@)", name];
+    
+    NSString *tagId = [NSString stringWithFormat:@"Tag:Custom:%@", name];
+    [[GrowthAnalytics sharedInstance] setTag:tagId value:value];
+    
+    // TODO Clear client when response code is 401.
+    
 }
 
 - (void) setDeviceTags {
