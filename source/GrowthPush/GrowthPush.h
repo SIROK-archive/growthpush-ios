@@ -47,22 +47,6 @@
 - (void)setDeviceToken:(NSData *)deviceToken;
 
 /**
- * Track event
- *
- * @param name Event name such as "Launch" (max 64 characters)
- */
-- (void)trackEvent:(NSString *)name;
-
-/**
- * Track event with additional information
- *
- * @param name Event name (max 64 characters)
- * @param value Additional information
- */
-- (void)trackEvent:(NSString *)name value:(NSString *)value;
-
-
-/**
  * Clear badge of app icon
  */
 - (void)clearBadge;

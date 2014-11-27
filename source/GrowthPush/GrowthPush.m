@@ -116,27 +116,6 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 
 }
 
-- (void) trackEvent:(NSString *)name {
-    [self trackEvent:name value:nil];
-}
-
-- (void) trackEvent:(NSString *)name value:(NSString *)value {
-    
-    [logger info:@"Tracking event... (name: %@)", name];
-    
-    NSString *eventId = [NSString stringWithFormat:@"Event:Custom:%@", name];
-    NSDictionary *properties = nil;
-    if (value) {
-        properties = @{
-                       @"value":value
-                       };
-    }
-    [[GrowthAnalytics sharedInstance] trackEvent:eventId properties:properties];
-    
-    // TODO Clear client when response code is 401.
-    
-}
-
 - (void) clearBadge {
 
     [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
@@ -243,18 +222,6 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 
     self.client = nil;
     [preference removeAll];
-
-}
-
-- (NSMutableDictionary *) loadTags {
-
-    NSDictionary *loadedTags = [preference objectForKey:kGPPreferenceTagsKey];
-
-    if (loadedTags && [loadedTags isKindOfClass:[NSDictionary class]]) {
-        return [NSMutableDictionary dictionaryWithDictionary:loadedTags];
-    }
-
-    return [NSMutableDictionary dictionary];
 
 }
 
