@@ -157,29 +157,6 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
     
 }
 
-- (void) setDeviceTags {
-
-    if ([GBDeviceUtils model]) {
-        [self setTag:@"Device" value:[GBDeviceUtils model]];
-    }
-    if ([GBDeviceUtils os]) {
-        [self setTag:@"OS" value:[GBDeviceUtils os]];
-    }
-    if ([GBDeviceUtils language]) {
-        [self setTag:@"Language" value:[GBDeviceUtils language]];
-    }
-    if ([GBDeviceUtils timeZone]) {
-        [self setTag:@"Time Zone" value:[GBDeviceUtils timeZone]];
-    }
-    if ([GBDeviceUtils version]) {
-        [self setTag:@"Version" value:[GBDeviceUtils version]];
-    }
-    if ([GBDeviceUtils build]) {
-        [self setTag:@"Build" value:[GBDeviceUtils build]];
-    }
-
-}
-
 - (void) clearBadge {
 
     [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];

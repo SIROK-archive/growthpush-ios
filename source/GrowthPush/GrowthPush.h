@@ -76,10 +76,6 @@
  */
 - (void)setTag:(NSString *)name value:(NSString *)value;
 
-/**
- * Create tags including device model, OS version, language, time zone and app version
- */
-- (void)setDeviceTags;
 
 /**
  * Clear badge of app icon
