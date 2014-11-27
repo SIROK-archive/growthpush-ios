@@ -61,21 +61,6 @@
  */
 - (void)trackEvent:(NSString *)name value:(NSString *)value;
 
-/**
- * Create a tag for the device
- *
- * @param name Tag name such as "Finished Tutorial" (max 64 characters)
- */
-- (void)setTag:(NSString *)name;
-
-/**
- * Create a tag with value for the device
- *
- * @param name Tag name such as "Gender" (max 64 characters)
- * @param value Tag value such as "male"
- */
-- (void)setTag:(NSString *)name value:(NSString *)value;
-
 
 /**
  * Clear badge of app icon

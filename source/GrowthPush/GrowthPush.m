@@ -30,7 +30,6 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
     BOOL debug;
     NSString *token;
     GPClient *client;
-    NSMutableDictionary *tags;
     BOOL registeringClient;
 
 }
@@ -45,7 +44,6 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 @property (nonatomic, assign) BOOL debug;
 @property (nonatomic, strong) NSString *token;
 @property (nonatomic, strong) GPClient *client;
-@property (nonatomic, strong) NSMutableDictionary *tags;
 @property (nonatomic, assign) BOOL registeringClient;
 
 @end
@@ -62,7 +60,6 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 @synthesize debug;
 @synthesize token;
 @synthesize client;
-@synthesize tags;
 @synthesize registeringClient;
 
 + (instancetype) sharedInstance {
@@ -94,8 +91,6 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
     self.environment = newEnvironment;
     
     [GrowthbeatCore initializeWithApplicationId:applicationId credentialId:credentialId];
-    
-    self.tags = [self loadTags];
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
         GBClient *growthbeatClient = [[GrowthbeatCore sharedInstance] waitClient];
@@ -137,21 +132,6 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
                        };
     }
     [[GrowthAnalytics sharedInstance] trackEvent:eventId properties:properties];
-    
-    // TODO Clear client when response code is 401.
-    
-}
-
-- (void) setTag:(NSString *)name {
-    [self setTag:name value:nil];
-}
-
-- (void) setTag:(NSString *)name value:(NSString *)value {
-    
-    [logger info:@"Setting tag... (name: %@)", name];
-    
-    NSString *tagId = [NSString stringWithFormat:@"Tag:Custom:%@", name];
-    [[GrowthAnalytics sharedInstance] setTag:tagId value:value];
     
     // TODO Clear client when response code is 401.
     
@@ -275,16 +255,6 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
     }
 
     return [NSMutableDictionary dictionary];
-
-}
-
-- (void) saveTags:(NSDictionary *)newTags {
-
-    if (!newTags) {
-        return;
-    }
-
-    [preference setObject:newTags forKey:kGPPreferenceTagsKey];
 
 }
 
