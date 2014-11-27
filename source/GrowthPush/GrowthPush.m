@@ -180,21 +180,6 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 
 }
 
-- (void) runAfterRegister:(void (^)(void))runnable {
-
-    if (client) {
-        if (runnable) {
-            runnable();
-        }
-        return;
-    }
-
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(kGPRegisterPollingInterval * NSEC_PER_SEC)), dispatch_get_main_queue(), ^(void){
-            [self runAfterRegister:runnable];
-        });
-
-}
-
 - (GPClient *) loadClient {
 
     NSData *data = [preference objectForKey:kGPPreferenceClientKey];
