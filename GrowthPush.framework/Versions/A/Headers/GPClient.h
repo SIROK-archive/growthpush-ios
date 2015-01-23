@@ -6,11 +6,11 @@
 //  Copyright (c) 2013年 SIROK, Inc. All rights reserved.
 //
 
-#import "GPDomain.h"
+#import "GBDomain.h"
 #import "GPOS.h"
 #import "GPEnvironment.h"
 
-@interface GPClient : GPDomain <NSCoding> {
+@interface GPClient : GBDomain <NSCoding> {
 
     long long id;
     NSString *growthbeatClientId;
@@ -31,5 +31,8 @@
 @property (nonatomic, assign) GPOS os;
 @property (nonatomic, assign) GPEnvironment environment;
 @property (nonatomic, strong) NSDate *created;
+
++ (GPClient *) createWithApplicationId:(NSString *)applicationId credentialId:(NSString *)credentialId token:(NSString *)token environment:(GPEnvironment)environment;
++ (GPClient *) updateWithId:(long long)id code:(NSString *)code token:(NSString *)token environment:(GPEnvironment)environment;
 
 @end

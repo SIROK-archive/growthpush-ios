@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <GrowthPush/GrowthPush.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
