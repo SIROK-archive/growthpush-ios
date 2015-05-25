@@ -189,25 +189,14 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 }
 
 - (GPClient *) loadClient {
-
-    NSData *data = [preference objectForKey:kGPPreferenceClientKey];
-
-    if (!data) {
-        return nil;
-    }
-
-    return [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    
+    return [preference objectForKey:kGPPreferenceClientKey];
 
 }
 
 - (void) saveClient:(GPClient *)newClient {
 
-    if (!newClient) {
-        return;
-    }
-
-    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:client];
-    [preference setObject:data forKey:kGPPreferenceClientKey];
+    [preference setObject:newClient forKey:kGPPreferenceClientKey];
 
 }
 
