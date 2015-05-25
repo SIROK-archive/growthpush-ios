@@ -13,6 +13,7 @@
 static GrowthPush *sharedInstance = nil;
 static NSString *const kGBLoggerDefaultTag = @"GrowthPush";
 static NSString *const kGBHttpClientDefaultBaseUrl = @"https://api.growthpush.com/";
+static NSTimeInterval const kGBHttpClientDefaultTimeout = 60;
 static NSString *const kGBPreferenceDefaultFileName = @"growthpush-preferences";
 static NSString *const kGPPreferenceClientKey = @"client";
 static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
@@ -77,7 +78,7 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
     self = [super init];
     if (self) {
         self.logger = [[GBLogger alloc] initWithTag:kGBLoggerDefaultTag];
-        self.httpClient = [[GBHttpClient alloc] initWithBaseUrl:[NSURL URLWithString:kGBHttpClientDefaultBaseUrl]];
+        self.httpClient = [[GBHttpClient alloc] initWithBaseUrl:[NSURL URLWithString:kGBHttpClientDefaultBaseUrl] timeout:kGBHttpClientDefaultTimeout];
         self.preference = [[GBPreference alloc] initWithFileName:kGBPreferenceDefaultFileName];
     }
     return self;
