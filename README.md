@@ -28,7 +28,7 @@
 	[GrowthPush trackEvent:@"NAME" value:@"VALUE"];
 	[GrowthPush setTag:@"NAME" value:@"VALUE"];
 	```
-
+	
 ## Growthbeat Full SDK
 
 You can use Growthbeat SDK instead of this SDK. Growthbeat is growth hack tool for mobile apps. You can use full functions include Growth Push when you use the following SDK.

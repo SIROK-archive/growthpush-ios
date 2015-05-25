@@ -6,6 +6,7 @@
 //  Copyright (c) 2013年 SIROK, Inc. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
 #import "GrowthPush.h"
 #import "GPClient.h"
 #import "GrowthAnalytics.h"
@@ -104,8 +105,15 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 }
 
 - (void) requestDeviceToken {
-
-    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound];
+    
+    if (![[UIApplication sharedApplication] respondsToSelector:@selector(registerForRemoteNotifications)]) {
+        [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
+        return;
+    }
+    
+    UIUserNotificationSettings *userNotificationSettings = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert) categories:nil];
+    [[UIApplication sharedApplication] registerUserNotificationSettings:userNotificationSettings];
+    [[UIApplication sharedApplication] registerForRemoteNotifications];
 
 }
 

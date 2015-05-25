@@ -145,7 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				B2DB247F1A0C3EEB005D5C80 /* Info.plist */,
-			);
+            );
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
@@ -191,7 +191,7 @@
 				B2DB246B1A0C3EEB005D5C80 /* Frameworks */,
 				B2DB246C1A0C3EEB005D5C80 /* CopyFiles */,
 				B2FA9D061A0C3FA50015E28B /* ShellScript */,
-			);
+            );
 			buildRules = (
 			);
 			dependencies = (
@@ -240,7 +240,7 @@
 				};
 			};
 			buildConfigurationList = B2DB24691A0C3EEB005D5C80 /* Build configuration list for PBXProject "GrowthPush" */;
-			compatibilityVersion = "Xcode 3.2";
+            compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -336,6 +336,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					armv7s,
+				);
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -377,6 +381,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					armv7s,
+				);
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
