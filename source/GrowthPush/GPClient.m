@@ -22,13 +22,13 @@
 @synthesize environment;
 @synthesize created;
 
-+ (GPClient *) createWithApplicationId:(NSString *)applicationId credentialId:(NSString *)credentialId token:(NSString *)token environment:(GPEnvironment)environment {
++ (GPClient *) createWithClientId:(NSString *)clientId credentialId:(NSString *)credentialId token:(NSString *)token environment:(GPEnvironment)environment {
     
-    NSString *path = @"/1/clients";
+    NSString *path = @"/3/clients";
     NSMutableDictionary *body = [NSMutableDictionary dictionary];
     
-    if (applicationId) {
-        [body setObject:applicationId forKey:@"applicationId"];
+    if (clientId) {
+        [body setObject:clientId forKey:@"clientId"];
     }
     if (credentialId) {
         [body setObject:credentialId forKey:@"credentialId"];
@@ -54,13 +54,13 @@
     
 }
 
-+ (GPClient *) updateWithId:(long long)id code:(NSString *)code token:(NSString *)token environment:(GPEnvironment)environment {
++ (GPClient *) updateWithClientId:(NSString *)clientId credentialId:(NSString *)credentialId token:(NSString *)token environment:(GPEnvironment)environment {
     
-    NSString *path = [NSString stringWithFormat:@"/1/clients/%lld", id];
+    NSString *path = [NSString stringWithFormat:@"/3/clients/%@", clientId];
     NSMutableDictionary *body = [NSMutableDictionary dictionary];
     
-    if (code) {
-        [body setObject:code forKey:@"code"];
+    if (credentialId) {
+        [body setObject:credentialId forKey:@"credentialId"];
     }
     if (token) {
         [body setObject:token forKey:@"token"];

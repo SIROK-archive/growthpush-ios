@@ -32,7 +32,7 @@
 @property (nonatomic, assign) GPEnvironment environment;
 @property (nonatomic, strong) NSDate *created;
 
-+ (GPClient *) createWithApplicationId:(NSString *)applicationId credentialId:(NSString *)credentialId token:(NSString *)token environment:(GPEnvironment)environment;
-+ (GPClient *) updateWithId:(long long)id code:(NSString *)code token:(NSString *)token environment:(GPEnvironment)environment;
++ (GPClient *) createWithClientId:(NSString *)clientId credentialId:(NSString *)credentialId token:(NSString *)token environment:(GPEnvironment)environment;
++ (GPClient *) updateWithClientId:(NSString *)clientId credentialId:(NSString *)credentialId token:(NSString *)token environment:(GPEnvironment)environment;
 
 @end

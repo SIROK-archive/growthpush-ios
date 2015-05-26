@@ -26,10 +26,12 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
     GBPreference *preference;
     
     NSString *applicationId;
+    NSString *growthbeatClientId;
     NSString *credentialId;
     GPEnvironment environment;
     BOOL debug;
     NSString *token;
+    GBClient *growthbeatClient;
     GPClient *client;
     BOOL registeringClient;
 
@@ -44,6 +46,7 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 @property (nonatomic, assign) GPEnvironment environment;
 @property (nonatomic, assign) BOOL debug;
 @property (nonatomic, strong) NSString *token;
+@property (nonatomic, strong) GBClient *growthbeatClient;
 @property (nonatomic, strong) GPClient *client;
 @property (nonatomic, assign) BOOL registeringClient;
 
@@ -60,6 +63,7 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
 @synthesize environment;
 @synthesize debug;
 @synthesize token;
+@synthesize growthbeatClient;
 @synthesize client;
 @synthesize registeringClient;
 
@@ -94,9 +98,9 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
     [[GrowthbeatCore sharedInstance] initializeWithApplicationId:applicationId credentialId:credentialId];
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
-        GBClient *growthbeatClient = [[GrowthbeatCore sharedInstance] waitClient];
+        self.growthbeatClient = [[GrowthbeatCore sharedInstance] waitClient];
         self.client = [self loadClient];
-        if (self.client && self.client.growthbeatClientId && ![self.client.growthbeatClientId isEqualToString:growthbeatClient.id]) {
+        if (self.client && self.client.growthbeatClientId && ![self.client.growthbeatClientId isEqualToString:self.growthbeatClient.id]) {
             [self clearClient];
         }
         [self requestDeviceToken];
@@ -146,7 +150,7 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
             
             [logger info:@"Registering client... (applicationId: %d, environment: %@)", applicationId, NSStringFromGPEnvironment(environment)];
             
-            GPClient *createdClient = [GPClient createWithApplicationId:applicationId credentialId:credentialId token:token environment:environment];
+            GPClient *createdClient = [GPClient createWithClientId:growthbeatClient.id credentialId:credentialId token:token environment:environment];
             if(createdClient) {
                 [logger info:@"Registering client success. (clientId: %lld)", createdClient.id];
                 [logger info:@"See https://growthpush.com/applications/%d/clients to check the client registration.", applicationId];
@@ -169,7 +173,7 @@ static const NSTimeInterval kGPRegisterPollingInterval = 5.0f;
             
             [logger info:@"Update client... (id: %d, token: %@, environment: %@)", applicationId, token, NSStringFromGPEnvironment(environment)];
             
-            GPClient *updatedClient = [GPClient updateWithId:client.id code:client.code token:token environment:environment];
+            GPClient *updatedClient = [GPClient updateWithClientId:growthbeatClient.id credentialId:credentialId token:token environment:environment];
             if(updatedClient) {
                 [logger info:@"Updating client success. (clientId: %lld)", updatedClient.id];
                 self.client = updatedClient;
